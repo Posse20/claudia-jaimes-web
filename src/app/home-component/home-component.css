@@ -1,0 +1,31 @@
+.hero-card {
+    background-color: rgb(80, 119, 150);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    margin: -25px;
+    display: flex;
+    gap: 40px;
+    height: 400px;
+  }
+  
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -150px;
+    margin-left: 100px;
+}
+
+.logo-img {
+    width: 130px; /* o el tamaño que necesites */
+    height: 120px;
+}
+
+.header-title{
+    width: 250px;
+    color: white;
+    font-size: 1.8rem;
+    margin: 20px 0px 0px 0px;
+}
+  
