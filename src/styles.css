@@ -7,12 +7,26 @@
     font-weight: 100;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Creato Display';
+    src: url('assets/fonts/CreatoDisplay-ThinItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
   
 @font-face {
     font-family: 'Creato Display';
     src: url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Creato Display';
+    src: url('assets/fonts/CreatoDisplay-LightItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
 }
   
 @font-face {
@@ -47,4 +61,9 @@
 html, body {
     font-family: 'Creato Display', sans-serif;
     margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* ✅ solo uno maneja el scroll vertical */
 }

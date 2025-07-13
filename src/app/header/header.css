@@ -3,8 +3,9 @@
     justify-content: space-between;
     align-items: center;
     background: rgb(112, 129, 247);/* colores del menú */
-    padding: 10px 20px 30px 20px;
+    padding: 0px 20px 30px 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 50px;
 }
   
 .social-icons a {
