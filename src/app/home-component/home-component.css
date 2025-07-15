@@ -17,6 +17,8 @@
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-top: 15px;
+    margin-left: 100px;
 }
 
 .logo-img {
@@ -28,11 +30,14 @@
     color: white;
     font-size: 2.5rem;
     margin: 20px 0px 0px 0px;
+    width: 350px;
 }
 
 .header-title p {
     font-size: 1.3rem;
-    color: white;
+    color: rgb(22, 56, 93);
+    font-weight: 700;
+    font-style: normal;
 }
 
 .main-content {
@@ -54,6 +59,8 @@
 .right-column {
     flex: 1;
     min-width: 300px;
+    position: relative;
+    top: -100px;
 }
 
 .info-box {
@@ -110,43 +117,71 @@
 }
 
 .robot-img {
-    width: 300px;
-    height: 400px;
+    width: 340px;
+    height: 500px;
     border-radius: 30px;
     margin-top: 20px;
 }
 
 .content-parraf {
     background-color: rgb(22, 55, 88);
-    border-radius: 30px;
+    margin-left: 25px;
+    width: 450px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     padding: 20px;
     color: white;
     font-style: italic;
     font-weight: 400;
 }
 
+.parraf-1 {
+    width: 180px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.parraf-2 {
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
 .content-clau {
-    background-color: rgb(22, 55, 88);
-    border-radius: 30px;
-    padding: 30px;
+    background-color: rgb(17, 32, 53);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
     color: white;
     text-align: center;
+    width: 600px;
 }
 
 .content-clau img {
-    border-radius: 20px;
     max-width: 100%;
+    height: 750px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.content-clau p {
+    margin: 0;
+    padding: 0 20px 20px 20px;
 }
 
 .cta-button {
-    background-color: #335c94;
+    background-color: rgb(22, 55, 86);
     color: white;
-    border: none;
-    padding: 10px 20px;
+    font-size: 1rem;
+    border: solid white 1px;
     border-radius: 20px;
-    margin-top: 15px;
+    padding: 8px 50px;
     font-weight: 600;
     cursor: pointer;
+    position: relative;
+    top: -120px;
+    left: 220px;
+    width: 265px;
   }
   
 /* Responsive Home */
