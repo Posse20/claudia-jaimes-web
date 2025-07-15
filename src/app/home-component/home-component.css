@@ -83,7 +83,6 @@
 }
 
 .decorative-lines {
-    display: flex;
     gap: 8px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -164,9 +163,39 @@
     border-top-left-radius: 30px;
 }
 
+.decorative-lines-clau {
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    display: grid;
+    position: relative;
+}
+
+.lines-1  {
+    top: -100px;
+    left: -25px;
+}
+
+.lines-2  {
+    top: -200px;
+    left: -10px;
+}
+
+.line-clau {
+    height: 3px;
+    background-color: #6c63ff; /* color morado o el que quieras */
+    border-radius: 2px;
+    transform: rotate(25deg);
+    transform-origin: left center;
+    width: 300px;
+}
+
 .content-clau p {
     margin: 0;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 0px 20px;
+    position: relative;
+    top: -60px;
 }
 
 .cta-button {
