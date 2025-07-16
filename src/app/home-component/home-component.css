@@ -233,7 +233,7 @@
     background-image: url('/assets/imgs-carrousel/carrousel-3.png');
     background-size: cover;             /* Ajusta la imagen al contenedor */
     background-repeat: no-repeat;
-    background-position: 50% 180%; /* Mueve el foco hacia abajo */
+    background-position: 50% 250%; /* Mueve el foco hacia abajo */
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
