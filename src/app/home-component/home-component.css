@@ -245,7 +245,7 @@
     top: -100px;
     aspect-ratio: 3/5;
     width: 70%;
-    height: 1450px;
+    height: 1580px;
 }
 
 .second-left-clm-title {
@@ -269,7 +269,7 @@
     margin-top: 1rem;
     position: relative;
     left: -490px;
-    top: -180px;
+    top: -220px;
     height: 700px;
     padding: 30px 220px 50px 150px;
     border-top-right-radius: 150px;
@@ -277,8 +277,8 @@
 }
 
   .carousel-image {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 70vw;
+    max-height: 70vh;
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
