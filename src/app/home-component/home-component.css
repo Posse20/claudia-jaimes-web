@@ -1,3 +1,16 @@
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+
 .hero-card {
     background-color: #4f708d;
     border-top-right-radius: 40px;
@@ -120,6 +133,7 @@
     height: 500px;
     border-radius: 30px;
     margin-top: 20px;
+    animation: fadeInDown 0.9s ease-out forwards;
 }
 
 .content-parraf {
@@ -161,6 +175,7 @@
     height: 750px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+    animation: fadeInDown 0.9s ease-out forwards;
 }
 
 .decorative-lines-clau {
@@ -211,6 +226,7 @@
     top: -220px;
     left: 220px;
     width: 265px;
+    animation: fadeInDown 0.9s ease-out forwards;
   }
   
 /* Responsive Home */
