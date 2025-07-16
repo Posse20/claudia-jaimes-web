@@ -1,0 +1,36 @@
+<section class="gallery-section">
+    <div class="overlay-bg"></div>
+</section>
+
+<section>
+    <h2 class="gallery-title">Galería</h2>
+  
+    <div class="gallery-content">
+      <div class="carousel-wrapper">
+        <button class="nav-button left" (click)="prev()">‹</button>
+  
+        <div class="carousel">
+          <div
+            *ngFor="let img of images; let i = index"
+            class="carousel-item"
+            [class.active]="i === activeIndex"
+            [class.left]="i < activeIndex"
+            [class.right]="i > activeIndex"
+          >
+            <img [src]="img" alt="Imagen" />
+          </div>
+        </div>
+  
+        <button class="nav-button right" (click)="next()">›</button>
+      </div>
+  
+      <div class="info-box">
+        <h3>¿Cómo es el procedimiento?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at odio
+          vitae justo interdum fermentum. Integer porta, nunc a ultrices imperdiet...
+        </p>
+      </div>
+    </div>
+  </section>
+  
