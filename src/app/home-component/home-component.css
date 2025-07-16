@@ -43,7 +43,7 @@
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 180px;
     padding: 0 40px;
     margin-top: -150px; /* hace que se monten sobre el hero-card */
     position: relative;
@@ -208,7 +208,7 @@
     font-weight: 600;
     cursor: pointer;
     position: relative;
-    top: -120px;
+    top: -220px;
     left: 220px;
     width: 265px;
   }
@@ -218,11 +218,13 @@
     .main-content {
         flex-direction: column;
         padding: 0;
+        gap: 0;
     }
     
     .header-logo {
         justify-content: center;
         text-align: center;
+        margin: 0;
     }
     
     .header-title h1 {
@@ -236,6 +238,8 @@
     .img-robotic-wrapper {
         position: relative;
         margin: 20px 0;
+        top: 0;
+        left: 0;
     }
     
     .robot-img {
@@ -246,8 +250,47 @@
         margin: 0;
     }
 
+    .right-column {
+        top: 0;
+    }
+
     .info-box {
         width: 768px;
+        border-radius: 0;
+    }
+    .info-box h1 {
+        width: 300px;
+    }
+
+    .content-parraf {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .parraf-1, .parraf-2 {
+        width: 80%;
+    }
+
+    .content-clau {
+        border-radius: 0;
+        width: 60%;
+        text-align: unset;
+    }
+
+    .content-clau img {
+        width: 270px;
+        height: 450px;
+        margin-left: 70px;
+    }
+    .content-clau p {
+        top: 0;
+        margin-bottom: 20px;
+    }
+    .cta-button {
+        top: 0;
+        left: 0;
+        margin-bottom: 40px;
+        margin-left: 70px;
     }
 }
   
