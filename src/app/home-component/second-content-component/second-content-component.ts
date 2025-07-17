@@ -10,22 +10,27 @@ import { Component } from '@angular/core';
 export class SecondContentComponent {
   images = [
     'assets/imgs-carrousel/carrousel-1.png',
+    'assets/imgs-carrousel/carrousel-2.png',
     'assets/imgs-carrousel/carrousel-3.png',
     'assets/imgs-carrousel/carrousel-4.png',
-    'assets/imgs-carrousel/carrousel-5.png'
+    'assets/imgs-carrousel/carrousel-5.png',
+    'assets/imgs-carrousel/carrousel-6.png'
   ];
 
-  activeIndex = 2;
+  currentIndex  = 2;
 
-  prev() {
-    if (this.activeIndex > 0) {
-      this.activeIndex--;
-    }
+  get visibleImages(): string[] {
+    const start = this.currentIndex;
+    const end = start + 4;
+    return this.images.concat(this.images).slice(start, end);
   }
 
   next() {
-    if (this.activeIndex < this.images.length - 1) {
-      this.activeIndex++;
-    }
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
+
+  prev() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 }
