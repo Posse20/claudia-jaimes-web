@@ -49,6 +49,13 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Creato Display';
+    src: url('assets/fonts/CreatoDisplay-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
   
 @font-face {
     font-family: 'Creato Display';
