@@ -1,4 +1,24 @@
 <section class="gallery-section">
+  <div class="overlay-bg"></div>
+  <div class="overlay-bg-white">
+    <h2 class="gallery-title">Galería</h2>
+  </div>
+  <div class="gallery-content">
+    <div class="carousel-wrapper">
+      <button class="nav-button left" (click)="prev()">‹</button>
+
+      <div class="carousel">
+        <div class="carousel-item" *ngFor="let img of visibleImages">
+          <img [src]="img" alt="Imagen" />
+        </div>
+      </div>
+
+      <button class="nav-button right" (click)="next()">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="gallery-section">
     <div class="overlay-bg"></div>
 </section>
 
@@ -28,4 +48,4 @@
       </div>
     </div>
   </section>
-  
+   -->

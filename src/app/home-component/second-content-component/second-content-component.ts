@@ -26,6 +26,7 @@ export class SecondContentComponent {
   }
 
   next() {
+    console.log('next')
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
