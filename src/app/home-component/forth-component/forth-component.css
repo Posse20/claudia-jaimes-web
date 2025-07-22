@@ -1,0 +1,136 @@
+.gallery-section {
+    position: relative;
+    background-image: url('/assets/others/bg-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    height: 1200px;
+    width: 100%;
+}
+
+.overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.233);
+    z-index: 0;
+  }
+
+.contact-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1250px;
+    height: 700px;
+    margin-top: 300px;
+    margin-left: 350px;
+    background-color: rgb(29,52,96);
+    border-radius: 60px;
+    z-index: 1;
+}
+
+.contact-form-label{
+    margin-left: 50px;
+    padding-top: 50px;
+    font-size: 1.5rem;
+    display: grid;
+}
+
+.contact-form-label-1{
+    margin-left: 50px;
+    padding-top: 50px;
+    font-size: 1.5rem;
+}
+
+.content-input-1 {
+    margin-top: 10px;
+    background-color: gray;
+    padding: 10px;
+    width: 25%;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.content-input {
+    margin-top: 10px;
+    background-color: gray;
+    padding: 10px;
+    width: 68%;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.content-textarea {
+    margin-top: 10px;
+    background-color: gray;
+    padding: 10px;
+    width: 68%;
+    height: 150%;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.left-box {
+    background: rgb(80, 119, 150);
+    width: 100%;
+    height: 600px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    margin-left: 1250px;
+    z-index: 1;
+    position: absolute;
+}
+
+.contact-card {
+    font-size: 0.8rem;
+    margin-left: 72%;
+    margin-top: -90px;
+    display: flex;
+}
+
+.contact-card-2 {
+    font-size: 0.8rem;
+    margin-left: 72%;
+    margin-top: 10px;
+    display: flex;
+}
+
+.btn-submit {
+    padding: 10px 100px;
+    margin-left: 300px;
+    border-radius: 30px;
+    font-size: 1.7rem;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(17, 32, 53);
+}
+
+.phone-icon {
+    font-size: 300%;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(17, 32, 53);
+}
+
+.contact-card p{
+    font-size: 1rem;
+    margin-left: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contact-card-2 p{
+    font-size: 1rem;
+    margin-left: 20px;
+    font-weight: 700;
+    font-style: italic;
+}
