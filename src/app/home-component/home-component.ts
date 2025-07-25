@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { SecondContentComponent } from './second-content-component/second-content-component';
 import { ThirthContentComponent } from './thirth-content-component/thirth-content-component';
 import { ForthComponent } from './forth-component/forth-component';
+import { FooterComponent } from './footer-component/footer-component';
 
 @Component({
   selector: 'app-home-component',
-  imports: [SecondContentComponent, ThirthContentComponent, ForthComponent],
+  imports: [SecondContentComponent, ThirthContentComponent, ForthComponent, FooterComponent],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
