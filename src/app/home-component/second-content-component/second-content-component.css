@@ -1,9 +1,9 @@
 .gallery-section {
   position: relative;
   padding: 60px 20px;
-  background-image: url('/assets/imgs-carrousel/carrousel-3.png');
+  background-image: url('/assets/imgs-carrousel/carrousel-5.png');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center 55%;
   background-repeat: no-repeat;
   color: white;
   z-index: 0;
