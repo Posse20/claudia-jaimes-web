@@ -1,6 +1,6 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-forth-component',
@@ -17,16 +17,18 @@ export class ForthComponent {
     message: ''
   };
 
-  constructor(private http: HttpClient){}
+  constructor(){}
 
   onSubmit(){
     const body = {
-      username: this.form.username + ' ' + this.form.lastname,
+      title: 'Formulario de contacto',
+      name: this.form.username + ' ' + this.form.lastname,
       email: this.form.email,
-      phone: this.form.phone,
-      info: this.form.message
+      message: this.form.message,
+      phone: this.form.phone
     };
     console.log('form', body);
+    emailjs.send('service_zb6hrgz', 'template_5n3irqf', body, 'yjS-1mMOYrnmYGp7N')
 
   }
 
