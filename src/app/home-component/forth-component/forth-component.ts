@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -16,8 +17,17 @@ export class ForthComponent {
     message: ''
   };
 
+  constructor(private http: HttpClient){}
+
   onSubmit(){
-    console.log('form', this.form);
+    const body = {
+      username: this.form.username + ' ' + this.form.lastname,
+      email: this.form.email,
+      phone: this.form.phone,
+      info: this.form.message
+    };
+    console.log('form', body);
+
   }
 
 }
