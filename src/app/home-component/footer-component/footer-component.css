@@ -51,10 +51,10 @@
 }
 
 .side-nav {
-    width: 400px;
+    width: 30%;
     height: 900px;
     margin-top: 250px;
-    margin-left: 150px;
+    margin-left: 450px;
     background-color: rgb(17, 32, 53);
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;

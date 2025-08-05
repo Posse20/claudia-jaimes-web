@@ -27,8 +27,16 @@ export class ForthComponent {
       message: this.form.message,
       phone: this.form.phone
     };
-    console.log('form', body);
-    emailjs.send('service_zb6hrgz', 'template_5n3irqf', body, 'yjS-1mMOYrnmYGp7N')
+
+    emailjs.send('service_zb6hrgz', 'template_5n3irqf', body, 'yjS-1mMOYrnmYGp7N').then((res) => {
+      this.form = {
+        username: '',
+        lastname: '',
+        email: '',
+        phone: '',
+        message: ''
+      };
+    })
 
   }
 
