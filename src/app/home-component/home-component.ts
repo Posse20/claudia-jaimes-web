@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SecondContentComponent } from './second-content-component/second-content-component';
 import { ThirthContentComponent } from './thirth-content-component/thirth-content-component';
 import { ForthComponent } from './forth-component/forth-component';
 import { FooterComponent } from './footer-component/footer-component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
-  imports: [SecondContentComponent, ThirthContentComponent, ForthComponent, FooterComponent],
+  imports: [SecondContentComponent, ThirthContentComponent, ForthComponent, FooterComponent, RouterModule],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
 export class HomeComponent {
+
+  private _router = inject(Router);
+  
   images: string[] = [
     'assets/imgs-carrousel/carrousel-1.png',
     'assets/imgs-carrousel/carrousel-3.png',
@@ -37,5 +41,9 @@ export class HomeComponent {
 
   closeImage(): void {
     this.selectedImage = null;
+  }
+
+  goHome(){
+    this._router.navigate(['/']);
   }
 }
