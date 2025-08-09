@@ -46,4 +46,8 @@ export class HomeComponent {
   goHome(){
     this._router.navigate(['/']);
   }
+
+  abootMe(){
+    this._router.navigate(['/about-me']);
+  }
 }

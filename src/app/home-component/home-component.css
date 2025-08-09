@@ -176,7 +176,7 @@
     height: 750px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    animation: fadeInDown 0.9s ease-out forwards;
+    animation: fadeInDown 1.5s ease-out forwards;
 }
 
 .decorative-lines-clau {
