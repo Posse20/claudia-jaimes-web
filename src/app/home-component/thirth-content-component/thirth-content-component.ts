@@ -7,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrl: './thirth-content-component.css'
 })
 export class ThirthContentComponent {
-
+  navigateToAssociations(key: string){
+    switch (key) {
+      case 'acc':
+        window.open('https://www.ascolcirugia.org', '_blank');
+        break;
+      case 'srs':
+        window.open('https://srobotics.org', '_blank');
+        break;
+      case 'cmc':
+        window.open('https://colegiomedicocolombiano.org', '_blank');
+        break;
+      case 'spt':
+        window.open('https://panamtrauma.org', '_blank');
+        break;
+      default:
+        break;
+    }
+  }
 }
