@@ -40,16 +40,16 @@
 .txt-box {
     margin-top: 70px;
     margin-left: 50px;
-    width: 35%;
+    width: 85%;
     height: 50%;
 }
 
 .txt-box p {
     background: rgb(22, 55, 88);
-    padding: 30px 35px 30px 20px;
+    padding: 35px;
     border-radius: 60px;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .footer-box {
