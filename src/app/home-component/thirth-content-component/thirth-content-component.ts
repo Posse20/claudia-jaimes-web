@@ -21,6 +21,12 @@ export class ThirthContentComponent {
       case 'spt':
         window.open('https://panamtrauma.org', '_blank');
         break;
+      case 'marly':
+        window.open('https://clinicademarlyjorgecaveliergaviria.com.co', '_blank');
+        break;
+      case 'shaio':
+        window.open('https://www.shaio.org', '_blank');
+        break;
       default:
         break;
     }

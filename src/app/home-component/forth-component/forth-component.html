@@ -2,7 +2,33 @@
     <div class="form-bg">
         <img src="assets/others/bg-1.png" alt="img-4">
     </div>
-    <div>
+    <div class="contact-form">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="contact-form-label">
+                <label>Nombre: </label>
+                <input type="text" class="content-input" name="username" [(ngModel)]="form.username" required>
+            </div>
+            <div class="contact-form-label">
+                <label>Apellido: </label>
+                <input type="text" class="content-input" name="lastname" [(ngModel)]="form.lastname" required>
+            </div>
+            <div class="contact-form-label-1">
+                <label>Email: </label>
+                <input type="email" class="content-input-1" name="email" [(ngModel)]="form.email" required>
+                &nbsp;
+                <label>Teléfono: </label>
+                <input type="number" class="content-input-1" name="phone" [(ngModel)]="form.phone" required>
+            </div>
+            <div class="contact-form-textarea">
+                <label>Mensaje: </label>
+                <textarea class="content-textarea" name="message" [(ngModel)]="form.message" required></textarea>
+            </div>
+            <div class="btn-section">
+                <button class="btn-submit" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <!-- <div>
         <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
             <div class="contact-form">
                 <div class="contact-form-label">
@@ -41,8 +67,7 @@
                 <button class="btn-submit" type="submit">Enviar</button>
             </div>
         </form>
-    </div>
-    <div class="left-box"></div>
+    </div> -->
 </section>
 <!-- <section style="display: flex;">
     <div class="gallery-section">
