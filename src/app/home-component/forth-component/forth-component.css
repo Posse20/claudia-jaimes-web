@@ -41,6 +41,8 @@
     font-size: 1.2rem;
     display: grid;
     color: white;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .contact-form-textarea{
@@ -48,6 +50,8 @@
     font-size: 1.2rem;
     display: grid;
     color: white;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .contact-form-label-1{
@@ -56,6 +60,8 @@
     color: white;
     display: flex;
     justify-content: space-evenly;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .contact-form-label-1 label{
@@ -135,6 +141,27 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+}
+
+.contact-us-label{
+    color: white;
+    margin-left: 40px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contact-us {
+    background-color: rgb(17, 32, 53);
+    border-radius: 10px;
+    margin: -50px 50px 10px 500px;
+    padding: 0 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 0.8rem;
 }
 
 .phone-icon {

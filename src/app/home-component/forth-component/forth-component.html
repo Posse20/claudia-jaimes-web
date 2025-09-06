@@ -3,6 +3,15 @@
         <img src="assets/others/bg-1.png" alt="img-4">
     </div>
     <div class="contact-form">
+        <div class="contact-us-label">
+            <h1>Déjame un mensaje</h1>
+        </div>
+        <div class="contact-us">
+            <i class="fa-solid fa-phone-flip"></i>
+            <p>Telefono: +57 3183379340</p>
+            <i class="fa-solid fa-envelope"></i>
+            <p>Correo: stormjaimes1981&#64;gmail.com</p>
+        </div>
         <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
             <div class="contact-form-label">
                 <label>Nombre: </label>
@@ -27,47 +36,9 @@
                 <button class="btn-submit" type="submit">Enviar</button>
             </div>
         </form>
+
     </div>
-    <!-- <div>
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-            <div class="contact-form">
-                <div class="contact-form-label">
-                    <label>Nombre: </label>
-                    <input type="text" class="content-input" name="username" [(ngModel)]="form.username" required>
-                </div>
-                <div class="contact-form-label">
-                    <label>Apellido: </label>
-                    <input type="text" class="content-input" name="lastname" [(ngModel)]="form.lastname" required>
-                </div>
-                <div class="contact-form-label-1">
-                    <label>Email: </label>
-                    <input type="email" class="content-input-1" name="email" [(ngModel)]="form.email" required>
-                    &nbsp;
-                    <label>Teléfono: </label>
-                    <input type="number" class="content-input-1" name="phone" [(ngModel)]="form.phone" required>
-                </div>
-                <div class="contact-form-label">
-                    <label>Mensaje: </label>
-                    <textarea class="content-textarea" name="message" [(ngModel)]="form.message" required></textarea>
-                    <div class="contact-card">
-                        <i class="fa-solid fa-phone-flip phone-icon"></i>
-                        <div>
-                            <p>Telefono: </p>
-                            <p>+57 3183379340</p>
-                        </div>
-                    </div>
-                    <div class="contact-card-2">
-                        <i class="fa-solid fa-envelope phone-icon"></i>
-                        <div>
-                            <p>Correo: </p>
-                            <p>stormjaimes1981&#64;gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-submit" type="submit">Enviar</button>
-            </div>
-        </form>
-    </div> -->
+
 </section>
 <!-- <section style="display: flex;">
     <div class="gallery-section">
