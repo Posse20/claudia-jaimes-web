@@ -153,12 +153,12 @@
 .contact-us {
     background-color: rgb(17, 32, 53);
     border-radius: 10px;
-    margin: -50px 50px 10px 500px;
+    margin: -50px 50px 10px 550px;
     padding: 0 20px;
     color: white;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.8rem;
     font-weight: 200;
     font-style: italic;
     font-size: 0.8rem;
