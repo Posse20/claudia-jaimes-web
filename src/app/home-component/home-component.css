@@ -58,30 +58,29 @@
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* flex-wrap: wrap; */
-    gap: 3rem;
-    padding: 0 2rem;
-    margin-top: -6rem; /* hace que se monten sobre el hero-card */
-    /* position: relative; */
-    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 0 2vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: grid;
+  justify-content: center;   /* centra el contenido interno */
 }
 
 .left-column {
-    /* flex: 1; */
-    min-width: 300px;
-    margin-left: 0.8rem;
-    margin-top: 1rem;
-}
-
-.right-column {
-    /* flex: 1; */
-    min-width: 300px;
     position: relative;
-    top: -40px;
-    z-index: 1;
-    margin-left: 3rem;
+    top: -100px;
+}
+.right-column {
+    position: relative;
+    top: -170px;
 }
 
 .info-box {
@@ -91,7 +90,12 @@
     position: relative;
     z-index: 1;
     width: 20rem;
+    transition: transform 0.25s ease;
 }
+
+.info-box:hover {
+    transform: translateY(-4px) scale(1.1);
+  }
 
 .info-box h1 {
     color: white;
@@ -133,13 +137,17 @@
     position: absolute;
     top: 50px;
     left: 300px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.robot-anim{
+    animation: fadeInDown 0.9s ease-out forwards;
 }
 
 .robot-img {
-    width: 16rem;
+    width: 20rem;
     height: auto;
-    border-radius: 30px;
-    animation: fadeInDown 0.9s ease-out forwards;
 }
 
 .content-parraf {
@@ -152,35 +160,35 @@
     color: white;
     font-style: italic;
     font-weight: 400;
+    position: relative;
+    top: -30px;
 }
 
 .parraf-1 {
     width: 50%;
-    text-align: justify;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .parraf-2 {
     text-align: justify;
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .content-clau {
     background-color: rgb(17, 32, 53);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 40px 20px 20px 20px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     color: white;
     text-align: center;
-    width: 500px;
+    width: auto;
 }
 
 .content-clau img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
     animation: fadeInDown 1.5s ease-out forwards;
 }
 
@@ -196,11 +204,13 @@
 .lines-1  {
     top: -100px;
     left: -25px;
+    transition: transform 0.25s ease;
 }
 
 .lines-2  {
     top: -200px;
     left: -10px;
+    transition: transform 0.25s ease;
 }
 
 .line-clau {
@@ -214,9 +224,35 @@
 
 .content-clau p {
     margin: 0;
-    padding: 0 20px 0px 20px;
+    padding: 0 40px 0px 40px;
     position: relative;
     top: -60px;
+    text-align: justify;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.btn-robotic-info{
+    margin-left: 40px;
+}
+.robotic-button {
+    background-color: rgb(112, 129, 247);
+    color: white;
+    font-size: 1rem;
+    border-color:  rgb(112, 129, 247);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-style: italic;
+    cursor: pointer;
+    position: relative;
+    width: 320px;
+    z-index: 1;
+    transition: transform 0.25s ease;
+}
+
+.robotic-button:hover, .cta-button:hover, .lines-1:hover, .lines-2:hover {
+    transform: translateY(-4px) scale(1.05);
 }
 
 .cta-button {
@@ -232,7 +268,7 @@
     top: -220px;
     left: 170px;
     width: 265px;
-    animation: fadeInDown 0.9s ease-out forwards;
+    transition: transform 0.25s ease;
 }
 
 .second-main {
