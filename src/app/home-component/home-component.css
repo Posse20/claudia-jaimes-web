@@ -342,6 +342,106 @@
   .nav-btn:hover {
     background-color: rgba(255,255,255,1);
   }
+
+.asociations-icons{
+    background-color: rgb(80, 119, 150);
+    width: 25%;
+    margin-left: 100px;
+    height: auto;
+    display: grid;
+    position: relative;
+    top: -400px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+  
+.acc-img{
+    margin-top: 4rem;
+    justify-self: center;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+  
+.trogss-img{
+    justify-self: center;
+    cursor: pointer;
+    width: 80%;
+    height: 80%;
+    transition: transform 0.25s ease;
+}
+
+.camec-img{
+    justify-self: center;
+    cursor: pointer;
+    width: 50%;
+    height: 80%;
+    transition: transform 0.25s ease;
+}
+  
+.srs-img{
+    width: 50%;
+    height: 70%;
+    cursor: pointer;
+    justify-self: center;
+    margin-top: 2rem;
+    transition: transform 0.25s ease;
+}
+
+.cmc-img {
+    width: 95%;
+    height: 60%;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+    justify-self: center;
+    transition: transform 0.25s ease;
+}
+  
+.spt-img {
+    width: 70%;
+    height: 60%;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+    justify-self: center;
+    transition: transform 0.25s ease;
+}
+  
+.spt-img:hover, 
+.cmc-img:hover,
+.srs-img:hover,
+.trogss-img:hover,
+.camec-img:hover,
+.acc-img:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.procedimiento-info{
+    background-color: rgb(80, 119, 150);
+    color: white;
+    position: relative;
+    top: -1200px;
+    left: 700px;
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    z-index: 1;
+}
+  
+.procedimiento-info h1{
+    text-align: end;
+    margin-left: 150px;
+    margin-right: 50px;
+    font-weight: 700;
+    font-style: italic;
+}
+  
+.procedimiento-info p{
+    text-align: justify;
+    padding: 10px 30px;
+    font-weight: 200;
+    font-style: italic;
+    font-size: large;
+}
   
 /* Responsive Home */
 @media screen and (max-width: 768px) {

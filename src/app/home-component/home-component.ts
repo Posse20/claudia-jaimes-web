@@ -50,4 +50,29 @@ export class HomeComponent {
   abootMe(){
     this._router.navigate(['/about-me']);
   }
+
+  navigateToAssociations(key: string){
+    switch (key) {
+      case 'acc':
+        window.open('https://www.ascolcirugia.org', '_blank');
+        break;
+      case 'srs':
+        window.open('https://srobotics.org', '_blank');
+        break;
+      case 'cmc':
+        window.open('https://colegiomedicocolombiano.org', '_blank');
+        break;
+      case 'spt':
+        window.open('https://panamtrauma.org', '_blank');
+        break;
+      case 'trogss':
+        window.open('https://trogss.org', '_blank');
+        break;
+      case 'camec':
+        window.open('https://www.camec.co', '_blank');
+        break;
+      default:
+        break;
+    }
+  }
 }
