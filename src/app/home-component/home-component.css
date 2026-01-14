@@ -11,6 +11,28 @@
 }
 
 
+.asociations-icons {
+    background-color: rgb(80, 119, 150);
+    width: 25%;
+    padding: 50px 0px;
+    margin-left: 100px;
+    height: auto;
+    display: grid;
+    position: relative;
+    top: -300px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.arrow-asc-icons {
+    font-size: 80px;
+    margin-left: 250px;
+    position: relative;
+    top: -260px;
+    z-index: 2;
+}
+
 .hero-card {
     background-color: #4f708d;
     border-top-right-radius: 40px;
@@ -93,7 +115,11 @@
     transition: transform 0.25s ease;
 }
 
-.info-box:hover {
+.clau-img-anim{
+    transition: transform 0.25s ease;
+}
+
+.info-box:hover, .clau-img-anim:hover {
     transform: translateY(-4px) scale(1.1);
   }
 
@@ -251,7 +277,7 @@
     transition: transform 0.25s ease;
 }
 
-.robotic-button:hover, .cta-button:hover, .lines-1:hover, .lines-2:hover {
+.robotic-button:hover, .cta-button:hover {
     transform: translateY(-4px) scale(1.05);
 }
 
@@ -342,19 +368,6 @@
   .nav-btn:hover {
     background-color: rgba(255,255,255,1);
   }
-
-.asociations-icons{
-    background-color: rgb(80, 119, 150);
-    width: 25%;
-    margin-left: 100px;
-    height: auto;
-    display: grid;
-    position: relative;
-    top: -400px;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
   
 .acc-img{
     margin-top: 4rem;
@@ -411,7 +424,8 @@
 .srs-img:hover,
 .trogss-img:hover,
 .camec-img:hover,
-.acc-img:hover {
+.acc-img:hover,
+.arrow-asc-icons:hover {
     transform: translateY(-4px) scale(1.05);
 }
 

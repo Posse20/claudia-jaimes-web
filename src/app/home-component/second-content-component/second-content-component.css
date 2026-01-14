@@ -1,6 +1,6 @@
 .gallery-section {
   position: relative;
-  display: grid;
+  display: flex;
   /* padding: 60px 20px;
   background-image: url('/assets/imgs-carrousel/carrousel-5.png');
   background-size: auto;
@@ -14,12 +14,10 @@
 
 .background-img {
   position: relative;
-  /* top: -1500px; */
-  transform: translateY(-1500px);
-  left: 400px;
+  left: -250px;
+  top: -300px;
   opacity: 0.7;
-  object-fit: cover;
-  object-position: center 20%;
+  z-index: -3;
 }
 
 .asociations-icons{
@@ -29,8 +27,7 @@
   height: auto;
   display: grid;
   position: relative;
-  /* top: -400px; */
-  transform: translateY(-400px);
+  top: -300px;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -99,13 +96,12 @@
   background-color: rgb(80, 119, 150);
   color: white;
   position: relative;
-  /* top: -1200px; */
-  transform: translateY(-1200px);
-  left: 700px;
+  top: -550px;
+  left: 200px;
   width: 50%;
+  height: 550px;
   font-size: 1.5rem;
   border-radius: 20px;
-  z-index: 1;
 }
 
 .procedimiento-info h1{

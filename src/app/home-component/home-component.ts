@@ -47,8 +47,12 @@ export class HomeComponent {
     this._router.navigate(['/']);
   }
 
-  abootMe(){
+  aboutMe(){
     this._router.navigate(['/about-me']);
+  }
+
+  roboticSurgery(){
+    this._router.navigate(['/robotic-surgery']);
   }
 
   navigateToAssociations(key: string){

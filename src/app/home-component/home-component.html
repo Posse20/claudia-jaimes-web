@@ -4,93 +4,78 @@
     </div>
 </section>
 
-<section class="main-content">
-    <div class="left-column">
-        <div class="info-box">
-            <div class="title-anim">
+<div>
+    <section class="main-content">
+        <div class="left-column">
+            <div class="info-box">
                 <h1>¿Qué es la cirugía robótica?</h1>
-            </div>
 
-            <div class="decorative-lines">
-                <div class="line short"></div>
-                <div class="line medium"></div>
-                <div class="line long"></div>
-            </div>
+                <div class="decorative-lines">
+                    <div class="line short"></div>
+                    <div class="line medium"></div>
+                    <div class="line long"></div>
+                </div>
 
-            <div class="img-robotic-wrapper">
-                <div class="robot-anim">
-                    <img src="assets/home-imgs/img-1.png" alt="img1" class="robot-img"/>
+                <div class="img-robotic-wrapper">
+                    <div class="robot-anim">
+                        <img src="assets/home-imgs/img-1.png" alt="img1" class="robot-img"/>
+                    </div>
+                </div>
+            </div>
+            <div class="content-parraf">
+                <div class="parraf-1">
+                    <p>
+                        La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.
+                    </p>
+                    <p>
+                        A través de un sistema robótico asistido por el cirujano, se logran movimientos más exactos, mejor visualización del área quirúrgica y menor impacto en los tejidos.
+                    </p>
+                </div>
+                <div class="btn-robotic-info">
+                    <button class="robotic-button" (click)="roboticSurgery()">Conoce más de cirugía robótica dando click aquí.</button>
+                </div>
+                <div class="parraf-2">
+                    <p>
+                        Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.
+                    </p>
+                    <p>
+                        Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="content-parraf">
-            <div class="parraf-1">
+        <div class="right-column">
+            <div class="content-clau">
+                <div  class="clau-img-anim">
+                    <img src="assets/home-imgs/main-clau.png" alt="main-img" style="border-top-right-radius: 8px; border-top-left-radius: 8px;">
+                </div>
+                <div class="decorative-lines-clau lines-1">
+                    <div class="line-clau"></div>
+                    <div class="line-clau"></div>
+                    <div class="line-clau"></div>
+                </div>
+                <div class="decorative-lines-clau lines-2">
+                    <div class="line-clau"></div>
+                    <div class="line-clau"></div>
+                    <div class="line-clau"></div>
+                </div>
+                <button class="cta-button" (click)="aboutMe()">Conoce más sobre la Dra. Claudia Jaimes</button>
                 <p>
-                    La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.
-                </p>
-                <p>
-                    A través de un sistema robótico asistido por el cirujano, se logran movimientos más exactos, mejor visualización del área quirúrgica y menor impacto en los tejidos.
-                </p>
-            </div>
-            <div class="btn-robotic-info">
-                <button class="robotic-button" (click)="abootMe()">Conoce más de cirugía robótica dando click aquí.</button>
-            </div>
-            <div class="parraf-2">
-                <p>
-                    Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.
-                </p>
-                <p>
-                    Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.
+                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci,
+                    con formación internacional en el Memorial Hermann Hospital de Houston, Estados Unidos.
+                    Es miembro de la Sociedad Mundial de Cirugía Robótica y egresada de la Universidad Nacional de Colombia.
                 </p>
             </div>
         </div>
-    </div>
-    <div class="right-column">
-        <div class="content-clau">
-            <img src="assets/home-imgs/main-clau.png" alt="main-img">
-            <div class="decorative-lines-clau lines-1">
-                <div class="line-clau"></div>
-                <div class="line-clau"></div>
-                <div class="line-clau"></div>
-            </div>
-            <div class="decorative-lines-clau lines-2">
-                <div class="line-clau"></div>
-                <div class="line-clau"></div>
-                <div class="line-clau"></div>
-            </div>
-            <button class="cta-button" (click)="abootMe()">Conoce más sobre la Dra. Claudia Jaimes</button>
-            <p>
-                La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci,
-                con formación internacional en el Memorial Hermann Hospital de Houston, Estados Unidos.
-                Es miembro de la Sociedad Mundial de Cirugía Robótica y egresada de la Universidad Nacional de Colombia.
-            </p>
+    </section>
+    <section>
+        <i class="fa-solid fa-angles-up arrow-asc-icons"></i>
+        <div class="asociations-icons">
+            <img src="assets/logo/ACC.png" alt="acc" (click)="navigateToAssociations('acc')" class="acc-img">
+            <img src="assets/logo/SRS.png" alt="src" (click)="navigateToAssociations('srs')" class="srs-img">
         </div>
-    </div>
-</section>
-<!-- <section>
-    <div class="asociations-icons">
-        <img src="assets/logo/ACC.png" alt="acc" (click)="navigateToAssociations('acc')" class="acc-img">
-        <img src="assets/logo/SRS.png" alt="src" (click)="navigateToAssociations('srs')" class="srs-img">
-        <img src="assets/logo/TROGSS.png" alt="trogss" (click)="navigateToAssociations('trogss')" class="trogss-img">
-        <img src="assets/logo/CAMEC.png" alt="camec" (click)="navigateToAssociations('camec')" class="camec-img">
-        <img src="assets/logo/CMC.png" alt="cmc" (click)="navigateToAssociations('cmc')" class="cmc-img">
-        <img src="assets/logo/SPT.png" alt="spt" (click)="navigateToAssociations('spt')" class="spt-img">
-    </div>
-    <div class="procedimiento-info">
-        <h1>¿Cómo es el procedimiento?</h1>
-        <p>
-          El procedimiento de cirugía robótica se realiza mediante un sistema de alta tecnología que permite al cirujano operar con una visión tridimensional de alta definición y movimientos de extrema precisión.
-          Desde una consola especializada, la Dra. Claudia Jaimes controla cada instrumento quirúrgico, dirigiendo cada acción con total exactitud y seguridad.
-        </p>
-        <p>
-          Es importante destacar que la tecnología no reemplaza al cirujano: la cirugía robótica es una herramienta que potencia la experiencia, el criterio médico y la destreza de la Dra. Jaimes, permitiendo resultados más precisos y predecibles.
-          Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.
-        </p>
-        <p>
-          Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.
-        </p>
-    </div>
-</section> -->
+    </section>
+</div>
 
 <app-second-content-component></app-second-content-component>
 <app-thirth-content-component></app-thirth-content-component>
