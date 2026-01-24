@@ -262,4 +262,6 @@
   background-color: rgb(80, 119, 150);
   width: 100%;
   height: 200px;
+  position: relative;
+  top: -200px;
 }
