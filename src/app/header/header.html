@@ -1,18 +1,17 @@
 <nav class="navbar">
-  <div class="menu-hambuger">
+  <div class="menu-left">
     <div class="social-icons">
-      <a href="https://wa.me/573025305555" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
-      <a href="https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-      <a href="https://www.instagram.com/claudiacx.jaimes/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://wa.me/573025305555" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/claudiacx.jaimes/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
-    <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
   </div>
-  <ul class="nav-links" [class.open]="menuOpen">
-    <li><a routerLink="/" routerLinkActive="active" class="active">INICIO</a></li>
-    <li><a routerLink="/about-me" routerLinkActive="active" class="active">PERFIL PROFESIONAL</a></li>
-    <li><a routerLink="/robotic-surgery" routerLinkActive="active" class="active">PROCEDIMIENTOS/CIRUGÍA ROBÓTICA</a></li>
-    <li><a routerLink="/appoiment-form" routerLinkActive="active" class="active">AGENDA TU CITA</a></li>
-    <li style="border: none;"><a routerLink="/articles" routerLinkActive="active" class="active">ARTÍCULOS</a></li>
+
+  <ul class="nav-links">
+    <li><a routerLink="/">INICIO</a></li>
+    <li><a routerLink="/about-me">PERFIL PROFESIONAL</a></li>
+    <li><a routerLink="/robotic-surgery">PROCEDIMIENTOS / CIRUGÍA ROBÓTICA</a></li>
+    <li><a routerLink="/appoiment-form">AGENDA TU CITA</a></li>
+    <li class="no-border"><a routerLink="/articles">ARTÍCULOS</a></li>
   </ul>
 </nav>
-  
