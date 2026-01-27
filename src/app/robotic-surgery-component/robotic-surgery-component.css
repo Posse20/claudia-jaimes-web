@@ -1,0 +1,72 @@
+.hero-card {
+    background-color: #4f708d;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    margin-top: -35px;
+    padding: 0 2rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+
+.section-1 {
+    display: inline-flex;
+    width: 100%;
+}
+
+.sct-1-left {
+    width: 70%;
+    margin-top: -300px;
+    z-index: 1;
+}
+
+.sct-1-right {
+    width: 30%;
+    margin-top: -250px;
+    z-index: 1;
+}
+
+.first-img img {
+    width: 90%;
+    margin-left: 80px;
+    border-radius: 60px;
+    z-index: 1;
+}
+
+.text-1 {
+    width: 50%;
+    background-color: rgb(22, 55, 88);
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-bottom: 30px;
+    padding: 20px 60px;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 20px;
+}
+
+.text-1 p {
+    color: white;
+}
+
+.title-right-sct-1 {
+    margin-left: 50px;
+    text-align: end;
+    margin-right: 30px;
+}
+
+.title-right-sct-1 h1 {
+    font-size: 2.9rem;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(19, 48, 88);
+}
+
+.title-right-sct-1 strong {
+    font-size: 2.9rem;
+    color: white;
+    font-style: normal;
+}
