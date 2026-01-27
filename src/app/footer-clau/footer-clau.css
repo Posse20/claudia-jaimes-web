@@ -1,0 +1,75 @@
+.footer-section {
+    display: inline-flex;
+    width: 100%;
+    background-color: rgb(17, 32, 53);
+}
+
+.left-part {
+    display: inline-flex;
+    width: 50%;
+    padding: 120px 0px 120px 120px;
+}
+
+.logo-clau {
+    width: 30%;
+    text-align: right;
+}
+
+.logo-clau img {
+    width: 80%;
+}
+
+.logo-clau-letras {
+    color: white;
+    width: 70%;
+    margin-left: 20px;
+}
+
+.logo-clau-letras h1 {
+    margin: 0px;
+    font-size: 2.5rem;
+}
+
+.logo-clau-letras p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.right-part {
+    display: inline-flex;
+    width: 50%;
+}
+
+.decorative-lines {
+    width: 20%;
+    display: flex;
+    gap: 4px;
+    height: auto;
+    align-items: center;
+}
+
+.decorative-lines span {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(70, 110, 255, 0.2),
+        rgba(70, 110, 255, 0.9),
+        rgba(70, 110, 255, 0.2)
+    );
+    border-radius: 2px;
+}
+
+.information {
+    width: 80%;
+    margin-top: 100px;
+}
+
+.information p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: italic;
+    color: white;
+}
