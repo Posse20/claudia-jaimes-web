@@ -10,6 +10,40 @@
     }
 }
 
+.left-part {
+    display: inline-flex;
+    width: 50%;
+    padding: 0px 0px 110px 30px;
+}
+
+.logo-clau {
+    width: 30%;
+    text-align: right;
+}
+
+.logo-clau img {
+    width: 80%;
+}
+
+.logo-clau-letras {
+    color: white;
+    width: 70%;
+    margin-left: 20px;
+}
+
+.logo-clau-letras h1 {
+    margin: 0px;
+    font-size: 2.5rem;
+}
+
+.logo-clau-letras p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #1B3562;
+}
+
 
 .asociations-icons {
     background-color: rgb(80, 119, 150);
@@ -34,7 +68,7 @@
 }
 
 .hero-card {
-    background-color: #4f708d;
+    background-color: #507796;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
     margin-top: -35px;
