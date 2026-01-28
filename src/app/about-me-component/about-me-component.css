@@ -95,6 +95,7 @@
     width: 100%;
     min-height: 1000px;
     margin-top: -1000px;
+    margin-bottom: 30px;
     position: relative;
     z-index: -1;
     overflow: hidden;
