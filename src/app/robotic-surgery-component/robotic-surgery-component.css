@@ -150,9 +150,6 @@
     font-style: normal;
 }
 
-.angles-down-1 {
-    transition: transform 0.25s ease;
-}
 .angles-down-1 i{
     color: white;
     margin-left: 30px;
@@ -278,7 +275,6 @@
 .text-1:hover,
 .img-2:hover,
 .img-3:hover,
-.angles-down-1:hover,
 .area-ademas:hover {
     transform: translateY(-4px) scale(1.05);
 }

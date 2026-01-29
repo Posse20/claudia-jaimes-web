@@ -13,7 +13,8 @@ import { FooterClau } from '../footer-clau/footer-clau';
 })
 export class ArticlesComponent implements OnInit {
 
-  protected articles: Article[] = []
+  protected articles: Article[] = [];
+  protected filteredArticles: Article[] = [];
 
   constructor(
     private _articlesService: ArticlesService
@@ -23,8 +24,16 @@ export class ArticlesComponent implements OnInit {
     this._articlesService.getArticles().subscribe({
       next: data => {
         this.articles = data;
+        this.filteredArticles = this.articles;
       }
     })
+  }
+
+  protected _onSearch(event: Event){
+    const value = (event.target as HTMLInputElement).value.toLowerCase();
+
+    this.filteredArticles = this.articles.filter(x => x.name.toLowerCase().includes(value));
+
   }
 
 

@@ -12,6 +12,15 @@
     z-index: 0;
 }
 
+.no-results {
+    text-align: center;
+}
+.no-results h1 {
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.3rem;
+}
 .section-1 {
     width: 100%;
     margin-top: -270px;
