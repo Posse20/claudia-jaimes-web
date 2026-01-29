@@ -10,10 +10,26 @@
     }
 }
 
+/* Section Logo */
+
+.hero-card {
+    background-color: #507796;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    margin-top: -35px;
+    padding: 0 2rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+
 .left-part {
     display: inline-flex;
     width: 50%;
-    padding: 0px 0px 110px 30px;
+    padding-bottom: 140px;
 }
 
 .logo-clau {
@@ -41,7 +57,132 @@
     font-size: 1.3rem;
     font-weight: 700;
     font-style: normal;
-    color: #1B3562;
+    color: #1D3461;
+}
+
+/* Section 1 Left Part */
+
+.section-1 {
+    position: absolute;
+    top: 50%;   /* ajusta esto */
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.left-column {
+    width: 50%;
+    margin-left: 70px;
+}
+
+.lf-1 {
+    display: inline-flex;
+    width: 100%;
+}
+
+.what-is {
+    width: 50%;
+    height: fit-content;
+    background-color: #112034;
+    padding: 20px 20px 30px 20px;
+    border-radius: 50px;
+    transition: transform 0.25s ease;
+}
+
+.what-is h1 {
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2.8rem;
+    margin: 0;
+    width: 45%;
+    padding-left: 20px;
+}
+
+.decorative-lines {
+    width: 55%;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left: -40px;
+    position: relative;
+    display: grid;
+}
+
+.decorative-lines span {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        to bottom,
+        rgba(70, 110, 255, 0.2),
+        rgba(70, 110, 255, 0.9),
+        rgba(70, 110, 255, 0.2)
+    );
+    border-radius: 2px;
+}
+
+.robot-img-1 {
+    width: 50%;
+    margin-left: -100px;
+    margin-top: 100px;
+    z-index: 1;
+    transition: transform 0.25s ease;
+}
+
+.robot-img-1 img {
+    width: 80%;
+    border-radius: 20%;
+}
+
+.robot-img-1:hover,
+.what-is:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Section 2 Left Part */
+
+.lf-2 {
+    width: 50%;
+    background-color: #173759;
+    margin-top: -330px;
+    margin-left: 20px;
+    padding: 40px 30px;
+}
+
+.text-wth-1 {
+    width: 65%;
+}
+
+.text-wth-1 p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Section 3 Left Part */
+
+.lf-3 {
+    width: 50%;
+    margin-left: 20px;
+    background-color: #173759;
+    padding-left: 55px;
+
+}
+
+.robotic-button {
+    background-color: rgb(112, 129, 247);
+    color: white;
+    font-size: 1rem;
+    border-color:  rgb(112, 129, 247);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-style: italic;
+    cursor: pointer;
+    position: relative;
+    width: 320px;
+    z-index: 1;
+    transition: transform 0.25s ease;
 }
 
 
@@ -67,19 +208,7 @@
     z-index: 2;
 }
 
-.hero-card {
-    background-color: #507796;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    margin-top: -35px;
-    padding: 0 2rem;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-}
+
   
 .header-logo {
     display: flex;
@@ -123,17 +252,7 @@
     margin: 0 auto;
 }
 
-.left-column,
-.right-column {
-  flex: 1;
-  display: grid;
-  justify-content: center;   /* centra el contenido interno */
-}
 
-.left-column {
-    position: relative;
-    top: -100px;
-}
 .right-column {
     position: relative;
     top: -170px;
@@ -167,13 +286,13 @@
     margin-bottom: 0;
 }
 
-.decorative-lines {
+/* .decorative-lines {
     gap: 8px;
     margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
     display: grid;
-}
+} */
   
 .line {
     height: 3px;
@@ -252,14 +371,14 @@
     animation: fadeInDown 1.5s ease-out forwards;
 }
 
-.decorative-lines-clau {
+/* .decorative-lines-clau {
     gap: 8px;
     margin-top: 10px;
     margin-bottom: 20px;
     position: relative;
     display: grid;
     position: relative;
-}
+} */
 
 .lines-1  {
     top: -100px;

@@ -53,6 +53,37 @@
   white-space: nowrap;
 }
 
-.nav-links a:hover {
+.nav-links li:not(:first-child) a:hover {
   background: rgb(80, 119, 150);
+}
+
+.nav-links li:not(:first-child) a.active {
+  background: rgb(80, 119, 150);
+}
+
+.nav-links li:first-child a {
+  padding: 0 8px;  /* menos espacio */
+}
+
+.logo-item {
+  border-right: none !important;
+}
+
+.logo-link {
+  padding: 0 10px;
+  background: transparent !important;
+}
+
+.logo-link img {
+  width: auto;
+  height: 40px;
+  display: block;
+}
+
+.logo-link:hover img {
+  transform: scale(1.12);
+}
+
+.logo-link.active {
+  background: transparent !important;
 }

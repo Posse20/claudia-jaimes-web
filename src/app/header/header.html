@@ -8,10 +8,10 @@
   </div>
 
   <ul class="nav-links">
-    <li><a routerLink="/">INICIO</a></li>
-    <li><a routerLink="/about-me">PERFIL PROFESIONAL</a></li>
-    <li><a routerLink="/robotic-surgery">PROCEDIMIENTOS / CIRUGÍA ROBÓTICA</a></li>
-    <li><a routerLink="/appoiment-form">AGENDA TU CITA</a></li>
-    <li class="no-border"><a routerLink="/articles">ARTÍCULOS</a></li>
+    <li class="logo-item"><a routerLink="/" routerLinkActive="active" class="logo-link" title="Inicio"><img src="assets/logos/logo-clau/logo-white.png" alt=""></a></li>
+    <li><a routerLink="/about-me" routerLinkActive="active">PERFIL PROFESIONAL</a></li>
+    <li><a routerLink="/robotic-surgery" routerLinkActive="active">PROCEDIMIENTOS / CIRUGÍA ROBÓTICA</a></li>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">AGENDA TU CITA</a></li>
+    <li class="no-border"><a routerLink="/articles" routerLinkActive="active">ARTÍCULOS</a></li>
   </ul>
 </nav>
