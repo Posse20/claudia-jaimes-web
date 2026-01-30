@@ -437,11 +437,6 @@
     transition: transform 0.25s ease;
 }
 
-.arr-gallery:hover,
-.sct-2-text:hover {
-    transform: translateY(-4px) scale(1.05);
-}
-
 .gallery-section {
     width: 80%;
     background-color: #112034;
@@ -520,4 +515,151 @@
     font-weight: 400;
     font-style: italic;
     font-size: 2.5rem;
+}
+
+.arr-gallery:hover,
+.sct-2-text:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* SECTION 3 */
+
+.section-3 {
+    display: flex;
+    width: 100%;
+}
+
+.medical-office-left-part {
+    width: 55%;
+    background-color: #507796;
+    padding: 50px 20px 100px 20px;
+}
+
+.medical-office-right-part {
+    display: flex;
+    width: 40%;
+}
+
+.medical-office-title {
+    width: 55%;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+    color: white;
+    background-color: #1D3461;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.medical-office-title h1 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.anim-arrow {
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5rem;
+    color: white;
+    width: 10%;
+    margin-left: 450px;
+    margin-top: -55px;
+    transition: transform 0.25s ease;
+}
+
+.main-medical-office {
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.location {
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.loc-icon {
+    width: 15%;
+    color: #112034;
+    font-size: 6rem;
+}
+
+.loc-info {
+    width: 70%;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-style: italic;
+    align-content: center;
+}
+
+.loc-info p {
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+.contact-info {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.contact-info-title {
+    margin-left: 20px;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.contact-info-info {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.others-offices {
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.also-find-me {
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.others-clinics {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #1D3461;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.39);
+    transition: transform 0.25s ease;
+}
+
+.logo-shaio {
+    width: 100%;
+}
+
+.anim-arrow:hover,
+.logo-circle:hover {
+    transform: translateY(-4px) scale(1.05);
 }
