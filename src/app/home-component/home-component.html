@@ -14,33 +14,126 @@
 <section class="section-1">
 
     <div class="left-column">
+
         <div class="lf-1">
-            <div class="what-is">
-                <h1>¿Qué es la cirugía robótica?</h1>
-                <div class="decorative-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="wt-1">
+
+                <div class="what-is">
+                    <h1>¿Qué es la cirugía robótica?</h1>
+                    <div class="decorative-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
+
+                <div class="lf-2">
+                    <div class="text-wth-1">
+                        <p>La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.</p>
+                        <p>A través de un sistema robótico asistido por el cirujano, se logran movimientos más precisos, una mejor visualización del área quirúrgica y un menor impacto en los tejidos.</p>
+                    </div>
+                    <div class="know-more">
+                        <button class="robotic-button" (click)="roboticSurgery()">Conoce más de cirugía robótica dando click aquí <i class="fa-solid fa-angles-right"></i></button>
+                        <p>Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.</p>
+                        <p>Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.</p>
+                    </div>
+                </div>
+
             </div>
             <div class="robot-img-1">
                 <img src="assets/home-imgs/img-1.png" alt="rbt-1">
             </div>
         </div>
-        <div class="lf-2">
-            <div class="text-wth-1">
-                <p>La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.</p>
-                <p>A través de un sistema robótico asistido por el cirujano, se logran movimientos más precisos, una mejor visualización del área quirúrgica y un menor impacto en los tejidos.</p>
+        
+
+        <div class="lf-3">
+            <div class="arr-1-lf3">
+                <i class="fa-solid fa-angles-up"></i>
             </div>
-            <div class="lf-3">
-                <button class="robotic-button" (click)="roboticSurgery()">Conoce más de cirugía robótica dando click aquí.</button>
+            <div class="convenios-title">
+                <h1>Convenios</h1>
+            </div>
+            <div class="convenios">
+                <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas">
+                <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani">
+                <img src="assets/logos/logos-conve/medplus.png" alt="medplus" class="medplus">
+                <img src="assets/logos/logos-conve/unimarly.png" alt="unimarly" class="unimarly">
+                <img src="assets/logos/logos-conve/coomeva.png" alt="coomeva" class="coomeva">
             </div>
         </div>
     </div>
     <div class="right-column">
 
+        <div class="clau">
+            <div class="home-clau-img">
+                <img src="assets/home-imgs/main-clau.png" alt="clau-1">
+            </div>
+            <div class="aboutme-btn">
+                <div class="decora-lines-abtme-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    &nbsp;
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="abtme-btn">
+                    <button class="cta-button" (click)="aboutMe()">Conoce más sobre la Dra. Claudia Jaimes</button>
+                </div>
+            </div>
+            <div class="clau-bio">
+                <p>
+                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
+                    y actual miembro de la Sociedad Mundial de Cirugía Robótica
+                </p>
+                <p>
+                    Cirujana graduada de la Universidad Nacional de Colombia en su especialidad.
+                </p>
+                <p>
+                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander y Docente Universitario.
+                </p>
+                <p>
+                    Miembro del Colegio Médico Colombiano, de la Asociación Colombiana y Panamericana de Trauma, Asociación Colombiana y Latinoamericana de Cirugía
+                </p>
+                <p>
+                    Cirujana Destacada directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
+                </p>
+            </div>
+        </div>
+
+        <div class="como-es">
+            <h1>¿Cómo es el procedimiento?</h1>
+            <p>
+                El procedimiento de cirugía robótica se realiza mediante un sistema de alta tecnología que permite al cirujano operar con una visión tridimensional
+                de alta definición y movimientos de extrema precisión. Desde una consola especializada, la Dra. Claudia Jaimes controla cada instrumento quirúrgico,
+                dirigiendo cada acción con total exactitud y seguridad.
+            </p>
+            <p>
+                Es importante destacar que la tecnología no reemplaza al cirujano: la cirugía robótica es una herramienta que potencia la experiencia,
+                el criterio médico y la destreza de la Dra. Jaimes, permitiendo resultados más precisos y predecibles.
+            </p>
+        </div>
     </div>
 
+</section>
+
+<section class="section-2">
+    <div class="gallery-section">
+        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
+        <div class="gallery-wrapper">
+            <button class="nav-button left" (click)="prevImage()">‹</button>
+            <div class="carrousel">
+                <div class="carrousel-item" *ngFor="let img of visibleImages">
+                    <img [src]="img" alt="Imagen" />
+                </div>
+            </div>
+            <button class="nav-button right" (click)="nextImage()">›</button>
+        </div>
+    </div>
+    <div class="sct-2-text">
+        <h1>Cirugía robótica de alta precisión, pensada en tu bienestar</h1>
+    </div>
 </section>
 
 <!-- <div>

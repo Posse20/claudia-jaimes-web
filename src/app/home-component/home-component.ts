@@ -4,15 +4,18 @@ import { ThirthContentComponent } from './thirth-content-component/thirth-conten
 import { ForthComponent } from './forth-component/forth-component';
 import { FooterComponent } from './footer-component/footer-component';
 import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-component',
-  imports: [SecondContentComponent, ThirthContentComponent, ForthComponent, FooterComponent, RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
 export class HomeComponent {
 
+
+  
   private _router = inject(Router);
   
   images: string[] = [
@@ -21,26 +24,20 @@ export class HomeComponent {
     'assets/imgs-carrousel/carrousel-4.png',
     'assets/imgs-carrousel/carrousel-5.png'
   ];
-  currentIndex = 0;
-  selectedImage: string | null = null;
+  currentIndex = 2;
 
   nextImage() {
-    this.selectedImage = null;
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
   prevImage() {
-    this.selectedImage = null;
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
-  openImage(imageUrl: string): void {
-    console.log(imageUrl);
-    this.selectedImage = imageUrl;
-  }
-
-  closeImage(): void {
-    this.selectedImage = null;
+  get visibleImages(): string[] {
+    const start = this.currentIndex;
+    const end = start + 4;
+    return this.images.concat(this.images).slice(start, end);
   }
 
   goHome(){
