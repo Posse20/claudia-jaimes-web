@@ -149,7 +149,7 @@
         <div class="main-medical-office">
             <div class="location">
                 <div class="loc-icon">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-location-dot" (click)="navigateToAssociations('marly-maps')"></i>
                 </div>
                 <div class="loc-info">
                     <p>Clínica de Marly</p>
@@ -161,7 +161,7 @@
                     <h1>Informacion de Contacto:</h1>
                 </div>
                 <div class="contact-info-info">
-                    <p>Telefono: (+57) 316 931 8999</p>
+                    <p>Teléfono: (+57) 316 931 8999</p>
                     <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
                 </div>
             </div>
@@ -175,18 +175,25 @@
 
             <div class="others-clinics">
                 <div class="logo-circle">
-                    <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio">
+                    <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio" (click)="navigateToAssociations('shaio')">
                 </div>
                 <div class="logo-circle">
-                    <img src="assets/logos/logos-clinics/logo-country.png" alt="">
+                    <img src="assets/logos/logos-clinics/logo-country.png" alt="" (click)="navigateToAssociations('country')">
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="sct-3-right-part">
+    <div class="medical-office-right-part">
 
+        <div class="map-office">
+            <app-google-map></app-google-map>
+        </div>
+
+        <div class="logo-marly">
+            <img src="assets/logos/logos-clinics/logo-marly.png" alt="" class="logo-marly-1" (click)="navigateToAssociations('marly')">
+        </div>
     </div>
 </section>
 

@@ -1,14 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { SecondContentComponent } from './second-content-component/second-content-component';
-import { ThirthContentComponent } from './thirth-content-component/thirth-content-component';
-import { ForthComponent } from './forth-component/forth-component';
-import { FooterComponent } from './footer-component/footer-component';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { GoogleMapComponent } from '../google-map/google-map';
 
 @Component({
   selector: 'app-home-component',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, GoogleMapComponent],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
@@ -54,23 +51,17 @@ export class HomeComponent {
 
   navigateToAssociations(key: string){
     switch (key) {
-      case 'acc':
-        window.open('https://www.ascolcirugia.org', '_blank');
+      case 'shaio':
+        window.open('https://www.shaio.org/', '_blank');
         break;
-      case 'srs':
-        window.open('https://srobotics.org', '_blank');
+      case 'country':
+        window.open('https://www.clinicadelcountry.com/', '_blank');
         break;
-      case 'cmc':
-        window.open('https://colegiomedicocolombiano.org', '_blank');
+      case 'marly-maps':
+        window.open('https://maps.app.goo.gl/riWW6pgFVEfALJEy9', '_blank');
         break;
-      case 'spt':
-        window.open('https://panamtrauma.org', '_blank');
-        break;
-      case 'trogss':
-        window.open('https://trogss.org', '_blank');
-        break;
-      case 'camec':
-        window.open('https://www.camec.co', '_blank');
+      case 'marly':
+        window.open('https://marly.com.co/', '_blank');
         break;
       default:
         break;
