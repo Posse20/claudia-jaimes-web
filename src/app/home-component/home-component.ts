@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GoogleMapComponent } from '../google-map/google-map';
+import { FooterClau } from '../footer-clau/footer-clau';
 
 @Component({
   selector: 'app-home-component',
-  imports: [RouterModule, CommonModule, GoogleMapComponent],
+  imports: [RouterModule, CommonModule, GoogleMapComponent, FooterClau],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
@@ -62,6 +63,48 @@ export class HomeComponent {
         break;
       case 'marly':
         window.open('https://marly.com.co/', '_blank');
+        break;
+      case 'wa':
+        window.open('https://wa.me/573025305555', '_blank');
+        break;
+      case 'linkedin':
+        window.open('https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/', '_blank');
+        break;
+      case 'insta':
+        window.open('https://www.instagram.com/claudiacx.jaimes/', '_blank');
+        break;
+      case 'acc':
+        window.open('https://www.ascolcirugia.org', '_blank');
+        break;
+      case 'srs':
+        window.open('https://srobotics.org', '_blank');
+        break;
+      case 'cmc':
+        window.open('https://colegiomedicocolombiano.org', '_blank');
+        break;
+      case 'trogss':
+        window.open('https://trogss.org', '_blank');
+        break;
+      case 'camec':
+        window.open('https://www.camec.co', '_blank');
+        break;
+      case 'scopah':
+        window.open('https://scopah.com/', '_blank');
+        break;
+      case 'colsanitas':
+        window.open('https://www.colsanitas.com/', '_blank');
+        break;
+      case 'medisani':
+        window.open('https://www.colsanitas.com/nosotros-medisanitas', '_blank');
+        break;
+      case 'medplus':
+        window.open('https://medplus.com.co/', '_blank');
+        break;
+      case 'unimarly':
+        window.open('https://clinicademarlyjorgecaveliergaviria.com.co/unidad-de-servicios-ambulatorios-unimarly/', '_blank');
+        break;
+      case 'coomeva':
+        window.open('https://medicinaprepagada.coomeva.com.co/', '_blank');
         break;
       default:
         break;

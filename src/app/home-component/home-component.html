@@ -54,11 +54,11 @@
                 <h1>Convenios</h1>
             </div>
             <div class="convenios">
-                <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas">
-                <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani">
-                <img src="assets/logos/logos-conve/medplus.png" alt="medplus" class="medplus">
-                <img src="assets/logos/logos-conve/unimarly.png" alt="unimarly" class="unimarly">
-                <img src="assets/logos/logos-conve/coomeva.png" alt="coomeva" class="coomeva">
+                <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas" (click)="navigateToAssociations('colsanitas')">
+                <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani" (click)="navigateToAssociations('medisani')">
+                <img src="assets/logos/logos-conve/medplus.png" alt="medplus" class="medplus" (click)="navigateToAssociations('medplus')">
+                <img src="assets/logos/logos-conve/unimarly.png" alt="unimarly" class="unimarly" (click)="navigateToAssociations('unimarly')">
+                <img src="assets/logos/logos-conve/coomeva.png" alt="coomeva" class="coomeva" (click)="navigateToAssociations('coomeva')">
             </div>
         </div>
     </div>
@@ -137,65 +137,190 @@
 </section>
 
 <section class="section-3">
-    <div class="medical-office-left-part">
+    <div class="contact-clau">
+        <div class="medical-office-left-part">
 
-        <div class="medical-office-title">
-            <h1>Consultorio</h1>
+            <div class="medical-office-title">
+                <h1>Consultorio</h1>
+            </div>
+            <div class="anim-arrow">
+                <i class="fa-solid fa-angles-right"></i>
+            </div>
+
+            <div class="main-medical-office">
+                <div class="location">
+                    <div class="loc-icon">
+                        <i class="fa-solid fa-location-dot" (click)="navigateToAssociations('marly-maps')"></i>
+                    </div>
+                    <div class="loc-info">
+                        <p>Clínica de Marly</p>
+                        <p>Carrera 13 No. 49 -40 Cons. 604B</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-title">
+                        <h1>Informacion de Contacto:</h1>
+                    </div>
+                    <div class="contact-info-info">
+                        <p>Teléfono: (+57) 316 931 8999</p>
+                        <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="others-offices">
+
+                <div class="also-find-me">
+                    <p>También me puedes encontrar en...</p>
+                </div>
+
+                <div class="others-clinics">
+                    <div class="logo-circle">
+                        <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio" (click)="navigateToAssociations('shaio')">
+                    </div>
+                    <div class="logo-circle">
+                        <img src="assets/logos/logos-clinics/logo-country.png" alt="" (click)="navigateToAssociations('country')">
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="anim-arrow">
-            <i class="fa-solid fa-angles-right"></i>
-        </div>
 
-        <div class="main-medical-office">
-            <div class="location">
-                <div class="loc-icon">
-                    <i class="fa-solid fa-location-dot" (click)="navigateToAssociations('marly-maps')"></i>
-                </div>
-                <div class="loc-info">
-                    <p>Clínica de Marly</p>
-                    <p>Carrera 13 No. 49 -40 Cons. 604B</p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-info-title">
-                    <h1>Informacion de Contacto:</h1>
-                </div>
-                <div class="contact-info-info">
-                    <p>Teléfono: (+57) 316 931 8999</p>
-                    <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
-                </div>
-            </div>
-        </div>
+        <div class="medical-office-right-part">
 
-        <div class="others-offices">
-
-            <div class="also-find-me">
-                <p>También me puedes encontrar en...</p>
+            <div class="map-office">
+                <app-google-map></app-google-map>
             </div>
 
-            <div class="others-clinics">
-                <div class="logo-circle">
-                    <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio" (click)="navigateToAssociations('shaio')">
-                </div>
-                <div class="logo-circle">
-                    <img src="assets/logos/logos-clinics/logo-country.png" alt="" (click)="navigateToAssociations('country')">
-                </div>
+            <div class="logo-marly">
+                <img src="assets/logos/logos-clinics/logo-marly.png" alt="" class="logo-marly-1" (click)="navigateToAssociations('marly')">
             </div>
-
         </div>
     </div>
-
-    <div class="medical-office-right-part">
-
-        <div class="map-office">
-            <app-google-map></app-google-map>
+    <div class="social-media">
+        <div class="social-title">
+            <p>Redes Sociales</p>
         </div>
-
-        <div class="logo-marly">
-            <img src="assets/logos/logos-clinics/logo-marly.png" alt="" class="logo-marly-1" (click)="navigateToAssociations('marly')">
+        <div class="social-icons">
+            <div class="social-item">
+                <div class="icon">
+                    <i class="fab fa-whatsapp" (click)="navigateToAssociations('wa')"></i>
+                </div>
+                <div class="icon-info">
+                    <p>(+57) 316 931 8999</p>
+                </div>
+            </div>
+            <div class="social-item">
+                <div class="icon">
+                    <i class="fab fa-linkedin" (click)="navigateToAssociations('linkedin')"></i>
+                </div>
+                <div class="icon-info">
+                    <p>Claudia Viviana Jaimes González</p>
+                </div>
+            </div>
+            <div class="social-item">
+                <div class="icon">
+                    <i class="fab fa-instagram" (click)="navigateToAssociations('insta')"></i>
+                </div>
+                <div class="icon-info">
+                    <p>&#64;claudiacx.jaimes</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<section class="section-4">
+    <div class="form-title">
+        <div class="form-title-title">
+            <p>Solicita tu valoración en el siguiente formulario</p>
+        </div>
+        <div class="form-title-arrow">
+            <i class="fa-solid fa-angles-down"></i>
+        </div>
+    </div>
+
+    <form class="form-sect">
+
+        <div class="form-group">
+            <p>Nombres:</p>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <p>Apellidos:</p>
+            <input type="text">
+        </div>
+
+        <div class="form-group-1">
+            <p>Email:</p>
+            <input type="text">
+            <p>Teléfono:</p>
+            <input type="text">
+        </div>
+
+        <div class="form-group-1">
+            <p>EPS/Aseguradora:</p>
+            <input type="text">
+        </div>
+
+        <div class="form-group-2">
+            <div class="mensaje">
+                <p>Mensaje:</p>
+                <textarea name="" id=""></textarea>
+                <div class="form-send"><button class="form-send-btn">Enviar</button></div>
+                
+            </div>
+            <div class="form-contact">
+                <div class="form-contact-sect">
+                    <div class="form-phone-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="form-phone">
+                        <p>Teléfono:</p>
+                        <p>(+57) 316 931 8999</p>
+                    </div>
+                </div>
+                <div class="form-contact-sect">
+                    <div class="form-phone-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="form-phone">
+                        <p>Correo electrónico</p>
+                        <p>cirugiarobotica.drjaimes&#64;gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="asociations-1">
+        <div class="logo-aso">
+            <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')">
+        </div>
+        <div class="logo-aso logo-aso-1">
+            <img src="assets/logos/logo-aso/TROGSS.png" alt="" (click)="navigateToAssociations('trogss')">
+        </div>        
+        <div class="logo-aso">
+            <img src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
+        </div>
+    </div>
+
+</section>
+
+<section class="section-5">
+    <div class="logo-ACC">
+        <img src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+    </div>
+    <div class="logo-CMC">
+        <img src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
+    </div>
+    <div class="logo-SCOPAH">
+        <img src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
+    </div>
+</section>
+
+<app-footer-clau></app-footer-clau>
+
 
 <!-- <div>
     <section class="main-content">

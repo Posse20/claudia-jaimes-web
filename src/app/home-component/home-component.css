@@ -61,7 +61,7 @@
     color: #1D3461;
 }
 
-/* SECTION 1 LEFT PART*/
+/* SECTION 1 */
 
 /* Part 1 Left Section */
 
@@ -525,14 +525,19 @@
 /* SECTION 3 */
 
 .section-3 {
+    width: 100%;
+}
+
+.contact-clau {
     display: flex;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .medical-office-left-part {
     width: 55%;
     background-color: #507796;
-    padding: 50px 20px 100px 20px;
+    padding: 50px 20px 170px 20px;
 }
 
 .medical-office-title {
@@ -660,7 +665,7 @@
 .medical-office-right-part {
     width: 45%;
     background: linear-gradient(to right, #507796 50%, #1D3461 50%);
-    padding: 20px;
+    padding: 20px 20px 40px 0px;
     min-height: 400px;
     align-items: stretch;
 }
@@ -697,9 +702,326 @@
     width: 80%;
 }
 
+.social-media {
+    background-color: white;
+    padding: 20px 20px 5px 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0 -6px 20px -6px rgba(0, 0, 0, 0.925);
+    margin-top: -70px;
+    z-index: 1;
+    position: relative;
+}
+
+.social-title {
+    background-color: #112034;
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 20%;
+    border-radius: 50px;
+    transition: transform 0.25s ease
+}
+
+.social-title p {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    padding: 10px 20px 10px 30px;
+}
+
+.social-icons {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.social-item {
+    display: flex;
+    width: 100%;
+}
+
+.icon {
+    width: 40%;
+    font-size: 5.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    align-self: center;
+}
+
+.icon-info {
+    width: 100%;
+    align-content: center;
+}
+
+.icon-info p {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 2.3rem;
+}
+
 .anim-arrow:hover,
 .logo-circle:hover,
 .loc-icon:hover,
-.logo-marly:hover {
+.logo-marly:hover,
+.icon:hover,
+.social-title:hover,
+.form-title-arrow:hover,
+.form-send-btn:hover,
+.logo-aso:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* SECTION 4 */
+
+.section-4 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(255, 255, 255, 0.308)), url("/assets/home-imgs/form-bg.png");
+    background-size: 100% auto;
+    /* background-position: center 40%; */
+    background-repeat: no-repeat;
+    height: 290vh;
+    width: 100%;
+}
+
+.form-title {
+    padding: 10px;
+    display: flex;
+    background-color: #173759;
+    width: 35%;
+    justify-self: end;
+}
+
+.form-title-title {
+    padding: 30px 0px 20px 60px;
+    width: 60%;
+}
+
+.form-title-title p {
+    color: white;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.form-title-arrow {
+    width: 20%;
+    text-align: start;
+    font-size: 3.5rem;
+    color: white;
+    align-self: center;
+    margin-left: 15px;
+    margin-top: 20px;
+    transition: transform 0.25s ease;
+}
+
+.form-sect {
+    padding: 30px;
+    background-color: #173759;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 70%;
+    justify-self: end;
+    height: 40%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 0px;
+}
+
+.form-group p {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 85%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(180, 179, 179);
+    color: white;
+}
+
+.form-group-1 {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+
+.form-group-1 p {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+}
+
+.form-group-1 input {
+    width: 35%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(180, 179, 179);
+    color: white;
+}
+
+.form-group-2 {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 30%;
+}
+
+.mensaje {
+    width: 60%;
+}
+
+.mensaje p {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 100;
+    font-style: normal;
+    margin: 10px 0px;
+}
+
+.mensaje textarea {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(180, 179, 179);
+    color: white;
+    width: 90%;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.form-contact {
+    width: 40%;
+    align-content: start;
+    margin-top: 100px;
+}
+
+.form-contact-sect {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-phone-icon {
+    width: 20%;
+    background-color: #112034;
+    border-radius: 50%;
+    margin: 0 20px 0 0;
+    text-align: center;
+    align-content: center;
+}
+
+.form-phone-icon i {
+    color: white;
+    font-size: 3rem;
+    padding: 15px 0;
+}
+
+.form-phone {
+    width: 70%;
+    align-content: center;
+}
+
+.form-phone p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 200;
+    font-style: italic;
+    margin: 0;
+}
+
+.form-send {
+    text-align: end;
+}
+
+.form-send-btn {
+    background-color: #112034;
+    border-color: #112034;
+    padding: 30px 80px;
+    font-size: 1.8rem;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 50px;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.25s ease
+}
+
+.asociations-1 {
+    justify-self: end;
+    width: 40%;
+    background-color: #507796;
+    padding-top: 100px;
+    padding-bottom: 170px;
+}
+
+.logo-aso {
+    text-align: center;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.logo-aso img{
+    width: 40%;
+}
+
+.logo-aso-1 img{
+    width: 70%;
+}
+
+.section-5 {
+    width: 100%;
+    padding: 20px;
+    background-color: #507796;
+    display: flex;
+    text-align: center;
+    height: fit-content;
+    align-items: center;
+}
+
+.logo-ACC{
+    width: 45%;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.logo-CMC{
+    width: 45%;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.logo-CMC img {
+    width: 75%;
+}
+
+
+.logo-SCOPAH {
+    width: 40%;
+    text-align: start;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.logo-SCOPAH img {
+    width: 60%;
+}
+
+.logo-ACC:hover,
+.logo-CMC:hover,
+.logo-SCOPAH:hover {
     transform: translateY(-4px) scale(1.05);
 }
