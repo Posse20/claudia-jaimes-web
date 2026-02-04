@@ -18,9 +18,24 @@ export class HomeComponent {
   
   images: string[] = [
     'assets/imgs-carrousel/carrousel-1.png',
+    'assets/imgs-carrousel/carrousel-13.jpg',
+    'assets/imgs-carrousel/carrousel-10.jpg',
     'assets/imgs-carrousel/carrousel-3.png',
+    'assets/imgs-carrousel/carrousel-7.jpg',
+    'assets/imgs-carrousel/carrousel-8.jpg',
     'assets/imgs-carrousel/carrousel-4.png',
-    'assets/imgs-carrousel/carrousel-5.png'
+    'assets/imgs-carrousel/carrousel-11.jpg',
+    'assets/imgs-carrousel/carrousel-12.jpg',
+    'assets/imgs-carrousel/carrousel-5.png',
+    'assets/imgs-carrousel/carrousel-14.jpg',
+    'assets/imgs-carrousel/carrousel-15.jpg',
+    'assets/imgs-carrousel/carrousel-6.png',
+    'assets/imgs-carrousel/carrousel-9.png',
+    'assets/imgs-carrousel/carrousel-16.jpg',
+    'assets/imgs-carrousel/carrousel-17.png',
+    'assets/imgs-carrousel/carrousel-18.png',
+    'assets/imgs-carrousel/carrousel-19.png',
+    'assets/imgs-carrousel/carrousel-20.jpg'
   ];
   currentIndex = 2;
 
