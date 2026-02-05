@@ -31,6 +31,7 @@
 
 .title-1 {
     display: inline-flex;
+    margin-bottom: 30px;
 }
 
 .abt-me-1 p{
@@ -60,7 +61,7 @@
 
 .perfil-prof-info{
     position: relative;
-    margin-left: 300px;
+    margin-left: 250px;
     margin-top: 20px;
 }
 
