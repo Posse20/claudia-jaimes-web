@@ -137,8 +137,30 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit(event: Event) {
-    event.preventDefault(); // evita recarga
-  this.showToast = true
+    event.preventDefault();
+
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        this.showToast = true;
+        form.reset();
+
+        // ocultar toast después de 3s
+        setTimeout(() => {
+          this.showToast = false;
+        }, 3000);
+      })
+      .catch(() => {
+        alert("Error al enviar el formulario");
+      });
 
   }
 }
