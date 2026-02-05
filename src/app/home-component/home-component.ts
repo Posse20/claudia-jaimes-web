@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GoogleMapComponent } from '../google-map/google-map';
@@ -10,7 +10,22 @@ import { FooterClau } from '../footer-clau/footer-clau';
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+
+  ngOnInit(): void {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('success') === 'true') {
+      this.showToast = true;
+
+      // opcional: limpiar la URL
+      setTimeout(() => {
+        this.showToast = false;
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }, 4000);
+    }
+  }
 
 
   
@@ -128,25 +143,4 @@ export class HomeComponent {
     }
   }
 
-  onSubmit(event: Event) {
-    event.preventDefault();
-
-    const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    fetch('/', {
-      method: 'POST',
-      body: formData
-    }).then(() => {
-      this.showToast = true;
-      form.reset();
-
-      setTimeout(() => {
-        this.showToast = false;
-      }, 3000);
-    }).catch(() => {
-      alert('Error')
-    });
-
-  }
 }

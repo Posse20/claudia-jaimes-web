@@ -244,8 +244,9 @@
         class="form-sect"
         name="contact"
         method="post"
+        action="/?success=true"
+        netlify-honeypot="bot-field"
         data-netlify="true"
-        (ngSubmit)="onSubmit($event)"
     >
 
         <input type="hidden" name="form-name" value="contact" />
