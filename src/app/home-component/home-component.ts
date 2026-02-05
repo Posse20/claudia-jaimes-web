@@ -14,17 +14,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const params = new URLSearchParams(window.location.search);
 
-    if (params.get('success') === 'true') {
-      this.showToast = true;
-
-      // opcional: limpiar la URL
-      setTimeout(() => {
-        this.showToast = false;
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }, 4000);
-    }
   }
 
 
