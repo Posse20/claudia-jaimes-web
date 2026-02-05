@@ -15,6 +15,8 @@ export class HomeComponent {
 
   
   private _router = inject(Router);
+
+  protected showToast = false;
   
   images: string[] = [
     'assets/imgs-carrousel/carrousel-1.png',
@@ -124,5 +126,27 @@ export class HomeComponent {
       default:
         break;
     }
+  }
+
+  onSubmit(event: Event) {
+    event.preventDefault();
+
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      body: formData
+    }).then(() => {
+      this.showToast = true;
+      form.reset();
+
+      setTimeout(() => {
+        this.showToast = false;
+      }, 3000);
+    }).catch(() => {
+      alert('Error')
+    });
+
   }
 }

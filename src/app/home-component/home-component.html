@@ -240,34 +240,42 @@
         </div>
     </div>
 
-    <form class="form-sect">
+    <form 
+        class="form-sect"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        (ngSubmit)="onSubmit($event)"
+    >
+
+        <input type="hidden" name="form-name" value="contact" />
 
         <div class="form-group">
             <p>Nombres:</p>
-            <input type="text">
+            <input type="text" name="nombres">
         </div>
         <div class="form-group">
             <p>Apellidos:</p>
-            <input type="text">
+            <input type="text" name="apellidos">
         </div>
 
         <div class="form-group-1">
             <p>Email:</p>
-            <input type="text">
+            <input type="email" name="email">
             <p>Teléfono:</p>
-            <input type="text">
+            <input type="text" name="telefono">
         </div>
 
         <div class="form-group-1">
             <p>EPS/Aseguradora:</p>
-            <input type="text">
+            <input type="text" name="eps">
         </div>
 
         <div class="form-group-2">
             <div class="mensaje">
                 <p>Mensaje:</p>
-                <textarea name="" id=""></textarea>
-                <div class="form-send"><button class="form-send-btn">Enviar</button></div>
+                <textarea name="mensaje"></textarea>
+                <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
                 
             </div>
             <div class="form-contact">
@@ -291,6 +299,29 @@
                 </div>
             </div>
         </div>
+    </form>
+
+    <!-- TOASTER -->
+    <div class="toast" *ngIf="showToast">
+        Mensaje enviado correctamente
+    </div>
+
+    <!-- Formulario oculto que necesita Netlify Forms para relacionar el formulario -->
+
+    <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        hidden
+    >
+        <input type="hidden" name="form-name" value="contact"/>
+
+        <input type="text" name="nombres"/>
+        <input type="text" name="apellidos"/>
+        <input type="email" name="email"/>
+        <input type="text" name="telefono">
+        <input type="text" name="eps">
+        <textarea name="mensaje"></textarea>
     </form>
 
     <div class="asociations-1">
