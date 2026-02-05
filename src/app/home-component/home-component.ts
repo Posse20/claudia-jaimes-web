@@ -143,4 +143,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  onSubmit(event: Event) {
+    event.preventDefault(); // evita recarga
+  this.showToast = true
+
+  }
 }
