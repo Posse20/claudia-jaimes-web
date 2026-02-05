@@ -225,7 +225,7 @@
     margin-top: 80px;
     margin-left: 0px;
     margin-bottom: 20px;
-    padding-bottom: 50px;
+    padding: 10px 20px 50px 20px;
 }
 
 .arr-1-lf3 {
@@ -905,6 +905,8 @@
     width: 90%;
     margin-top: 10px;
     height: 100%;
+    font-family: 'Creato Display';
+    font-size: 1.2rem;
 }
 
 .form-contact {
@@ -1112,5 +1114,49 @@
 
     .logo-clau-letras {
         margin-top: 20px;
+    }
+}
+
+@media(max-width: 1280px) {
+    .robot-img-1 {
+        width: 60%;
+        margin-left: 10px;
+    }
+
+    .text-wth-1 {
+        width: 65%;
+    }
+
+    .colsanitas {
+        width: 80%;
+    }
+
+    .medplus {
+        padding: 0 40px;
+    }
+
+    .sct-2-text {
+        margin-left: 650px;
+    }
+
+    .sct-2-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .anim-arrow {
+        margin-left: 370px;
+    }
+
+    .icon-info p {
+        font-size: 1.9rem;
+    }
+
+    .form-sect {
+        height: 50%;
+    }
+
+    .section-4 {
+        height: 400vh;
+        background-size: 140% auto;
     }
 }

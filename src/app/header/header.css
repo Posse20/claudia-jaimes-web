@@ -78,10 +78,16 @@
   width: auto;
   height: 40px;
   display: block;
+  transition: transform 0.25s ease;
 }
 
-.logo-link:hover img {
-  transform: scale(1.12);
+.social-ic {
+  transition: transform 0.25s ease;
+}
+
+.logo-link:hover img,
+.social-ic:hover {
+  transform: translateY(-4px) scale(1.05);
 }
 
 .logo-link.active {

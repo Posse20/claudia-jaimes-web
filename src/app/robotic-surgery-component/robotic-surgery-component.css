@@ -412,3 +412,12 @@
     }
 
 }
+
+@media(max-width: 1280px) {
+    .robotic-container {
+        margin-top: -250px;
+    }
+    .benefits {
+        margin-top: -60px;
+    }
+}
