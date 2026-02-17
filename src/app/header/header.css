@@ -3,7 +3,7 @@
   align-items: center;
   background: rgb(112, 129, 247);
   padding: 0px 20px 30px 20px;
-  height: 70px;
+  height: 100px;
 }
 
 .menu-left {
@@ -92,4 +92,110 @@
 
 .logo-link.active {
   background: transparent !important;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.mobile-socials {
+  display: none;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px 30px 20px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  /* Ocultamos redes */
+  .menu-left {
+    display: none;
+  }
+
+  /* Hamburguesa visible y a la DERECHA */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Menú mobile */
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    background: rgb(112, 129, 247);
+    margin-top: 20px;
+    display: none;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .nav-links a {
+    justify-content: center;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  /* Mostrar menú */
+  #menu-toggle:checked + .hamburger + .menu-left + .nav-links {
+    display: flex;
+  }
+
+    /* Redes dentro del menú mobile */
+  #menu-toggle:checked + .hamburger + .menu-left + .nav-links + .mobile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 0;
+    background: rgb(112, 129, 247);
+  }
+
+  .mobile-socials i {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .logo-item  img{
+    justify-content: center;
+    padding-bottom: 20px;
+    display: none;
+  }
+
+  .logo-mobile{
+    display: contents;
+  }
+  .logo-mobile img {
+    width: 20%;
+  }
+  .logo-mobile p{
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+
 }

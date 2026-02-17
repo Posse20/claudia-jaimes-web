@@ -73,3 +73,46 @@
     font-style: italic;
     color: white;
 }
+
+
+@media (max-width: 768px) {
+
+    .footer-section {
+        padding: 10px 0px;
+    }
+
+    .left-part {
+        padding: 10px;
+        width: 60%;
+    }
+
+    .logo-clau {
+        width: 40%;
+        text-align: center;
+    }
+
+    .logo-clau-letras {
+        margin-left: 0;
+        width: 60%;
+    }
+
+    .logo-clau-letras h1 {
+        font-size: 1rem;
+    }
+
+    .logo-clau-letras p {
+        font-size: 0.5rem;
+    }
+
+    .right-part {
+        width: 40%;
+    }
+    .information {
+        margin-top: 10px;
+    }
+
+    .information p {
+        font-size: 0.4rem;
+    }
+
+}

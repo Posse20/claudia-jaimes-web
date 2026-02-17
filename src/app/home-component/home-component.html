@@ -118,7 +118,132 @@
 
 </section>
 
+<section class="section-1-mobile">
+    <div class="first-column">
+        <div class="clau">
+            <div class="home-clau-img">
+                <img src="assets/home-imgs/main-clau.png" alt="clau-1">
+            </div>
+            <div class="aboutme-btn">
+                <div class="decora-lines-abtme-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    &nbsp;
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="abtme-btn">
+                    <button class="cta-button" (click)="aboutMe()">Conoce más sobre la Dra. Claudia Jaimes</button>
+                </div>
+            </div>
+            <div class="clau-bio">
+                <p>
+                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
+                    y actual miembro de la Sociedad Mundial de Cirugía Robótica
+                    &nbsp;
+                    Cirujana graduada de la Universidad Nacional de Colombia en su especialidad.
+                    &nbsp;
+                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander y Docente Universitario.
+                    &nbsp;
+                    Miembro del Colegio Médico Colombiano, de la Asociación Colombiana y Panamericana de Trauma, Asociación Colombiana y Latinoamericana de Cirugía
+                    &nbsp;
+                    Cirujana Destacada directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
+                </p>
+            </div>
+        </div>
+        <div class="convenios-mobile">
+            <div class="lf-3">
+                <div class="convenios-title">
+                    <p>Convenios</p>
+                </div>
+                <div *ngIf="showAllBenefits" class="convenios">
+                    <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas" (click)="navigateToAssociations('colsanitas')">
+                    <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani" (click)="navigateToAssociations('medisani')">
+                    <img src="assets/logos/logos-conve/medp.png" alt="medplus" class="medplus" (click)="navigateToAssociations('medplus')">
+                    <img src="assets/logos/logos-conve/unimarly.png" alt="unimarly" class="unimarly" (click)="navigateToAssociations('unimarly')">
+                    <img src="assets/logos/logos-conve/coomeva.png" alt="coomeva" class="coomeva" (click)="navigateToAssociations('coomeva')">
+                </div>
+                <div *ngIf="!showAllBenefits" class="convenios">
+                    <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas" (click)="navigateToAssociations('colsanitas')">
+                    <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani" (click)="navigateToAssociations('medisani')">
+                </div>
+            </div>
+            <div class="arr-2-lf3">
+                <p *ngIf="!showAllBenefits">Ver más</p>
+                <p *ngIf="showAllBenefits">Ver menos</p>
+                <i *ngIf="!showAllBenefits" class="fa-solid fa-angles-down" (click)="toggleConven()"></i>
+                <i *ngIf="showAllBenefits" class="fa-solid fa-angles-up" (click)="toggleConven()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="second-column">
+        <div class="lf-1">
+            <div class="wt-1">
+
+                <div class="what-is">
+                    <h1>¿Qué es la cirugía robótica?</h1>
+                    <div class="decorative-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="lf-2">
+                    <div class="text-wth-1">
+                        <p>La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.</p>
+                        <p>A través de un sistema robótico asistido por el cirujano, se logran movimientos más precisos, una mejor visualización del área quirúrgica y un menor impacto en los tejidos.</p>
+                    </div>
+                    <div class="know-more">
+                        <button class="robotic-button" (click)="roboticSurgery()">Conoce más de cirugía robótica dando click aquí</button>
+                        <p>Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.</p>
+                        <p>Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="robot-img-1">
+                <img src="assets/home-imgs/img-1.png" alt="rbt-1">
+            </div>
+        </div>
+    </div>
+    <div class="column-three">
+        <div class="como-es">
+            <h1>¿Cómo es el procedimiento?</h1>
+            <p>
+                El procedimiento de cirugía robótica se realiza mediante un sistema de alta tecnología que permite al cirujano operar con una visión tridimensional
+                de alta definición y movimientos de extrema precisión. Desde una consola especializada, la Dra. Claudia Jaimes controla cada instrumento quirúrgico,
+                dirigiendo cada acción con total exactitud y seguridad.
+            </p>
+            <p>
+                Es importante destacar que la tecnología no reemplaza al cirujano: la cirugía robótica es una herramienta que potencia la experiencia,
+                el criterio médico y la destreza de la Dra. Jaimes, permitiendo resultados más precisos y predecibles.
+            </p>
+        </div>
+    </div>
+</section>
+
 <section class="section-2">
+    <div class="gallery-section">
+        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
+        <div class="gallery-wrapper">
+            <button class="nav-button left" (click)="prevImage()">‹</button>
+            <div class="carrousel">
+                <div class="carrousel-item" *ngFor="let img of visibleImages">
+                    <img [src]="img" alt="Imagen" />
+                </div>
+            </div>
+            <button class="nav-button right" (click)="nextImage()">›</button>
+        </div>
+    </div>
+    <div class="sct-2-text">
+        <h1>Cirugía robótica de alta precisión, pensada en tu bienestar</h1>
+    </div>
+</section>
+
+<section class="section-2-mobile">
     <div class="gallery-section">
         <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
         <div class="gallery-wrapper">
@@ -230,6 +355,210 @@
     </div>
 </section>
 
+<section class="section-3-mobile">
+    <div class="medical-office-title">
+        <h1>Consultorio</h1>
+        <i class="fa-solid fa-angles-right"></i>
+    </div>
+    <div class="main-medical-office">
+        <div class="location">
+            <div class="loc-icon">
+                <i class="fa-solid fa-location-dot" (click)="navigateToAssociations('marly-maps')"></i>
+            </div>
+            <div class="loc-info">
+                <p>Clínica de Marly</p>
+                <p>Carrera 13 No. 49 -40 Cons. 604B</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div class="contact-info-title">
+                <p>Informacion de Contacto:</p>
+            </div>
+            <div class="contact-info-info">
+                <p>Teléfono: (+57) 316 931 8999</p>
+                <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-3-1-mobile">
+    <div class="also-find-me">
+        <p>También me puedes encontrar en...</p>
+    </div>
+</section>
+
+<section class="section-3-2-mobile">
+
+    <div class="mb-of-left">
+        <div class="mb-sh">
+            <div class="logo-circle">
+                <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio" (click)="navigateToAssociations('shaio')">
+            </div>
+        </div>
+
+        <div class="mb-cont">
+            <div class="logo-circle">
+                <img src="assets/logos/logos-clinics/logo-country.png" alt="" class="logo-cunt" (click)="navigateToAssociations('country')">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mb-of-right">
+        <div class="map-office">
+            <app-google-map></app-google-map>
+        </div>
+        <div class="logo-marly">
+            <img src="assets/logos/logos-clinics/logo-marly.png" alt="" class="logo-marly-1" (click)="navigateToAssociations('marly')">
+        </div>
+    </div>
+
+</section>
+
+<section class="section-3-3-mobile">
+    <div class="social-title">
+        <p>Redes Sociales</p>
+    </div>
+    <div class="social-icons">
+        <div class="social-item">
+            <div class="icon">
+                <i class="fab fa-whatsapp" (click)="navigateToAssociations('wa')"></i>
+            </div>
+            <div class="icon-info">
+                <p>(+57) 316 931 8999</p>
+            </div>
+        </div>
+        <div class="social-item">
+            <div class="icon">
+                <i class="fab fa-linkedin" (click)="navigateToAssociations('linkedin')"></i>
+            </div>
+            <div class="icon-info">
+                <p>Claudia Viviana Jaimes González</p>
+            </div>
+        </div>
+        <div class="social-item">
+            <div class="icon">
+                <i class="fab fa-instagram" (click)="navigateToAssociations('insta')"></i>
+            </div>
+            <div class="icon-info">
+                <p>&#64;claudiacx.jaimes</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-4-mobile">
+    <div class="form-title">
+        <div class="form-title-title">
+            <p>Solicita tu valoración en el siguiente formulario</p>
+        </div>  
+    </div>
+    <form 
+        class="form-sect"
+        name="contact"
+        method="post"
+        (submit)="onSubmit($event)"
+    >
+
+        <input type="hidden" name="form-name" value="contact" />
+
+
+        <div class="form-group">
+            <p>Nombres:</p>
+            <input type="text" name="nombres">
+        </div>
+        <div class="form-group">
+            <p>Apellidos:</p>
+            <input type="text" name="apellidos">
+        </div>
+
+        <div class="form-group-1">
+            <p>Email:</p>
+            <input type="email" name="email">
+            <p>Teléfono:</p>
+            <input type="text" name="telefono">
+        </div>
+
+        <div class="form-group-1">
+            <p>EPS/Aseguradora:</p>
+            <input type="text" name="eps">
+        </div>
+
+        <div class="form-group-2">
+            <div class="mensaje">
+                <p>Mensaje:</p>
+                <textarea name="mensaje"></textarea>
+                
+            </div>
+            <div class="form-contact">
+                <div class="form-contact-sect">
+                    <div class="form-phone-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="form-phone">
+                        <p>Teléfono:</p>
+                        <p>(+57) 316 931 8999</p>
+                    </div>
+                </div>
+                <div class="form-contact-sect">
+                    <div class="form-phone-icon">
+                        <i class="fa-solid fa-envelope" style="padding: 10px;"></i>
+                    </div>
+                    <div class="form-phone">
+                        <p>Correo electrónico</p>
+                        <p>cirugiarobotica.drjaimes&#64;gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
+        </div>
+    </form>
+
+</section>
+
+<section class="section-4-1-mobile">
+
+    <div class="mb-aso">
+        <div class="mb-aso-1">
+            <p>Asociaciones</p>
+        </div>
+        <div class="mb-aso-arr">
+            <i class="fa-solid fa-angles-down" ></i>
+        </div>
+        <div class="mb-logo-aso">
+            <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')" class="mb-logo-srs">
+        </div>
+        <div class="mb-logo-aso">
+            <img style="width: 100%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+        </div>
+        <div class="mb-logo-aso">
+            <img style="width: 100%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
+        </div>
+        <div class="mb-logo-aso">
+            <img style="width: 80%;" src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
+        </div>
+        <div class="mb-logo-aso">
+            <img style="width: 100%;" src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
+        </div>
+        <div class="mb-logo-aso">
+            <img style="width: 100%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
+        </div>
+    </div>
+
+    <div class="mb-clau-aso">
+        <div class="clau-img-mb">
+            <img src="assets/home-imgs/clau-3.jpg" alt="">
+        </div>
+        <div class="clau-img-mb">
+            <img src="assets/home-imgs/clau-2.png" alt="">
+        </div>
+    </div>
+
+</section>
+
 <section class="section-4">
     <div class="form-title">
         <div class="form-title-title">
@@ -275,7 +604,6 @@
             <div class="mensaje">
                 <p>Mensaje:</p>
                 <textarea name="mensaje"></textarea>
-                <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
                 
             </div>
             <div class="form-contact">
@@ -299,6 +627,9 @@
                 </div>
             </div>
         </div>
+        <div>
+            <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
+        </div>
     </form>
 
     <!-- TOASTER -->
@@ -307,108 +638,37 @@
     </div>
 
     <div class="asociations-1">
-        <div class="logo-aso">
-            <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')">
+        <div class="aso-bg-1" style="padding-bottom: 2.5rem;">
+            <div class="logo-aso-1">
+                <img style="width: 30%;" src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
+            </div>
+            <div class="logo-aso-2">
+                <img style="width: 100%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
+            </div>
         </div>
-        <div class="logo-aso logo-aso-1">
-            <img src="assets/logos/logo-aso/TROGSS.png" alt="" (click)="navigateToAssociations('trogss')">
-        </div>        
-        <div class="logo-aso">
-            <img src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
+
+        <div class="aso-bg">
+            <div class="aso-title">
+                <p>Asociaciones</p>
+                <div class="form-title-arrow">
+                    <i class="fa-solid fa-angles-down"></i>
+                </div>
+            </div>
+            <div class="logo-aso pt-5">
+                <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')">
+            </div>
+            <div class="logo-aso logo-aso-1 pt-5">
+                <img style="width: 100%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
+            </div>
+            <div class="logo-aso" style="padding-top: 4rem; padding-bottom: 3rem;">
+                <img style="width: 100%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+            </div>
+            <div class="logo-aso pt-4 pb-1">
+                <img style="width: 100%;" src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
+            </div>
         </div>
     </div>
 
-</section>
-
-<section class="section-5">
-    <div class="logo-ACC">
-        <img src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
-    </div>
-    <div class="logo-CMC">
-        <img src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
-    </div>
-    <div class="logo-SCOPAH">
-        <img src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
-    </div>
 </section>
 
 <app-footer-clau></app-footer-clau>
-
-
-<!-- <div>
-    <section class="main-content">
-        <div class="left-column">
-            <div class="info-box">
-                <h1>¿Qué es la cirugía robótica?</h1>
-
-                <div class="decorative-lines">
-                    <div class="line short"></div>
-                    <div class="line medium"></div>
-                    <div class="line long"></div>
-                </div>
-
-                <div class="img-robotic-wrapper">
-                    <div class="robot-anim">
-                        <img src="assets/home-imgs/img-1.png" alt="img1" class="robot-img"/>
-                    </div>
-                </div>
-            </div>
-            <div class="content-parraf">
-                <div class="parraf-1">
-                    <p>
-                        La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.
-                    </p>
-                    <p>
-                        A través de un sistema robótico asistido por el cirujano, se logran movimientos más exactos, mejor visualización del área quirúrgica y menor impacto en los tejidos.
-                    </p>
-                </div>
-                <div class="btn-robotic-info">
-                    <button class="robotic-button" (click)="roboticSurgery()">Conoce más de cirugía robótica dando click aquí.</button>
-                </div>
-                <div class="parraf-2">
-                    <p>
-                        Aunque se denomina “robótica”, el procedimiento siempre es controlado por el cirujano, quien dirige cada movimiento con total precisión.
-                    </p>
-                    <p>
-                        Cada caso se estudia de forma personalizada, teniendo en cuenta el diagnóstico, el estado de salud y las necesidades específicas del paciente.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="right-column">
-            <div class="content-clau">
-                <div  class="clau-img-anim">
-                    <img src="assets/home-imgs/main-clau.png" alt="main-img" style="border-top-right-radius: 8px; border-top-left-radius: 8px;">
-                </div>
-                <div class="decorative-lines-clau lines-1">
-                    <div class="line-clau"></div>
-                    <div class="line-clau"></div>
-                    <div class="line-clau"></div>
-                </div>
-                <div class="decorative-lines-clau lines-2">
-                    <div class="line-clau"></div>
-                    <div class="line-clau"></div>
-                    <div class="line-clau"></div>
-                </div>
-                <button class="cta-button" (click)="aboutMe()">Conoce más sobre la Dra. Claudia Jaimes</button>
-                <p>
-                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci,
-                    con formación internacional en el Memorial Hermann Hospital de Houston, Estados Unidos.
-                    Es miembro de la Sociedad Mundial de Cirugía Robótica y egresada de la Universidad Nacional de Colombia.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <i class="fa-solid fa-angles-up arrow-asc-icons"></i>
-        <div class="asociations-icons">
-            <img src="assets/logo/ACC.png" alt="acc" (click)="navigateToAssociations('acc')" class="acc-img">
-            <img src="assets/logo/SRS.png" alt="src" (click)="navigateToAssociations('srs')" class="srs-img">
-        </div>
-    </section>
-</div>
-
-<app-second-content-component></app-second-content-component>
-<app-thirth-content-component></app-thirth-content-component>
-<app-forth-component></app-forth-component>
-<app-footer-component></app-footer-component> -->

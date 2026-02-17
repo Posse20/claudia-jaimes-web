@@ -126,7 +126,7 @@
     content: "";
     position: absolute;
     inset: 0px -25px -25px 0px;
-    background-color: rgb(29,52,96);
+    background-color: #1D3461;
     border-radius: 20px;
     z-index: 1;
 }
@@ -140,7 +140,7 @@
 }
 
 .atr-btn {
-    margin-left: 150px;
+    margin-left: 80px;
     margin-top: 50px;
     transition: transform 0.25s ease;
 }
@@ -152,7 +152,6 @@
     font-weight: 400;
     font-style: italic;
     cursor: pointer;
-    width: 300px;
     font-size: xx-large;
 }
 
@@ -307,6 +306,10 @@
     color: white;
 }
 
+.mb-abt-me-1 {
+    display: none;
+}
+
 
 @media (min-width: 1640px) {
     .inf-section {
@@ -348,4 +351,146 @@
     .atr-btn {
         margin-left: 50px;
     }
+}
+
+@media (max-width: 768px) {
+
+    .hero-card, .inf-section, .inf-section-img {
+        display: none;
+    }
+
+    .mb-abt-me-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -20px;
+        background-color: #507796;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .abt-me-img-1 {
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    .perfil-prof {
+        margin: 0;
+        align-self: end;
+        margin-top: -200px;
+    }
+
+    .title-1 {
+        margin-bottom: 20px;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .abt-me-arrw-1 {
+        position: relative;
+        font-size: 1.5rem;
+        margin-left: 0px;
+        z-index: 1;
+        color: white;
+        margin-top: 0px;
+        top: 10px;
+    }
+
+    .perfil-prof-info {
+        margin-left: 60px;
+        margin-top: 0px;
+    }
+
+    .perfil-prof-info label {
+        font-size: 1rem;
+    }
+
+    .abt-me-1{
+        border-radius: 20px;
+        margin-left: 0px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .abt-me-1 p {
+        font-size: 0.5rem;
+    }
+
+    .title-2 {
+        margin-left:  0px;
+        width: 100%;
+    }
+
+    .title-2 h1 {
+        width: 60%;
+        font-size: 2rem;
+        justify-self: end;
+        margin-right: 20px;
+    }
+
+    .insta-badge {
+        padding-right:  0px;
+        margin: 0;
+        margin-top: 150px;
+    }
+
+    .insta-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .insta-icon i {
+        font-size: 1.6rem;
+    }
+
+    .insta-user {
+        font-size: 0.6rem;
+        margin-left: -10px;
+    }
+
+    .video-1 video {
+        width: 200px;
+        height: 350px;
+    }
+
+    .column-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #173759;
+        padding: 10px;
+        z-index: 1;
+        padding-bottom: 40px;
+    }
+
+    .mb-col-2-clau {
+        width: 60%;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+    .mb-col-2-clau img {
+        width: 80%;
+    }
+
+    .atr-btn {
+        margin-top: 20px;
+        margin-left: 80px;
+    }
+
+    .articles-btn {
+        padding: 5px 20px 5px 20px;
+        font-size: 1.2rem;
+        background-color: #112034;
+    }
+
 }

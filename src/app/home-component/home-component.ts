@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   private _router = inject(Router);
 
   protected showToast = false;
+
+  protected showAllBenefits = false;
   
   images: string[] = [
     'assets/imgs-carrousel/carrousel-1.png',
@@ -54,6 +56,7 @@ export class HomeComponent implements OnInit {
   }
 
   prevImage() {
+    console.log('a');
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
@@ -162,5 +165,9 @@ export class HomeComponent implements OnInit {
         alert("Error al enviar el formulario");
       });
 
+  }
+
+  toggleConven() {
+    this.showAllBenefits = !this.showAllBenefits;
   }
 }
