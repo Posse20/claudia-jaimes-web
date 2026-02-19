@@ -74,8 +74,40 @@
     color: white;
 }
 
+@media(max-width: 1026px) {
 
-@media (max-width: 768px) {
+    .footer-section{
+        padding-top: 15px;
+    }
+    .left-part {
+        padding: 5px;
+        padding-right: 30px;
+    }
+
+    .logo-clau {
+        width: 40%;
+    }
+
+    .logo-clau-letras {
+        width: 60%;
+    }
+
+    .logo-clau-letras h1 {
+        font-size: 1.6rem;
+    }
+    .logo-clau-letras p {
+        font-size: 0.8rem;
+    }
+    .information{
+        margin-top: 0;
+        padding: 10px;
+    }
+    .information p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 450px) {
 
     .footer-section {
         padding: 10px 0px;

@@ -29,7 +29,7 @@
 
                 <div class="lf-2">
                     <div class="text-wth-1">
-                        <p>La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.</p>
+                        <p class="text-wth-1-p">La cirugía robótica es una técnica quirúrgica avanzada que permite realizar procedimientos con mayor precisión, control y seguridad.</p>
                         <p>A través de un sistema robótico asistido por el cirujano, se logran movimientos más precisos, una mejor visualización del área quirúrgica y un menor impacto en los tejidos.</p>
                     </div>
                     <div class="know-more">
@@ -419,7 +419,12 @@
 
     <div class="mb-of-right">
         <div class="map-office">
-            <app-google-map></app-google-map>
+            <app-google-map
+                [lat]="4.636849617999522"
+                [lng]="-74.0650520876891"
+                [title]="'Consultorio Marly'"
+                [content]="_content"
+            ></app-google-map>
         </div>
         <div class="logo-marly">
             <img src="assets/logos/logos-clinics/logo-marly.png" alt="" class="logo-marly-1" (click)="navigateToAssociations('marly')">

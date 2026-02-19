@@ -163,7 +163,34 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media(max-width: 1026px) {
+
+    .section-1 {
+        width: 100%;
+        margin-top: -350px;
+        margin-left: 100px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .buscador {
+        width: 80%;
+    }
+
+    .link a {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        word-break: break-all;
+    }
+
+}
+
+@media (max-width: 450px) {
     .section-1 {
         display: none;
     }

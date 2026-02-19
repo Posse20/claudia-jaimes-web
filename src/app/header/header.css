@@ -120,7 +120,15 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1026px) {
+
+  .nav-links a {
+    font-size: 0.5rem;
+  }
+  
+}
+
+@media (max-width: 450px) {
 
   .navbar {
     padding: 15px 20px 30px 20px;

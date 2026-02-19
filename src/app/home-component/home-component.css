@@ -1115,7 +1115,9 @@
   }
 }
 
-
+.text-wth-1-p {
+    display: none;
+}
 
 
 @media (min-width: 1640px) {
@@ -1219,7 +1221,303 @@
     }
 }
 
-@media (max-width: 768px) {
+@media(max-width: 1026px) {
+    .hero-card {
+        min-height: 0vh;
+        height: 300px;
+    }
+    
+    .left-part {
+        width: 60%;
+        padding-left: 0;
+        margin-top: 100px;
+    }
+
+    .logo-clau-letras h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-clau-letras p {
+        font-size: 0.9rem;
+    }
+
+    .left-column {
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 70px;
+    }
+
+    .wt-1 {
+        width: 60%;
+    }
+
+    .what-is {
+        padding: 10px;
+    }
+
+    .what-is h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        width: 65%;
+        padding-left: 10px;
+    }
+
+    .decorative-lines {
+        margin-left: -10px;
+    }
+
+    .robot-img-1 {
+        width: 40%;
+        margin-left: -50px;
+        margin-top: 40px;
+    }
+
+    .robot-img-1 img {
+        width: 110%;
+    }
+
+    .text-wth-1 {
+        width: 95%;
+    }
+
+    .text-wth-1 p {
+        font-size: 0.8rem;
+    }
+
+    .text-wth-1-p {
+        display: flex;
+        width: 60%;
+    }
+
+    .know-more {
+        margin-top: 20px;
+    }
+
+    .know-more p {
+        font-size: 0.8rem;
+    }
+
+    .robotic-button {
+        font-size: 0.8rem;
+        padding: 8px 5px;
+        width: 95%;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .lf-3 {
+        margin-top: 0px;
+        margin-left: 60px;
+    }
+
+    .medplus {
+        padding: 0 25px;
+        height: 60px;
+
+    }
+
+    .coomeva {
+        height: 60px;
+        padding: 5px;
+    }
+
+    .right-column {
+        margin-right: 30px;
+    }
+
+    .clau {
+        margin-top: -20px;
+    }
+
+    .decora-lines-abtme-btn {
+        width: 40%;
+        height: 70px;
+        gap: 1px;
+    }
+    
+    .abtme-btn {
+        width: 80%;
+        padding: 0;
+        left: 0;
+        top: -60px;
+    }
+
+    .cta-button {
+        padding: 5px;
+        font-size: 1.1rem;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .clau-bio {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .clau-bio p {
+        font-size: 1rem;
+    }
+
+    .como-es {
+        width: 120%;
+        padding: 30px;
+        margin-top: 50px;
+        position: relative;
+        right: 70px;
+    }
+
+    .como-es h1 {
+        font-size: 2.2rem;
+        width: 70%;
+    }
+
+    .como-es p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .gallery-section {
+        top: 410px;
+    }
+
+    .gallery-section h1 {
+        font-size: 3rem;
+    }
+
+    .carrousel-item {
+        height: 350px;
+    }
+
+    .section-2 {
+        margin-top: -520px;
+        height: 100vh;
+    }
+
+    .sct-2-text {
+        margin-left: 400px;
+        margin-top: 380px;
+        width: 45%;
+    }
+
+    .sct-2-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .medical-office-title{
+        width: 75%;
+    }
+
+    .anim-arrow {
+        margin-left: 250px;
+        margin-top: -60px;
+        font-size: 4rem;
+    }
+
+    .location {
+        margin-left: 0;
+    }
+
+    .loc-icon {
+        font-size: 5rem;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .loc-info {
+        width: 90%;
+        font-size: 1.4rem;
+        margin-left: 25px;
+    }
+    .contact-info-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .contact-info-info {
+        font-size: 1rem;
+    }
+
+    .others-offices {
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .also-find-me {
+        font-size: 1.6rem;
+    }
+
+    .logo-circle {
+        width: 150px;
+        height: 150px;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .map-office {
+        width: 100%;
+    }
+
+    .logo-marly {
+        width: 200px;
+        height: 200px;
+        margin-left: 130px;
+    }
+
+    .social-title {
+        width: 40%;
+    }
+
+    .icon {
+        font-size: 4rem;
+    }
+
+    .icon-info p {
+        font-size: 1.2rem;
+    }
+
+    .form-title-title {
+        padding: 0;
+    }
+
+    .form-title-title p {
+        font-size: 1.6rem;
+    }
+
+    .form-phone-icon {
+        width: 30%;
+        height: 30%;
+        padding: 10px;
+    }
+
+    .form-phone-icon i {
+        font-size: 1.5rem;
+    }
+
+    .form-sect {
+        height: 25%;
+    }
+
+    .form-contact {
+        margin-top: 50px;
+    }
+
+    .section-4 {
+        height: unset;
+    }
+
+    .aso-title p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 450px) {
 
     * {
         box-sizing: border-box;
@@ -1238,6 +1536,11 @@
         border-top-left-radius: 30px;
         margin-top: -25px;
         z-index: 0;
+        height: 0;
+    }
+
+    .wt-1 {
+        width: 50%;
     }
 
     .left-part {
@@ -1504,8 +1807,9 @@
     }
 
     .decorative-lines {
-        width: 130%;
+        width: 100%;
         gap: 2px;
+        margin-left: -60px;
     }
 
     .lf-2 {
@@ -1517,7 +1821,7 @@
     }
 
     .text-wth-1 {
-        width: 65%;
+        width: 60%;
     }
 
     .text-wth-1 p {
@@ -1530,6 +1834,7 @@
     .robot-img-1 {
         margin-top: 30px;
         margin-left: 15px;
+        width: 60%;
     }
 
     .robot-img-1 img {
@@ -1557,6 +1862,7 @@
         justify-self: end;
         z-index: 1;
         position: relative;
+        right: 0;
     }
 
     .como-es h1 {

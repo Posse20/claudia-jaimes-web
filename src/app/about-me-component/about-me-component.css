@@ -353,7 +353,121 @@
     }
 }
 
-@media (max-width: 768px) {
+@media(max-width: 1026px) {
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    .hero-card {
+        min-height: 30vh;
+    }
+
+    .abt-me-img-1 {
+        width: 50%;
+        transition: none;
+    }
+
+    .abt-me-img-1 img {
+        width: 110%;
+        margin-top: 60px;
+        margin-left: -20px;
+    }
+
+    .perfil-prof {
+        width: 50%;
+    }
+
+    .title-1 {
+        gap: 10px;
+        margin-left: 50px;
+        margin-top: 100px;
+    }
+
+    .abt-me-arrw-1 {
+        margin-left: 0;
+        margin-top: 0;
+        animation: bounce 1.5s infinite;
+    }
+
+    .perfil-prof-info {
+        margin: 0;
+    }
+
+    .perfil-prof-info label {
+        font-size: 2rem;
+    }
+
+    .abt-me-1 {
+        margin-left: 60px;
+        width: 80%;
+    }
+
+    .abt-me-1 p {
+        font-size: 0.8rem;
+    }
+
+    .title-2 {
+        margin-left: 30px;
+        padding-top: 80px;
+    }
+
+    .video-1 {
+        margin-left: 50px;
+    }
+
+    .video-1 video {
+        width: 300px;
+        height: 550px;
+    }
+
+    .insta-badge {
+        margin-top: 400px;
+        margin-left: -60px;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .clau-articles {
+        margin-left: 200px;
+    }
+
+    .imagen-frame {
+        width: 250px;
+    }
+
+    .atr-btn {
+        margin-left: 20px;
+    }
+
+    .articles-btn {
+        padding: 10px;
+        font-size: 1.5rem;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 450px) {
 
     .hero-card, .inf-section, .inf-section-img {
         display: none;
@@ -374,6 +488,7 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         padding: 10px;
+        padding-bottom: 40px;
         z-index: 1;
     }
 
@@ -386,15 +501,20 @@
     .abt-me-img-1 img {
         border-radius: 30px;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
+        margin-top: 0px;
+        margin-left: 0px;
+        width: 90%;
     }
 
     .perfil-prof {
         margin: 0;
         align-self: end;
-        margin-top: -100px;
+        margin-top: -90px;
+        width: 60%;
     }
 
     .title-1 {
+        margin: 0;
         margin-bottom: 20px;
         gap: 10px;
         width: 100%;
@@ -407,7 +527,8 @@
         z-index: 1;
         color: white;
         margin-top: 0px;
-        top: 40px;
+        top: 0px;
+        left: 20px;
     }
 
     .perfil-prof-info {
@@ -433,6 +554,7 @@
     .title-2 {
         margin-left:  0px;
         width: 100%;
+        padding-top: 20px;
     }
 
     .title-2 h1 {

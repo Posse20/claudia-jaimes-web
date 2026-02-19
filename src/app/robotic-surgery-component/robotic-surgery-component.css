@@ -592,7 +592,266 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1026px) {
+    .hero-card {
+        min-height: 40vh;
+    }
+
+    .first-img img {
+        width: 130%;
+        margin-left: 20px;
+        border-radius: 60px;
+        z-index: 1;
+        position: relative;
+        top: -100px;
+    }
+
+    .title-right-sct-1 {
+        text-align: end;
+        padding-right: 90px;
+        margin-top: 50px;
+        padding-left: 0px;
+    }
+
+    .title-right-sct-1 h1 {
+        font-size: 1.6rem;
+        margin-right: -70px;
+    }
+    
+    .title-right-sct-1 strong {
+        font-size: 1.5rem;
+    }
+
+    .rb-right {
+        margin-top: -100px;
+    }
+
+    .benefits {
+        width: 80%;
+        margin-left: 50px;
+    }
+
+    .what-is p {
+        padding: 30px;
+        font-size: 1rem;
+    }
+
+    .text-1 {
+        width: 75%;
+        margin-top: -50px;
+        margin-left: 120px;
+        margin-bottom: 30px;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+
+    .bene{
+        margin-top: 40px;
+        margin-left: 20px;
+        padding-bottom: 50px
+    }
+
+    .bene h1 {
+        font-size: 2.5rem;
+        padding-right: 20px;
+    }
+
+    .bene p {
+        padding: 10px 10px 10px 0px;
+        font-size: 0.9rem;
+    }
+
+    .bene-list {
+        padding: 0;
+        max-height: 670px;
+    }
+
+    .bene-title-icon {
+        padding: 10px;
+    }
+
+    .bene-title-icon span {
+        font-size: 20px;
+    }
+
+    .bene-title-title{
+        text-align: center;
+    }
+    .bene-title-title p {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .toggle-img {
+        width: 130%;
+        top: 20px;
+        right: 140px;
+    }
+
+    .area-ademas p {
+        font-size: 1.1rem;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .areas {
+        width: 75%;
+    }
+
+    .area-title {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    .area-title h1 {
+        font-size: 2rem;
+    }
+
+    .area-sect h3 {
+        font-size: 1.2rem;
+    }
+
+    .area-sect p {
+        font-size: 1rem;
+    }
+
+    .areas-photos {
+        width: 110%;
+        gap: 10px;
+    }
+
+    .img-2 {
+        width: 190%;
+        position: relative;
+        z-index: 2;
+        margin-left: 5px;
+        top: 150px;
+    }
+
+    .img-3 {
+        width: 190%;
+        position: relative;
+        z-index: 2;
+        margin-left: 5px;
+        top: 450px;
+    }
+
+    .lo-que-dicen {
+        width: 75%;
+        padding: 10px;
+    }
+
+    .lo-que-dicen p {
+        font-size: 2.2rem;
+    }
+
+    .lo-que-dicen i {
+        font-size: 4rem;
+        left: 20px;
+        top: 40px;
+    }
+
+    .testi-1-1{
+        position: relative;
+        right: 70px;
+    }
+    .testi-1-img {
+        width: 110%;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .testi-1-msg {
+        width: 220%;
+        position: relative;
+        top: -130px;
+        z-index: 0;
+        right: 40px;
+    }
+
+    .testi-2-img {
+        width: 105%;
+        position: relative;
+        z-index: 1;
+        left: 330px;
+        animation: pulse 1.6s ease-in-out infinite;
+        top: 70px;
+    }
+
+    .testi-2-msg {
+        width: 230%;
+        position: relative;
+        top: -30px;
+        z-index: 0;
+        right: 90px;
+    }
+
+    .section-4 {
+        padding-bottom: 500px;
+    }
+
+    .donde-opero-title {
+        width: 75%;
+    }
+
+    .donde-opero-title p {
+        font-size: 2.2rem;
+    }
+
+    .donde-opero-title i {
+        font-size: 4rem;
+    }
+
+    .opero-maps{
+        gap: 30px;
+    }
+
+    .opero-item {
+        margin-top: 30px;
+        height: 400px;
+    }
+
+    .opero-item p {
+        font-size: 1.5rem;
+    }
+
+    .title-right-sct-1 i {
+        margin-right: 90px;
+        top: -30px;
+        animation: bounce 1.5s infinite;
+    }
+
+    .view-more, .anim-angl {
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+}
+
+@media (max-width: 450px) {
 
     .robotic-container, .section-3, .section-4, .section-5 {
         display: none;
@@ -630,6 +889,7 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
         z-index: 2;
         position: relative;
+        top: 20px;
     }
 
     .sct-1-right {
@@ -642,7 +902,7 @@
         width: 75%;
         background-color: #173759;
         border: #7080F7 2px solid;
-        margin-top: 30px;
+        margin-top: 80px;
         margin-left: 50px;
         margin-bottom: 30px;
         padding: 10px;
@@ -661,6 +921,7 @@
         width: 90%;
         margin-top: 40px;
         margin-left: 25px;
+        position: unset;
     }
 
     .img-3 {
@@ -670,6 +931,7 @@
         opacity: 0;
         transform: translateY(10px);
         pointer-events: none;
+        position: unset;
 
         transition:
             opacity 0.3s ease,       /* ⬅ delay aquí */
@@ -708,6 +970,7 @@
         font-size: 2rem;
         margin-right: 80px;
         margin-top: -10px;
+        top: 0;
     }
 
     .bene-mobile {
@@ -862,11 +1125,12 @@
         padding: 5px;
         margin-top: -250px;
         padding-top: 140px;
-        max-height: 1000px;
+        max-height: 1100px;
     }
 
     .lo-que-dicen{
         width: 80%;
+        padding: 10px;
     }
 
     .lo-que-dicen p {
@@ -881,6 +1145,7 @@
 
     .testi-1-1 {
         width: 100%;
+        position: unset;
     }
 
     .testi-1-1-a {
@@ -891,6 +1156,7 @@
     }
 
     .testi-1-img {
+        width: 80%;
         position: relative;
         right: 60px;
         animation: pulse 1.6s ease-in-out infinite;
@@ -900,16 +1166,21 @@
     .testi-1-msg {
         top: -90px;
         right: 70px;
+        width: 130%;
     }
 
     .testi-2-img {
         left: -50px;
         animation: pulse 1.6s ease-in-out infinite;
+        width: 75%;
+
+        top: 0;
     }
 
     .testi-2-msg {
         top: -70px;
         right: 60px;
+        width: 140%;
     }
 
     .section-4-mobile {
@@ -943,7 +1214,7 @@
     .opero-item {
         margin-top: 0;
         width: 45%;
-        height: 400px;
+        height: 300px;
     }
     .opero-item p {
         font-size: 1rem;
