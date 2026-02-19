@@ -201,26 +201,7 @@
 
 </section>
 
-<section class="section-3">
-    <div class="testimonio">
-        <h1>Testimonio y más...</h1>
-        <div class="video-testi">
-            <video controls
-                #autoVideo
-                muted
-                playsinline
-                src="assets/robotic-surgery/testi.mp4"></video>
-        </div>
-    </div>
-</section>
-<app-footer-clau></app-footer-clau>
-
-
-
-<!-- 
-
-
-<section class="section-1">
+<section class="section-1-mobile">
     <div class="sct-1-left">
         <div class="first-img">
             <img src="assets/robotic-surgery/img-1.png" alt="img-1">
@@ -228,15 +209,145 @@
         <div class="text-1">
             <p>La roboótica no reemplaza al cirujano, sino que potencia su destreza, ampliando la capacidad para abordar procedimientos delicados con mayor exactitud y seguridad</p>
         </div>
+        <div class="img-section-2">
+            <img src="assets/robotic-surgery/img-2.png" alt="img-2" class="img-2">
+            <img [class.visible]="!showAllBenefits" src="assets/robotic-surgery/img-3.png" alt="img-3" class="img-3">
+        </div>
     </div>
     <div class="sct-1-right">
         <div class="title-right-sct-1">
-            <h1>¿Qué es la <strong>cirugía robótica</strong> y como se aplica?</h1>
+            <p>¿Qué es la <strong>cirugía robótica</strong> y como se aplica?</p>
             <i class="fa-solid fa-angles-down what-is-angle"></i>
+        </div>
+        <div class="bene-mobile">
+            <h1>Beneficios</h1>
+            <p>La cirugía robótica representa una evolución natural de la medicina quirúrgica moderna, combinando la experiencia médica con tecnología de alta precisión. Esta combinación permite:</p>
+            <div class="bene-list" [class.expanded]="showAllBenefits">
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">surgical</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Incisiones más pequeñas</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">sentiment_satisfied</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Menor dolor posoperatorio</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">speed</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Recuperación más rápida</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">precision_manufacturing</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Mayor precisión quirúrgica</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">eye_tracking</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Mejor visión del campo quirúrgico</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">pan_tool_alt</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Mayor estabilidad y control del movimiento</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">water_drop</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Menor sangrado.</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">shield_with_heart</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Menor riesgo de infección de la herida.</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="fa-solid fa-feather-pointed"></span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Menor trauma tisular.</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="fa-solid fa-sitemap"></span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Mayor capacidad para realizar procedimientos complejos.</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="fa-solid fa-hospital-user"></span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Estancia hospitalaria más corta en muchos procedimientos</p>
+                    </div>
+                </div>
+
+                <div class="bene-card-title">
+                    <div class="bene-title-icon">
+                        <span class="material-symbols-outlined">health_and_safety</span>
+                    </div>
+                    <div class="bene-title-title">
+                        <p>Enfoque en seguridad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more">
+                <button class="bene-toggle" (click)="toggleBenefits()">
+                    <span>{{ showAllBenefits ? 'Ver menos' : 'Ver más' }}</span>
+                    <span
+                        class="material-symbols-outlined"
+                        [class.expanded]="showAllBenefits"
+                    >
+                        expand_more
+                    </span>
+                </button>
+            </div>
         </div>
     </div>
 </section>
-<section class="section-2">
+
+<section class="section-2-mobile">
     <div class="areas">
         <div class="area-title">
             <h1>Áreas y Especialidades</h1>
@@ -270,41 +381,142 @@
         </div>
 
     </div>
-    <div class="img-section-2">
-        <img src="assets/robotic-surgery/img-2.png" alt="img-2" class="img-2">
-        <img src="assets/robotic-surgery/img-3.png" alt="img-3" class="img-3">
-    </div>
-    <div class="benefits">
-        <div class="what-is">
-            <p>La cirugía robótica es una técnica quirúrgica mínimamente invasiva que utiliza tecnología de última generación para que el cirujano pueda realizar procedimientos complejos con mayor precisión, mejor control y visión tridimensional de alta definición.</p>
-            <p>A través de sistemas robóticos avanzados, como la plataforma Da Vinci, la Dra. Claudia Jaimes dirige cada movimiento desde una consola especializada, lo que permite optimizar la técnica, reducir el impacto en los tejidos y mejorar la experiencia quirúrgica del paciente.</p>
-        </div>
-        <div class="bene">
-            <h1>Beneficios</h1>
-            <p>La cirugía robótica representa una evolución natural de la medicina quirúrgica moderna, combinando la experiencia médica con tecnología de alta precisión. Esta combinación permite:</p>
-            <ul class="bene-list">
-                <li>Incisiones más pequeñas (cirugía mínimamente invasiva), con mejor resultado estético.</li>
-                <li>Menor dolor posoperatorio y, en muchos casos, menor necesidad de analgésicos.</li>
-                <li>Recuperación más rápida y regreso más temprano a actividades cotidianas y laborales.</li>
-                <li>Mayor precisión quirúrgica gracias a instrumentos articulados con movimientos finos y controlados.</li>
-                <li>Mejor visión del campo quirúrgico (imagen 3D de alta definición y aumento), lo que facilita identificar planos y estructuras.</li>
-                <li>Mayor estabilidad y control del movimiento (el sistema filtra temblores), útil en disecciones delicadas.</li>
-                <li>Menor sangrado y, con frecuencia, menor requerimiento de transfusión.</li>
-                <li>Menor riesgo de infección de la herida por incisiones pequeñas y menor manipulación de tejidos.</li>
-                <li>Menor trauma tisular (manipulación más suave y precisa), lo que puede favorecer la recuperación.</li>
-                <li>Mayor capacidad para realizar procedimientos complejos por mínima invasión en casos seleccionados (mejor acceso y sutura intracorpórea).</li>
-                <li>Estancia hospitalaria más corta en muchos procedimientos, según indicación y evolución.</li>
-                <li>Enfoque en seguridad: permite planificación, movimientos controlados y mejor ergonomía del cirujano, lo que favorece la consistencia técnica.</li>
-            </ul>
+    <div class="testimonio">
+        <h1>Testimonio y más...</h1>
+        <div class="video-testi">
+            <video controls
+                #autoVideo
+                muted
+                playsinline
+                src="assets/robotic-surgery/testi.mp4"></video>
         </div>
     </div>
 </section>
+
+<section class="section-3-mobile">
+    <div class="lo-que-dicen">
+        <p>Lo que dicen mis estudiantes...</p>
+        <i class="fa-solid fa-angles-down angl-anim"></i>
+    </div>
+    <div class="testi-1-1">
+        <img class="testi-1-img" src="assets/testis/testi-1.png" alt="">
+        <img class="testi-1-msg" src="assets/testis/testi-1-inf.png" alt="">
+    </div>
+    <div class="testi-1-1-a">
+        <img class="testi-2-img" src="assets/testis/testi-2-inf.png" alt="">
+        <img class="testi-2-msg" src="assets/testis/testi-2.png" alt="">
+    </div>
+</section>
+
 <section class="section-3">
     <div class="testimonio">
         <h1>Testimonio y más...</h1>
         <div class="video-testi">
-            <video controls src="assets/robotic-surgery/testi.mp4"></video>
+            <video controls
+                #autoVideo
+                muted
+                playsinline
+                src="assets/robotic-surgery/testi.mp4"></video>
         </div>
     </div>
 </section>
-<app-footer-clau></app-footer-clau> -->
+
+<section class="section-4">
+    <div class="lo-que-dicen">
+        <p>Lo que dicen mis estudiantes...</p>
+        <i class="fa-solid fa-angles-down"></i>
+    </div>
+    <div class="testi-1">
+        <div class="testi-1-1">
+            <img class="testi-1-img" src="assets/testis/testi-1.png" alt="">
+            <img class="testi-1-msg" src="assets/testis/testi-1-inf.png" alt="">
+        </div>
+        <div class="testi-2-1">
+            <img class="testi-2-img" src="assets/testis/testi-2-inf.png" alt="">
+            <img class="testi-2-msg" src="assets/testis/testi-2.png" alt="">
+        </div>
+    </div>
+
+</section>
+
+<section class="section-4-mobile">
+    <div class="donde-opero-title">
+        <p>Instituciones donde opero...</p>
+        <i class="fa-solid fa-angles-down angl-anim"></i>
+    </div>
+    <div class="opero-maps">
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.636849617999522"
+                [lng]="-74.0650520876891"
+                [isUrl]="false"
+                [title]="'Consultorio Marly'"
+                [content]="_contentMarly"
+            ></app-google-map>
+            <p>Clínica de Marly</p>
+        </div>
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.698465450966318"
+                [lng]="-74.07309676133181"
+                [isUrl]="false"
+                [title]="'Consultorio Shaio'"
+                [content]="_contentShaio"
+            ></app-google-map>
+            <p>Clínica Shaio</p>
+        </div>
+    </div>
+    <div class="opero-maps" style="margin-top: 30px;">
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.668920760030404"
+                [lng]="-74.05682566133201"
+                [isUrl]="false"
+                [title]="'Consultorio Country'"
+                [content]="_contentCountry"
+            ></app-google-map>
+            <p>Clínica Country</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-5">
+    <div class="donde-opero-title">
+        <p>Instituciones donde opero...</p>
+        <i class="fa-solid fa-angles-down"></i>
+    </div>
+    <div class="opero-maps">
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.636849617999522"
+                [lng]="-74.0650520876891"
+                [isUrl]="false"
+                [title]="'Consultorio Marly'"
+                [content]="_contentMarly"
+            ></app-google-map>
+            <p>Clínica de Marly</p>
+        </div>
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.698465450966318"
+                [lng]="-74.07309676133181"
+                [isUrl]="false"
+                [title]="'Consultorio Shaio'"
+                [content]="_contentShaio"
+            ></app-google-map>
+            <p>Clínica Shaio</p>
+        </div>
+        <div class="opero-item">
+            <app-google-map
+                [lat]="4.668920760030404"
+                [lng]="-74.05682566133201"
+                [isUrl]="false"
+                [title]="'Consultorio Country'"
+                [content]="_contentCountry"
+            ></app-google-map>
+            <p>Clínica Country</p>
+        </div>
+    </div>
+</section>
+
+<app-footer-clau></app-footer-clau>

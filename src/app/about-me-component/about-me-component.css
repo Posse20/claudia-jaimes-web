@@ -380,13 +380,18 @@
     .abt-me-img-1 {
         margin-left: 0px;
         margin-top: 20px;
-        width: 60%;
+        width: 70%;
+    }
+
+    .abt-me-img-1 img {
+        border-radius: 30px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
     }
 
     .perfil-prof {
         margin: 0;
         align-self: end;
-        margin-top: -200px;
+        margin-top: -100px;
     }
 
     .title-1 {
@@ -402,11 +407,11 @@
         z-index: 1;
         color: white;
         margin-top: 0px;
-        top: 10px;
+        top: 40px;
     }
 
     .perfil-prof-info {
-        margin-left: 60px;
+        margin-left: 90px;
         margin-top: 0px;
     }
 
@@ -434,13 +439,28 @@
         width: 60%;
         font-size: 2rem;
         justify-self: end;
-        margin-right: 20px;
+        margin-right: 60px;
     }
 
     .insta-badge {
         padding-right:  0px;
         margin: 0;
-        margin-top: 150px;
+        margin-top: 0px;
+        position: relative;
+        left: 30px;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     .insta-icon {
@@ -454,12 +474,17 @@
 
     .insta-user {
         font-size: 0.6rem;
-        margin-left: -10px;
+        margin-left: 0px;
+        margin-right: -11px;
     }
 
+    .video-1{
+        margin: 0;
+    }
     .video-1 video {
         width: 200px;
         height: 350px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
     }
 
     .column-2 {
@@ -480,6 +505,7 @@
 
     .mb-col-2-clau img {
         width: 80%;
+        box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.842);
     }
 
     .atr-btn {

@@ -12,23 +12,7 @@ import { FooterClau } from '../footer-clau/footer-clau';
 })
 export class HomeComponent implements OnInit {
 
-
-  ngOnInit(): void {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('success') === 'true') {
-      this.showToast = true;
-    }
-  }
-
-
-  
-  private _router = inject(Router);
-
-  protected showToast = false;
-
-  protected showAllBenefits = false;
-  
-  images: string[] = [
+    images: string[] = [
     'assets/imgs-carrousel/carrousel-1.png',
     'assets/imgs-carrousel/carrousel-13.jpg',
     'assets/imgs-carrousel/carrousel-10.jpg',
@@ -49,14 +33,87 @@ export class HomeComponent implements OnInit {
     'assets/imgs-carrousel/carrousel-19.png',
     'assets/imgs-carrousel/carrousel-20.jpg'
   ];
-  currentIndex = 2;
+
+  images1: string[] = [
+    'assets/imgs-carrousel/carrousel-1.png',
+    'assets/imgs-carrousel/carrousel-13.jpg',
+    'assets/imgs-carrousel/carrousel-10.jpg',
+    'assets/imgs-carrousel/carrousel-3.png',
+    'assets/imgs-carrousel/carrousel-7.jpg',
+    'assets/imgs-carrousel/carrousel-8.jpg',
+    'assets/imgs-carrousel/carrousel-4.png',
+    'assets/imgs-carrousel/carrousel-11.jpg',
+    'assets/imgs-carrousel/carrousel-12.jpg',
+    'assets/imgs-carrousel/carrousel-5.png',
+    'assets/imgs-carrousel/carrousel-14.jpg',
+    'assets/imgs-carrousel/carrousel-15.jpg',
+    'assets/imgs-carrousel/carrousel-6.png',
+    'assets/imgs-carrousel/carrousel-9.png',
+    'assets/imgs-carrousel/carrousel-16.jpg',
+    'assets/imgs-carrousel/carrousel-17.png',
+    'assets/imgs-carrousel/carrousel-18.png',
+    'assets/imgs-carrousel/carrousel-19.png',
+    'assets/imgs-carrousel/carrousel-20.jpg'
+  ];
+
+  
+  protected _content = `
+        <strong>Consultorio Dr. Claudia Jaimes</strong><br>
+        Clínica de Marly<br>
+        Consultorio 604 B
+      `
+
+  private _router = inject(Router);
+
+  protected showToast = false;
+
+  protected showAllBenefits = false;
+  
+  currentIndex = 1;
+  currentIndexMob = 1;
+
+  disableTransition = false;
+  extendedImages: string[] = [];
+  
+  ngOnInit(): void {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      this.showToast = true;
+    }
+    this.extendedImages = [
+      this.images1[this.images1.length - 1],
+      ...this.images1,
+      this.images1[0]
+    ];
+    setInterval(() => {
+      this.startAutoPlay();
+    }, 3500);
+  }
+
+  startAutoPlay() {
+    this.currentIndexMob++;
+    console.log('cuure', this.currentIndexMob);
+    console.log('leng', this.extendedImages.length);
+
+    // cuando llega al clon final
+    if (this.currentIndexMob === this.extendedImages.length - 12) {
+      setTimeout(() => {
+        this.disableTransition = true;
+        this.currentIndexMob = 1;
+
+        // reactivar transición
+        setTimeout(() => {
+          this.disableTransition = false;
+        }, 50);
+      }, 1000); // ⬅ MISMO tiempo que el CSS
+    }
+  }
 
   nextImage() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
   prevImage() {
-    console.log('a');
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
@@ -93,7 +150,7 @@ export class HomeComponent implements OnInit {
         window.open('https://marly.com.co/', '_blank');
         break;
       case 'wa':
-        window.open('https://wa.me/573025305555', '_blank');
+        window.open('https://wa.me/573169318999', '_blank');
         break;
       case 'linkedin':
         window.open('https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/', '_blank');
@@ -170,4 +227,5 @@ export class HomeComponent implements OnInit {
   toggleConven() {
     this.showAllBenefits = !this.showAllBenefits;
   }
+
 }

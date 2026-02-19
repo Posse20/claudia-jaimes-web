@@ -310,6 +310,7 @@
     color: white;
     font-size: 1.1rem;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .bene-card-body p {
@@ -322,7 +323,7 @@
 .bene-list {
   display: grid;
   gap: 16px;
-  max-height: 350px; /* aprox 4 cards */
+  max-height: 300px; /* aprox 4 cards */
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
@@ -363,12 +364,18 @@
 .section-3 {
     display: inline-flex;
     width: 100%;
+    background: linear-gradient(to right, #112034 50%, #173759 50%);
+    justify-content: center;
+    margin-top: 150px;
 }
 
 .testimonio {
-    width: 100%;
+    width: 90%;
     background-color: #4f708d;
     padding-bottom: 80px;
+    position: relative;
+    top: -100px;
+    border-radius: 40px;
 }
 
 .testimonio h1 {
@@ -382,11 +389,14 @@
 
 .video-testi {
     width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
 }
 
 .video-testi video {
     width: 80%;
-    padding-left: 100px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.932);
 }
 
 
@@ -397,8 +407,151 @@
 .img-3:hover,
 .area-ademas:hover,
 .toggle-img:hover,
-.bene-card-title:hover {
+.bene-card-title:hover,
+.testi-1-img:hover,
+.testi-2-img:hover,
+.lo-que-dicen i:hover,
+.donde-opero-title i:hover {
     transform: translateY(-4px) scale(1.05);
+}
+
+.section-4 {
+    width: 100%;
+    background: linear-gradient(to right, #112034 50%, #173759 50%);
+    padding: 10px 10px 350px 10px;
+}
+
+.lo-que-dicen {
+    background-color: #1D3461;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 55%;
+    display: flex;
+}
+
+.lo-que-dicen p {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.lo-que-dicen i {
+    color: white;
+    font-size: 4.5rem;
+    position: relative;
+    left: 40px;
+    top: 60px;
+    transition: transform 0.3s ease;
+}
+
+.testi-1 {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+
+}
+
+.testi-1-1 {
+    display: grid;
+    width: 50%;
+}
+
+.testi-1-img {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.testi-1-msg {
+    width: 130%;
+    position: relative;
+    top: -150px;
+    z-index: 0;
+}
+
+.testi-2-1 {
+    display: grid;
+    width: 50%;
+    position: relative;
+    top: 430px;
+    right: 250px;
+}
+
+.testi-2-img {
+    width: 75%;
+    position: relative;
+    z-index: 1;
+    left: 400px;
+    transition: transform 0.3s ease;
+}
+
+.testi-2-msg {
+    width: 140%;
+    position: relative;
+    top: -120px;
+    z-index: 0;
+    right: 90px;
+}
+
+
+.section-5 {
+    background-color: #507796;
+    padding: 10px 10px 80px 10px;
+}
+
+.donde-opero-title {
+    background-color: #1D3461;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 55%;
+    display: flex;
+    position: relative;
+    top: -50px;
+}
+
+.donde-opero-title p {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.donde-opero-title i {
+    color: white;
+    font-size: 4.5rem;
+    position: relative;
+    left: 40px;
+    top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.opero-maps {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    justify-content: center;
+}
+
+.opero-item {
+    width: 30%;
+    background-color: #112034;
+    border-radius: 30px;
+    margin-top: 100px;
+    padding: 20px 20px 80px 20px;
+    height: 700px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
+}
+
+.opero-item p {
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.section-1-mobile, .section-2-mobile, .section-3-mobile, .section-4-mobile {
+    display: none;
 }
 
 @media (min-width: 1640px) {
@@ -411,6 +564,23 @@
         height: auto;
     }
 
+    .testi-2-1 {
+        top: 550px;
+    }
+
+    .testi-2-img {
+        left: 500px;
+        top: 30px;
+    }
+
+    .testi-2-msg {
+        right: 170px;
+    }
+
+    .section-4 {
+        padding-bottom: 450px;
+    }
+
 }
 
 @media(max-width: 1280px) {
@@ -420,4 +590,365 @@
     .benefits {
         margin-top: -60px;
     }
+}
+
+@media (max-width: 768px) {
+
+    .robotic-container, .section-3, .section-4, .section-5 {
+        display: none;
+    }
+
+    .hero-card {
+        min-height: 200px;
+        padding: 2rem 1rem;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        margin-top: -25px;
+        z-index: 0;
+    }
+
+    .section-1-mobile {
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .sct-1-left {
+        width: 60%;
+        margin-top: -200px;
+    }
+
+    .first-img {
+        margin-top: 0px;
+    }
+
+    .first-img img {
+        width: 100%;
+        margin-left: 10px;
+        border-radius: 30px;
+        margin-top: 60px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
+        z-index: 2;
+        position: relative;
+    }
+
+    .sct-1-right {
+        width: 40%;
+        z-index: 0;
+        margin-top: -200px;
+    }
+
+    .text-1 {
+        width: 75%;
+        background-color: #173759;
+        border: #7080F7 2px solid;
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.6rem;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
+    }
+
+    .img-section-2 {
+        width: 90%;
+        margin-top: 0;
+    }
+
+    .img-2{
+        width: 90%;
+        margin-top: 40px;
+        margin-left: 25px;
+    }
+
+    .img-3 {
+        width: 90%;
+        margin-top: 40px;
+        margin-left: 105px;
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+
+        transition:
+            opacity 0.3s ease,       /* ⬅ delay aquí */
+            transform 0.3s ease;
+    }
+
+    .img-3.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        transition-delay: 0.01s;
+    }
+
+    .title-right-sct-1 {
+        text-align: end;
+        margin-top: 130px;
+        width: 90%;
+        margin-left: 10px;
+        padding: 0;
+        padding-right: 10px;
+    }
+
+    .title-right-sct-1 p {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+        font-style: italic;
+        color: rgb(19, 48, 88);
+    }
+
+    .title-right-sct-1 strong {
+        font-size: 0.9rem;
+    }
+
+    .title-right-sct-1 i {
+        font-size: 2rem;
+        margin-right: 80px;
+        margin-top: -10px;
+    }
+
+    .bene-mobile {
+        width: 100%;
+        background-color: #1D3461;
+        padding: 5px;
+        z-index: 0;
+        position: relative;
+        margin-top: -20px;
+    }
+
+    .bene-mobile h1 {
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.5rem;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .bene-mobile p {
+        padding: 0px;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0px;
+        margin-left: 20px;
+    }
+
+    .bene-list {
+        padding: 0;
+        margin-top: 30px;
+        max-height: 230px;
+    }
+
+    .bene-card-title {
+        width: 95%;
+        align-items: center;
+        border-radius: 20px;
+        margin-bottom: 0;
+    }
+
+    .what-is-angle, .view-more, .angl-anim {
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .bene-title-icon {
+        padding: 5px;
+    }
+
+    .bene-title-icon span {
+        font-size: 20px;
+    }
+
+    .bene-title-title p {
+        padding: 5px;
+        font-size: 0.7rem;
+    }
+    .bene-toggle {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    .section-2-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .areas{
+        width: 80%;
+        padding-bottom: 100px;
+    }
+
+    .area-title {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .area-title h1 {
+        font-size: 1.9rem;
+    }
+
+    .area-sect {
+        margin-top: 20px;
+    }
+
+    .area-sect h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .area-sect p {
+        font-size: 0.8rem;
+    }
+
+    .area-ademas p {
+        font-size: 1rem;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .testimonio {
+        width: 95%;
+        padding-bottom: 40px;
+    }
+
+    .testimonio h1 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .video-testi {
+        margin-top: 30px;
+    }
+
+    .video-testi video {
+        width: 90%;
+    }
+
+    .section-3-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #112034;
+        padding: 5px;
+        margin-top: -250px;
+        padding-top: 140px;
+        max-height: 1000px;
+    }
+
+    .lo-que-dicen{
+        width: 80%;
+    }
+
+    .lo-que-dicen p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .lo-que-dicen i {
+        top: 30px;
+        font-size: 2rem;
+    }
+
+    .testi-1-1 {
+        width: 100%;
+    }
+
+    .testi-1-1-a {
+        width: 100%;
+        display: grid;
+        position: relative;
+        top: -60px;
+    }
+
+    .testi-1-img {
+        position: relative;
+        right: 60px;
+        animation: pulse 1.6s ease-in-out infinite;
+        
+    }
+
+    .testi-1-msg {
+        top: -90px;
+        right: 70px;
+    }
+
+    .testi-2-img {
+        left: -50px;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    .testi-2-msg {
+        top: -70px;
+        right: 60px;
+    }
+
+    .section-4-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 25px 5px;
+        background-color: #507796;
+    }
+
+    .donde-opero-title {
+        width: 85%;
+        top: -20px;
+    }
+
+    .donde-opero-title p {
+        font-size: 1.1rem;
+    }
+
+    .donde-opero-title i {
+        font-size: 2rem;
+        top: 20px;
+    }
+
+    .opero-maps {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .opero-item {
+        margin-top: 0;
+        width: 45%;
+        height: 400px;
+    }
+    .opero-item p {
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+
+
 }

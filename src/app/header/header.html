@@ -1,8 +1,32 @@
 <nav class="navbar">
 
   <div class="logo-mobile">
-    <img src="assets/logos/logo-clau/logo-blue.png" alt="">
-    <p>Claudia Viviana <br> Jaimes González </p>
+    <div class="log-mb-1"> 
+      <img src="assets/logos/logo-clau/logo-blue.png" alt="" class="logo-animate" (click)="returnHome()">
+    </div>
+    
+    <div class="lg-tex-1">
+      <p class="reveal-text">
+        <ng-container *ngFor="let char of letters; let i = index">
+          <span
+            [style.animationDelay]="(i * 0.05) + 's'"
+            class="char"
+          >
+            {{ char === ' ' ? '\u00A0' : char }}
+          </span>
+        </ng-container>
+      </p>
+      <p class="reveal-text-1">
+        <ng-container *ngFor="let char of letters1; let i = index">
+          <span
+            [style.animationDelay]="(i * 0.05) + 's'"
+            class="char"
+          >
+            {{ char === ' ' ? '\u00A0' : char }}
+          </span>
+        </ng-container>
+      </p>
+    </div>
   </div>
   <input type="checkbox" id="menu-toggle" />
 
@@ -14,7 +38,7 @@
 
   <div class="menu-left">
     <div class="social-icons">
-      <a href="https://wa.me/573025305555" target="_blank"><i class="fab fa-whatsapp social-ic"></i></a>
+      <a href="https://wa.me/573169318999" target="_blank"><i class="fab fa-whatsapp social-ic"></i></a>
       <a href="https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/" target="_blank"><i class="fab fa-linkedin social-ic"></i></a>
       <a href="https://www.instagram.com/claudiacx.jaimes/" target="_blank"><i class="fab fa-instagram social-ic"></i></a>
     </div>
@@ -29,7 +53,7 @@
   </ul>
 
   <div class="mobile-socials">
-    <a href="https://wa.me/573025305555" target="_blank">
+    <a href="https://wa.me/573169318999" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="https://www.linkedin.com/in/claudia-viviana-jaimes-gonzalez-a3121230b/" target="_blank">

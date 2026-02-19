@@ -686,7 +686,7 @@
     padding: 20px 20px 80px 20px;
     height: 60%;
     width: 80%;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.836);
 }
 
 .logo-marly {
@@ -786,12 +786,26 @@
 /* SECTION 4 */
 
 .section-4 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(255, 255, 255, 0.308)), url("/assets/home-imgs/form-bg.png");
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(255, 255, 255, 0.308)), url("/assets/home-imgs/form-bg.png");
     background-size: 100% auto;
-    /* background-position: center 40%; */
     background-repeat: no-repeat;
-    /* height: 350vh; */
+    width: 100%; */
+
+    position: relative;
     width: 100%;
+    overflow: hidden;
+}
+
+.section-4 video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-85%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.85;
 }
 
 .form-title {
@@ -1231,7 +1245,7 @@
     }
 
     .section-1, .section-2, .section-3, .section-4, .section-5 {
-        display: none;
+        display: none !important;
     }
 
     .section-1-mobile {
@@ -1318,6 +1332,19 @@
         padding: 5px 20px;
         font-size: 0.7rem;
         border-radius: 15px;
+        animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     .clau-bio {
@@ -1516,6 +1543,7 @@
     .robotic-button {
         border-radius: 20px;
         font-size: 0.8rem;
+        animation: pulse 1.6s ease-in-out infinite;
     }
 
     .know-more p {
@@ -1550,6 +1578,11 @@
         margin-left: 10px;
         border-radius: 40px;
         margin-top: 210px;
+
+    }
+
+    .gallery-wrapper {
+        touch-action: pan-y;
     }
 
     .gallery-section h1 {
@@ -1558,16 +1591,32 @@
     }
 
     .nav-button {
-        margin: 0px;
+        /* margin: 0px;
+        position: relative;
+        z-index: 10; */
+        display: none;
     }
 
     .carrousel {
         gap: 10px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carrousel-track {
+        display: flex;
+        transition: transform 2s ease-in-out; /* 🔥 suavidad */
+    }
+
+    .carrousel-track.no-transition {
+        transition: none;
     }
 
     .carrousel-item {
         height: 150px;
-        border-radius: 1.1rem;
+        border-radius: 1.7rem;
+        flex-shrink: 0;
+        padding: 5px;
     }
 
     .sct-2-text {
@@ -1640,6 +1689,7 @@
 
     .loc-icon {
         font-size: 3rem;
+        animation: pulse 1.2s ease-in-out infinite;
     }
 
     .loc-info {
@@ -1695,6 +1745,8 @@
         width: 120px;
         height: 120px;
         background-color: #112034;
+        animation: pulse 1.2s ease-in-out infinite;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.856);
     }
 
     .mb-sh {
@@ -1711,7 +1763,7 @@
     }
 
     .logo-cunt {
-        width: 100%;
+        width: 80%;
     }
 
     .map-office {
@@ -1906,6 +1958,8 @@
         margin-bottom: 30px;
         position: relative;
         margin-left: 30px;
+        border-radius: 30px;
+        box-shadow: -20px 15px 30px rgba(0, 0, 0, 0.781);
     }
 
     .clau-img-mb::before {
@@ -1923,6 +1977,31 @@
         position: relative;
         display: block;
         z-index: 2;
+    }
+
+    .home-clau-img {
+        padding-top: 30px;
+    }
+    .home-clau-img img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .bounce-icon {
+        font-size: 3.5rem;        /* ajusta tamaño */
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
 
 }

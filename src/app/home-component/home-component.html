@@ -1,7 +1,7 @@
 <section class="hero-card">
     <div class="left-part">
         <div class="logo-clau">
-            <img src="assets/logos/logo-clau/logo-blue.png" alt="logo-w">
+            <img src="assets/logos/logo-clau/logo-blue.png" alt="logo-w" (click)="goHome()">
         </div>
         <div class="logo-clau-letras">
             <h1>Claudia Viviana</h1>
@@ -173,8 +173,8 @@
             <div class="arr-2-lf3">
                 <p *ngIf="!showAllBenefits">Ver más</p>
                 <p *ngIf="showAllBenefits">Ver menos</p>
-                <i *ngIf="!showAllBenefits" class="fa-solid fa-angles-down" (click)="toggleConven()"></i>
-                <i *ngIf="showAllBenefits" class="fa-solid fa-angles-up" (click)="toggleConven()"></i>
+                <i *ngIf="!showAllBenefits" class="fa-solid fa-angles-down bounce-icon" (click)="toggleConven()"></i>
+                <i *ngIf="showAllBenefits" class="fa-solid fa-angles-up bounce-icon" (click)="toggleConven()"></i>
             </div>
         </div>
     </div>
@@ -246,11 +246,17 @@
 <section class="section-2-mobile">
     <div class="gallery-section">
         <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
-        <div class="gallery-wrapper">
+        <div class="gallery-wrapper" >
             <button class="nav-button left" (click)="prevImage()">‹</button>
             <div class="carrousel">
-                <div class="carrousel-item" *ngFor="let img of visibleImages">
-                    <img [src]="img" alt="Imagen" />
+                <div
+                    class="carrousel-track"
+                    [style.transform]="'translateX(-' + currentIndexMob * 100 + '%)'"
+                    [class.no-transition]="disableTransition"
+                >
+                    <div class="carrousel-item" *ngFor="let img of extendedImages">
+                        <img [src]="img" alt="Imagen" />
+                    </div>  
                 </div>
             </div>
             <button class="nav-button right" (click)="nextImage()">›</button>
@@ -304,7 +310,7 @@
                         <img src="assets/logos/logos-clinics/logo-shaio.png" alt="" class="logo-shaio" (click)="navigateToAssociations('shaio')">
                     </div>
                     <div class="logo-circle">
-                        <img src="assets/logos/logos-clinics/logo-country.png" alt="" (click)="navigateToAssociations('country')">
+                        <img style="width: 80%;" src="assets/logos/logos-clinics/logo-country.png" alt="" (click)="navigateToAssociations('country')">
                     </div>
                 </div>
 
@@ -314,7 +320,13 @@
         <div class="medical-office-right-part">
 
             <div class="map-office">
-                <app-google-map></app-google-map>
+                <app-google-map
+                    [lat]="4.636849617999522"
+                    [lng]="-74.0650520876891"
+                    [isUrl]="true"
+                    [title]="'Consultori Dra. Jaimes'"
+                    [content]="_content"
+                ></app-google-map>
             </div>
 
             <div class="logo-marly">
@@ -560,6 +572,12 @@
 </section>
 
 <section class="section-4">
+    <video autoplay muted loop playsinline>
+        <source src="assets/home-imgs/bg-video-1.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+    </video>
+
+
     <div class="form-title">
         <div class="form-title-title">
             <p>Solicita tu valoración en el siguiente formulario</p>
