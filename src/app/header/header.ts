@@ -32,4 +32,12 @@ export class Header implements OnInit {
   returnHome() {
     this._router.navigate(['/']);
   }
+
+  redirect(){
+    if (window.innerWidth > 500) {
+      this._router.navigate(['/'], { fragment: 'form-clau' });
+    } else {
+      this._router.navigate(['/'], { fragment: 'form-clau-mobile' });
+    }
+  }
 }

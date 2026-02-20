@@ -249,9 +249,21 @@
         <div class="gallery-wrapper">
             <button class="nav-button left" (click)="prevImage()">‹</button>
             <div class="carrousel">
-                <div class="carrousel-item" *ngFor="let img of visibleImages">
+                <div class="carrousel-item" *ngFor="let img of visibleImages" (click)="openImage(img)">
                     <img [src]="img" alt="Imagen" />
                 </div>  
+            </div>
+            <!-- Overlay Lightbox -->
+            <div 
+                class="lightbox" 
+                *ngIf="selectedImage"
+                (click)="closeImage()"
+            >
+                <img 
+                    [src]="selectedImage" 
+                    class="lightbox-img"
+                    (click)="$event.stopPropagation()" 
+                />
             </div>
             <button class="nav-button right" (click)="nextImage()">›</button>
         </div>
@@ -459,7 +471,7 @@
     </div>
 </section>
 
-<section class="section-4-mobile" id="form-clau">
+<section class="section-4-mobile" id="form-clau-mobile">
     <video autoplay muted loop playsinline>
         <source src="assets/home-imgs/bg-video-1.mp4" type="video/mp4" />
         Tu navegador no soporta video.

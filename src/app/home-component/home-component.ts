@@ -143,8 +143,17 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  selectedImage: string | null = null;
+
+  openImage(img: string) {
+    this.selectedImage = img;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
+  }
+
   nextImage() {
-    console.log('entra')
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
