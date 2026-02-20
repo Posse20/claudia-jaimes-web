@@ -1,0 +1,8 @@
+[build]
+  publish = "dist/claudia-jaimes-web/browser"
+  command = "ng build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

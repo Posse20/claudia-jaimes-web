@@ -392,7 +392,7 @@
 
 .clau-bio {
     width: 90%;
-    padding: 0px 40px 20px 40px;
+    padding: 20px 40px 20px 40px;
     margin-top: -30px;
 }
 
@@ -1563,7 +1563,6 @@
         top: 0;
         display: flex;
         flex-direction: column;
-        z-index: -1;
         position: relative;
         background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(255, 255, 255, 0.308)), url("/assets/home-imgs/lamp-bg.png");
         background-size: 100% auto;
@@ -1573,14 +1572,27 @@
     }
 
     .section-4-mobile {
+        position: relative;
+        width: 100%;
+        padding-bottom: 300px;
+        overflow: hidden;
+        min-height: 50vh;
+        display: block;
+    }
+
+    .section-4-mobile video {
+        position: absolute;
         top: 0;
-        display: flex;
-        flex-direction: column;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.247), rgba(255, 255, 255, 0.308)), url("/assets/home-imgs/form-bg.png");
-        background-size: 110% auto; 
-        /* background-position: center 40%; */
-        background-repeat: no-repeat;
-        padding-bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .form-s {
+        position: relative;
+        z-index: 2;
     }
 
     .first-column {
@@ -1887,9 +1899,10 @@
 
     }
 
-    .gallery-wrapper {
+    /* .gallery-wrapper {
         touch-action: pan-y;
-    }
+        overflow: hidden;
+    } */
 
     .gallery-section h1 {
         font-size: 2rem;
@@ -1897,10 +1910,9 @@
     }
 
     .nav-button {
-        /* margin: 0px;
+        margin: 0px;
         position: relative;
-        z-index: 10; */
-        display: none;
+        z-index: 10;
     }
 
     .carrousel {
@@ -1911,7 +1923,7 @@
 
     .carrousel-track {
         display: flex;
-        transition: transform 2s ease-in-out; /* 🔥 suavidad */
+        transition: transform 0.4s ease-in-out; /* 🔥 suavidad */
     }
 
     .carrousel-track.no-transition {
@@ -1919,10 +1931,11 @@
     }
 
     .carrousel-item {
-        height: 150px;
+        height: 240px;
         border-radius: 1.7rem;
-        flex-shrink: 0;
+        flex: 0 0 50%;
         padding: 5px;
+        transition: none;
     }
 
     .sct-2-text {
@@ -2171,6 +2184,7 @@
     .form-phone-icon {
         width: 50px;
         height: 50px;
+        padding: 0;
     }
 
     .mensaje {
@@ -2236,6 +2250,7 @@
     .section-4-1-mobile {
         display: flex;
         width: 100%;
+        margin-top: -150px;
     }
 
     .mb-aso-arr {
@@ -2244,7 +2259,7 @@
     }
 
     .mb-logo-aso {
-        width: 80%;
+        width: 100%;
         text-align: center;
         margin-top: 20px;
         

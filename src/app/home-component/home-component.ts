@@ -74,6 +74,40 @@ export class HomeComponent implements OnInit {
 
   disableTransition = false;
   extendedImages: string[] = [];
+
+  // swipe variables
+  startX = 0;
+  currentX = 0;
+  isDragging = false;
+
+  
+  onTouchStart(event: TouchEvent) {
+    if (window.innerWidth > 450) return; // solo mobile
+
+    this.startX = event.touches[0].clientX;
+    this.isDragging = true;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (!this.isDragging) return;
+    this.currentX = event.touches[0].clientX;
+  }
+
+  onTouchEnd() {
+    if (!this.isDragging) return;
+
+    const diff = this.startX - this.currentX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        this.nextImage(); // izquierda
+      } else {
+        this.prevImage(); // derecha
+      }
+    }
+
+    this.isDragging = false;
+  }
   
   ngOnInit(): void {
     const params = new URLSearchParams(window.location.search);
@@ -85,9 +119,9 @@ export class HomeComponent implements OnInit {
       ...this.images1,
       this.images1[0]
     ];
-    setInterval(() => {
-      this.startAutoPlay();
-    }, 3500);
+    // setInterval(() => {
+    //   this.startAutoPlay();
+    // }, 3500);
   }
 
   startAutoPlay() {
@@ -110,6 +144,7 @@ export class HomeComponent implements OnInit {
   }
 
   nextImage() {
+    console.log('entra')
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 

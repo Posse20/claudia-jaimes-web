@@ -84,20 +84,20 @@
             </div>
             <div class="clau-bio">
                 <p>
-                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
+                    La Dra. Claudia Viviana Jaimes es cirujana general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
                     y actual miembro de la Sociedad Mundial de Cirugía Robótica
                 </p>
                 <p>
                     Cirujana graduada de la Universidad Nacional de Colombia en su especialidad.
                 </p>
                 <p>
-                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander y Docente Universitario.
+                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander, Gerente en salud de la FUCS y docente universitaria.
                 </p>
                 <p>
-                    Miembro del Colegio Médico Colombiano, de la Asociación Colombiana y Panamericana de Trauma, Asociación Colombiana y Latinoamericana de Cirugía
+                    Actualmente es miembro de las diferentes asociaciones médico quirúrgicas nacionales e internacionales
                 </p>
                 <p>
-                    Cirujana Destacada directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
+                    Es directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
                 </p>
             </div>
         </div>
@@ -140,16 +140,16 @@
             </div>
             <div class="clau-bio">
                 <p>
-                    La Dra. Claudia Viviana Jaimes es cirujana especialista en cirugía general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
+                    La Dra. Claudia Viviana Jaimes es cirujana general mínimamente invasiva y robótica Da Vinci - Memorial Hermann Houston, US
                     y actual miembro de la Sociedad Mundial de Cirugía Robótica
                     &nbsp;
                     Cirujana graduada de la Universidad Nacional de Colombia en su especialidad.
                     &nbsp;
-                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander y Docente Universitario.
+                    Médica y Cirujana, Egresada de la Universidad Industrial de Santander, Gerente en salud de la FUCS y docente universitaria.
                     &nbsp;
-                    Miembro del Colegio Médico Colombiano, de la Asociación Colombiana y Panamericana de Trauma, Asociación Colombiana y Latinoamericana de Cirugía
+                    Actualmente es miembro de las diferentes asociaciones médico quirúrgicas nacionales e internacionales
                     &nbsp;
-                    Cirujana Destacada directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
+                    Es directora de CAR dentro de la Asociación Colombiana de Cirugía con RECERTIFICACIÓN como especialista CAMEC.
                 </p>
             </div>
         </div>
@@ -246,18 +246,12 @@
 <section class="section-2-mobile">
     <div class="gallery-section">
         <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
-        <div class="gallery-wrapper" >
+        <div class="gallery-wrapper">
             <button class="nav-button left" (click)="prevImage()">‹</button>
             <div class="carrousel">
-                <div
-                    class="carrousel-track"
-                    [style.transform]="'translateX(-' + currentIndexMob * 100 + '%)'"
-                    [class.no-transition]="disableTransition"
-                >
-                    <div class="carrousel-item" *ngFor="let img of extendedImages">
-                        <img [src]="img" alt="Imagen" />
-                    </div>  
-                </div>
+                <div class="carrousel-item" *ngFor="let img of visibleImages">
+                    <img [src]="img" alt="Imagen" />
+                </div>  
             </div>
             <button class="nav-button right" (click)="nextImage()">›</button>
         </div>
@@ -294,7 +288,7 @@
                     </div>
                     <div class="contact-info-info">
                         <p>Teléfono: (+57) 316 931 8999</p>
-                        <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
+                        <p>Correo electrónico: cirugiarobotica.drajaimes&#64;gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -388,7 +382,7 @@
             </div>
             <div class="contact-info-info">
                 <p>Teléfono: (+57) 316 931 8999</p>
-                <p>Correo electrónico: cirugiarobotica.drjaimes&#64;gmail.com</p>
+                <p>Correo electrónico: cirugiarobotica.drajaimes&#64;gmail.com</p>
             </div>
         </div>
     </div>
@@ -465,74 +459,81 @@
     </div>
 </section>
 
-<section class="section-4-mobile">
-    <div class="form-title">
-        <div class="form-title-title">
-            <p>Solicita tu valoración en el siguiente formulario</p>
-        </div>  
+<section class="section-4-mobile" id="form-clau">
+    <video autoplay muted loop playsinline>
+        <source src="assets/home-imgs/bg-video-1.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+    </video>
+
+    <div class="form-s">
+        <div class="form-title">
+            <div class="form-title-title">
+                <p>Solicita tu valoración en el siguiente formulario</p>
+            </div>  
+        </div>
+        <form 
+            class="form-sect"
+            name="contact"
+            method="post"
+            (submit)="onSubmit($event)"
+        >
+
+            <input type="hidden" name="form-name" value="contact" />
+
+
+            <div class="form-group">
+                <p>Nombres:</p>
+                <input type="text" name="nombres">
+            </div>
+            <div class="form-group">
+                <p>Apellidos:</p>
+                <input type="text" name="apellidos">
+            </div>
+
+            <div class="form-group-1">
+                <p>Email:</p>
+                <input type="email" name="email">
+                <p>Teléfono:</p>
+                <input type="text" name="telefono">
+            </div>
+
+            <div class="form-group-1">
+                <p>EPS/Aseguradora:</p>
+                <input type="text" name="eps">
+            </div>
+
+            <div class="form-group-2">
+                <div class="mensaje">
+                    <p>Mensaje:</p>
+                    <textarea name="mensaje"></textarea>
+                    
+                </div>
+                <div class="form-contact">
+                    <div class="form-contact-sect">
+                        <div class="form-phone-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="form-phone">
+                            <p>Teléfono:</p>
+                            <p>(+57) 316 931 8999</p>
+                        </div>
+                    </div>
+                    <div class="form-contact-sect">
+                        <div class="form-phone-icon">
+                            <i class="fa-solid fa-envelope" style="padding: 10px;"></i>
+                        </div>
+                        <div class="form-phone">
+                            <p>Correo electrónico</p>
+                            <p>cirugiarobotica.drajaimes&#64;gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
+            </div>
+        </form>
     </div>
-    <form 
-        class="form-sect"
-        name="contact"
-        method="post"
-        (submit)="onSubmit($event)"
-    >
-
-        <input type="hidden" name="form-name" value="contact" />
-
-
-        <div class="form-group">
-            <p>Nombres:</p>
-            <input type="text" name="nombres">
-        </div>
-        <div class="form-group">
-            <p>Apellidos:</p>
-            <input type="text" name="apellidos">
-        </div>
-
-        <div class="form-group-1">
-            <p>Email:</p>
-            <input type="email" name="email">
-            <p>Teléfono:</p>
-            <input type="text" name="telefono">
-        </div>
-
-        <div class="form-group-1">
-            <p>EPS/Aseguradora:</p>
-            <input type="text" name="eps">
-        </div>
-
-        <div class="form-group-2">
-            <div class="mensaje">
-                <p>Mensaje:</p>
-                <textarea name="mensaje"></textarea>
-                
-            </div>
-            <div class="form-contact">
-                <div class="form-contact-sect">
-                    <div class="form-phone-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div class="form-phone">
-                        <p>Teléfono:</p>
-                        <p>(+57) 316 931 8999</p>
-                    </div>
-                </div>
-                <div class="form-contact-sect">
-                    <div class="form-phone-icon">
-                        <i class="fa-solid fa-envelope" style="padding: 10px;"></i>
-                    </div>
-                    <div class="form-phone">
-                        <p>Correo electrónico</p>
-                        <p>cirugiarobotica.drjaimes&#64;gmail.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="form-send"><button class="form-send-btn" type="submit">Enviar</button></div>
-        </div>
-    </form>
 
 </section>
 
@@ -546,22 +547,22 @@
             <i class="fa-solid fa-angles-down" ></i>
         </div>
         <div class="mb-logo-aso">
-            <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')" class="mb-logo-srs">
+            <img style="width: 70%;" src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')" class="mb-logo-srs">
         </div>
         <div class="mb-logo-aso">
-            <img style="width: 100%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+            <img style="width: 100%; margin-top: 20px;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
         </div>
         <div class="mb-logo-aso">
-            <img style="width: 100%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
+            <img style="width: 60%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
         </div>
         <div class="mb-logo-aso">
-            <img style="width: 80%;" src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
+            <img style="width: 50%;" src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
         </div>
         <div class="mb-logo-aso">
-            <img style="width: 100%;" src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
+            <img style="width: 80%;" src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
         </div>
         <div class="mb-logo-aso">
-            <img style="width: 100%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
+            <img style="width: 80%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
         </div>
     </div>
 
@@ -576,7 +577,7 @@
 
 </section>
 
-<section class="section-4">
+<section class="section-4" id="form-clau">
     <video autoplay muted loop playsinline>
         <source src="assets/home-imgs/bg-video-1.mp4" type="video/mp4" />
         Tu navegador no soporta video.
@@ -645,7 +646,7 @@
                     </div>
                     <div class="form-phone">
                         <p>Correo electrónico</p>
-                        <p>cirugiarobotica.drjaimes&#64;gmail.com</p>
+                        <p>cirugiarobotica.drajaimes&#64;gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -666,7 +667,7 @@
                 <img style="width: 30%;" src="assets/logos/logo-aso/CAMEC.png" alt="" (click)="navigateToAssociations('camec')">
             </div>
             <div class="logo-aso-2">
-                <img style="width: 100%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
+                <img style="width: 80%;" src="assets/logos/logo-aso/CMC.png" alt="" (click)="navigateToAssociations('cmc')">
             </div>
         </div>
 
@@ -678,13 +679,13 @@
                 </div>
             </div>
             <div class="logo-aso pt-5">
-                <img src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')">
-            </div>
-            <div class="logo-aso logo-aso-1 pt-5">
-                <img style="width: 100%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
+                <img style="width: 50%;" src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')">
             </div>
             <div class="logo-aso" style="padding-top: 4rem; padding-bottom: 3rem;">
-                <img style="width: 100%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+                <img style="width: 130%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')">
+            </div>
+            <div class="logo-aso logo-aso-1 pt-5">
+                <img style="width: 80%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')">
             </div>
             <div class="logo-aso pt-4 pb-1">
                 <img style="width: 100%;" src="assets/logos/logo-aso/SCOPAH.png" alt="" (click)="navigateToAssociations('scopah')">
