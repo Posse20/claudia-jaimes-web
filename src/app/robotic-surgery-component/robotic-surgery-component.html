@@ -384,10 +384,12 @@
     <div class="testimonio">
         <h1>Testimonio y más...</h1>
         <div class="video-testi">
-            <video controls
-                #autoVideo
+            <video
+                #autoVideo1
                 muted
                 playsinline
+                controls
+                preload="metadata"
                 src="assets/robotic-surgery/testi.webm"></video>
         </div>
     </div>
@@ -416,6 +418,7 @@
                 #autoVideo
                 muted
                 playsinline
+                controls
                 src="assets/robotic-surgery/testi.webm"></video>
         </div>
     </div>
@@ -431,92 +434,16 @@
             <img class="testi-1-img" src="assets/testis/testi-1.png" alt="" loading="lazy" >
             <img class="testi-1-msg" src="assets/testis/testi-1-inf.png" alt="" loading="lazy" >
         </div>
-        <div class="testi-2-1">
+        <div class="testi-1-1">
             <img class="testi-2-img" src="assets/testis/testi-2-inf.png" alt="" loading="lazy" >
             <img class="testi-2-msg" src="assets/testis/testi-2.png" alt="" loading="lazy" >
         </div>
+        <div class="testi-1-1">
+            <img class="testi-1-img" src="assets/testis/testi-3.png" alt="" loading="lazy" >
+            <img class="testi-1-msg" src="assets/testis/testi-3-inf.png" alt="" loading="lazy" >
+        </div>
     </div>
 
-</section>
-
-<section class="section-4-mobile">
-    <div class="donde-opero-title">
-        <p>Instituciones donde opero...</p>
-        <i class="fa-solid fa-angles-down angl-anim"></i>
-    </div>
-    <!-- <div class="opero-maps">
-        <div class="opero-item">
-            <app-google-map
-                [lat]="4.636849617999522"
-                [lng]="-74.0650520876891"
-                [isUrl]="false"
-                [title]="'Consultorio Marly'"
-                [content]="_contentMarly"
-            ></app-google-map>
-            <p>Clínica de Marly</p>
-        </div>
-        <div class="opero-item">
-            <app-google-map
-                [lat]="4.698465450966318"
-                [lng]="-74.07309676133181"
-                [isUrl]="false"
-                [title]="'Consultorio Shaio'"
-                [content]="_contentShaio"
-            ></app-google-map>
-            <p>Clínica Shaio</p>
-        </div>
-    </div> -->
-    <div class="opero-maps" style="margin-top: 30px;">
-        <div class="opero-item">
-            <app-google-map
-                [lat]="4.636849617999522"
-                [lng]="-74.0650520876891"
-                [isUrl]="false"
-                [title]="'Consultorio Marly'"
-                [content]="_contentMarly"
-            ></app-google-map>
-            <p>Clínica de Marly</p>
-        </div>
-    </div>
-</section>
-
-<section class="section-5">
-    <div class="donde-opero-title">
-        <p>Instituciones donde opero...</p>
-        <i class="fa-solid fa-angles-down anim-angl"></i>
-    </div>
-    <div class="opero-maps">
-        <div class="opero-item">
-            <app-google-map
-                [lat]="4.636849617999522"
-                [lng]="-74.0650520876891"
-                [isUrl]="false"
-                [title]="'Consultorio Marly'"
-                [content]="_contentMarly"
-            ></app-google-map>
-            <p>Clínica de Marly</p>
-        </div>
-        <!-- <div class="opero-item">
-            <app-google-map
-                [lat]="4.698465450966318"
-                [lng]="-74.07309676133181"
-                [isUrl]="false"
-                [title]="'Consultorio Shaio'"
-                [content]="_contentShaio"
-            ></app-google-map>
-            <p>Clínica Shaio</p>
-        </div>
-        <div class="opero-item">
-            <app-google-map
-                [lat]="4.668920760030404"
-                [lng]="-74.05682566133201"
-                [isUrl]="false"
-                [title]="'Consultorio Country'"
-                [content]="_contentCountry"
-            ></app-google-map>
-            <p>Clínica Country</p>
-        </div> -->
-    </div>
 </section>
 
 <app-footer-clau></app-footer-clau>

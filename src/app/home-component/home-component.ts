@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { GoogleMapComponent } from '../google-map/google-map';
@@ -10,7 +10,7 @@ import { FooterClau } from '../footer-clau/footer-clau';
   templateUrl: './home-component.html',
   styleUrl: './home-component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
     images: string[] = [
     'assets/imgs-carrousel/carrousel-1.webp',
@@ -32,6 +32,43 @@ export class HomeComponent implements OnInit {
     'assets/imgs-carrousel/carrousel-19.webp',
     'assets/imgs-carrousel/carrousel-20.webp'
   ];
+
+  @ViewChild('bgVideo', { static: true }) bgVideo!: ElementRef<HTMLVideoElement>;
+   @ViewChild('bgVideo1', { static: true }) bgVideo1!: ElementRef<HTMLVideoElement>;
+
+  ngAfterViewInit(): void {
+    if (window.innerWidth < 500) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.bgVideo.nativeElement.play().catch(() => {});
+          } else {
+            this.bgVideo.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.2 }); // 50% visible
+
+      observer.observe(this.bgVideo.nativeElement);
+    }else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.bgVideo1.nativeElement.play();
+          } else {
+            this.bgVideo1.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.2 }); // 50% visible
+
+      observer.observe(this.bgVideo1.nativeElement);
+    }
+  }
+
+
+  text = 'Claudia Viviana \nJaimes González';
+  text1 = 'Cirugía Robótica Mínima Invasión'
+  letters: string[] = [];
+  letters1: string[] = [];
 
   
   protected _content = `
@@ -91,6 +128,8 @@ export class HomeComponent implements OnInit {
     if (params.get('success') === 'true') {
       this.showToast = true;
     }
+    this.letters = this.text.split('');
+    this.letters1 = this.text1.split('');
   }
 
   selectedImage: string | null = null;

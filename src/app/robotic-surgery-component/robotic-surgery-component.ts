@@ -24,21 +24,35 @@ export class RoboticSurgeryComponent implements AfterViewInit{
   }
 
   @ViewChild('autoVideo', { static: true }) video!: ElementRef<HTMLVideoElement>;
+  @ViewChild('autoVideo1', { static: true }) video1!: ElementRef<HTMLVideoElement>;
 
 
   ngAfterViewInit(): void {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.video.nativeElement.play();
-        } else {
-          this.video.nativeElement.pause();
-        }
-      },
-      { threshold: 0.5 } // 50% visible
-    );
+    if (window.innerWidth < 500) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.video1.nativeElement.play();
+          } else {
+            this.video1.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.1 }); // 50% visible
 
-    observer.observe(this.video.nativeElement);
+      observer.observe(this.video1.nativeElement);
+    }else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.video.nativeElement.play();
+          } else {
+            this.video.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.1 }); // 50% visible
+
+      observer.observe(this.video.nativeElement);
+    }
   }
 
 }

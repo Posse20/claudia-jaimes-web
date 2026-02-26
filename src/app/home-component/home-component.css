@@ -257,8 +257,9 @@
 }
 
 .colsanitas {
+    width: 80%;
     background-color: white;
-    padding: 20px 15px;
+    padding: 0px;
     border-radius: 30px;
     margin-bottom: 20px;
     transition: transform 0.25s ease;
@@ -266,21 +267,21 @@
 }
 
 .medisani, .unimarly {
-    width: 80%;
     margin-top: 20px;
     background-color: white;
-    padding: 20px 15px;
+    padding: 0px;
     border-radius: 30px;
     margin-bottom: 20px;
     transition: transform 0.25s ease;
     cursor: pointer;
+    width: 80%;
 }
 
 .medplus {
-    height: 140px;
+    width: 80%;
     margin-top: 20px;
     background-color: white;
-    padding: 0px 85px;
+    padding: 0px;
     border-radius: 30px;
     margin-bottom: 20px;
     transition: transform 0.25s ease;
@@ -289,10 +290,9 @@
 
 .coomeva {
     width: 80%;
-    height: 140px;
     margin-top: 20px;
     background-color: white;
-    padding: 0px 15px;
+    padding: 0px;
     border-radius: 30px;
     margin-bottom: 20px;
     transition: transform 0.25s ease;
@@ -436,7 +436,7 @@
     background-size: 100% auto;
     background-position: center 60%;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 120vh;
     margin-top: -320px;
 }
 
@@ -522,8 +522,47 @@
     color: white;
     font-weight: 400;
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
+
+  .lg-tex-1 {
+    width: 60%;
+    margin-left: 20px;
+  }
+  
+  .reveal-text {
+    overflow: hidden;
+    white-space: pre-line; /* respeta el salto de línea */
+    width: 73%;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .reveal-text-1 {
+    overflow: hidden;
+    text-align: center;
+    white-space: pre-line; /* respeta el salto de línea */
+    width: 70%;
+    color: #112034;
+    font-size: 1rem;
+  }
+
+  .char {
+    display: inline-block;
+    transform: translateY(120%);
+    opacity: 0;
+    animation: riseUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes riseUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 .arr-gallery:hover,
 .sct-2-text:hover,
@@ -1138,15 +1177,14 @@
     }
 
     .colsanitas {
-        padding: 20px 45px;
+        padding: 0px;
     }
 
     .medplus {
-        height: 190px;
+        padding: 0px;
     }
 
     .coomeva {
-        width: 90%;
         padding: 0;
     }
 
@@ -1186,12 +1224,12 @@
         width: 65%;
     }
 
-    .colsanitas {
+    /* .colsanitas {
         width: 80%;
-    }
+    } */
 
     .medplus {
-        padding: 0 40px;
+        padding: 0px;
     }
 
     .sct-2-text {
@@ -1322,12 +1360,12 @@
 
     .medplus {
         padding: 0 25px;
-        height: 60px;
+        /* height: 60px; */
 
     }
 
     .coomeva {
-        height: 60px;
+        /* height: 60px; */
         padding: 5px;
     }
 
@@ -1748,20 +1786,19 @@
 
     .colsanitas {
         background-color: white;
-        padding: 5px 10px;
+        padding: 0px;
         border-radius: 30px;
         margin-bottom: 20px;
         transition: transform 0.25s ease;
         cursor: pointer;
-        width: 100%;
+        /* width: 100%; */
     }
 
 
     .medisani, .unimarly {
-        width: 100%;
         margin-top: 10px;
         background-color: white;
-        padding: 5px 5px;
+        padding: 0px;
         border-radius: 30px;
         margin-bottom: 20px;
         transition: transform 0.25s ease;
@@ -1769,7 +1806,7 @@
     }
 
     .medplus {
-        height: 60px;
+        /* height: 60px; */
         margin-top: 20px;
         background-color: white;
         padding: 0px;
@@ -1777,15 +1814,15 @@
         margin-bottom: 20px;
         transition: transform 0.25s ease;
         cursor: pointer;
-        width: 80%;
+        /* width: 80%; */
     }
 
     .coomeva {
-        width: 100%;
-        height: auto;
+        /* width: 100%;
+        height: auto; */
         margin-top: 20px;
         background-color: white;
-        padding: 0px 15px;
+        padding: 0px;
         border-radius: 30px;
         margin-bottom: 20px;
         transition: transform 0.25s ease;
@@ -1832,7 +1869,7 @@
         border-radius: 20px;
         z-index: 1;
         position: relative;
-        margin-top: -30px;
+        margin-top: -40px;
     }
 
     .what-is h1 {
@@ -1971,7 +2008,8 @@
         padding: 10px;
         border-radius: 20px;
         width: 50%;
-        z-index: 0;
+        z-index: 2;
+        top: -20px;
     }
 
     .sct-2-text h1 {
