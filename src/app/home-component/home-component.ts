@@ -13,47 +13,24 @@ import { FooterClau } from '../footer-clau/footer-clau';
 export class HomeComponent implements OnInit {
 
     images: string[] = [
-    'assets/imgs-carrousel/carrousel-1.png',
-    'assets/imgs-carrousel/carrousel-13.jpg',
-    'assets/imgs-carrousel/carrousel-10.jpg',
-    'assets/imgs-carrousel/carrousel-3.png',
-    'assets/imgs-carrousel/carrousel-7.jpg',
-    'assets/imgs-carrousel/carrousel-8.jpg',
-    'assets/imgs-carrousel/carrousel-4.png',
-    'assets/imgs-carrousel/carrousel-11.jpg',
-    'assets/imgs-carrousel/carrousel-12.jpg',
-    'assets/imgs-carrousel/carrousel-5.png',
-    'assets/imgs-carrousel/carrousel-14.jpg',
-    'assets/imgs-carrousel/carrousel-15.jpg',
-    'assets/imgs-carrousel/carrousel-6.png',
-    'assets/imgs-carrousel/carrousel-9.png',
-    'assets/imgs-carrousel/carrousel-16.jpg',
-    'assets/imgs-carrousel/carrousel-17.png',
-    'assets/imgs-carrousel/carrousel-18.png',
-    'assets/imgs-carrousel/carrousel-19.png',
-    'assets/imgs-carrousel/carrousel-20.jpg'
-  ];
-
-  images1: string[] = [
-    'assets/imgs-carrousel/carrousel-1.png',
-    'assets/imgs-carrousel/carrousel-13.jpg',
-    'assets/imgs-carrousel/carrousel-10.jpg',
-    'assets/imgs-carrousel/carrousel-3.png',
-    'assets/imgs-carrousel/carrousel-7.jpg',
-    'assets/imgs-carrousel/carrousel-8.jpg',
-    'assets/imgs-carrousel/carrousel-4.png',
-    'assets/imgs-carrousel/carrousel-11.jpg',
-    'assets/imgs-carrousel/carrousel-12.jpg',
-    'assets/imgs-carrousel/carrousel-5.png',
-    'assets/imgs-carrousel/carrousel-14.jpg',
-    'assets/imgs-carrousel/carrousel-15.jpg',
-    'assets/imgs-carrousel/carrousel-6.png',
-    'assets/imgs-carrousel/carrousel-9.png',
-    'assets/imgs-carrousel/carrousel-16.jpg',
-    'assets/imgs-carrousel/carrousel-17.png',
-    'assets/imgs-carrousel/carrousel-18.png',
-    'assets/imgs-carrousel/carrousel-19.png',
-    'assets/imgs-carrousel/carrousel-20.jpg'
+    'assets/imgs-carrousel/carrousel-1.webp',
+    'assets/imgs-carrousel/carrousel-13.webp',
+    'assets/imgs-carrousel/carrousel-10.webp',
+    'assets/imgs-carrousel/carrousel-3.webp',
+    'assets/imgs-carrousel/carrousel-7.webp',
+    'assets/imgs-carrousel/carrousel-8.webp',
+    'assets/imgs-carrousel/carrousel-11.webp',
+    'assets/imgs-carrousel/carrousel-12.webp',
+    'assets/imgs-carrousel/carrousel-5.webp',
+    'assets/imgs-carrousel/carrousel-14.webp',
+    'assets/imgs-carrousel/carrousel-15.webp',
+    'assets/imgs-carrousel/carrousel-6.webp',
+    'assets/imgs-carrousel/carrousel-9.webp',
+    'assets/imgs-carrousel/carrousel-16.webp',
+    'assets/imgs-carrousel/carrousel-17.webp',
+    'assets/imgs-carrousel/carrousel-18.webp',
+    'assets/imgs-carrousel/carrousel-19.webp',
+    'assets/imgs-carrousel/carrousel-20.webp'
   ];
 
   
@@ -113,33 +90,6 @@ export class HomeComponent implements OnInit {
     const params = new URLSearchParams(window.location.search);
     if (params.get('success') === 'true') {
       this.showToast = true;
-    }
-    this.extendedImages = [
-      this.images1[this.images1.length - 1],
-      ...this.images1,
-      this.images1[0]
-    ];
-    // setInterval(() => {
-    //   this.startAutoPlay();
-    // }, 3500);
-  }
-
-  startAutoPlay() {
-    this.currentIndexMob++;
-    console.log('cuure', this.currentIndexMob);
-    console.log('leng', this.extendedImages.length);
-
-    // cuando llega al clon final
-    if (this.currentIndexMob === this.extendedImages.length - 12) {
-      setTimeout(() => {
-        this.disableTransition = true;
-        this.currentIndexMob = 1;
-
-        // reactivar transición
-        setTimeout(() => {
-          this.disableTransition = false;
-        }, 50);
-      }, 1000); // ⬅ MISMO tiempo que el CSS
     }
   }
 

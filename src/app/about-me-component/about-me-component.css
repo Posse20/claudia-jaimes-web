@@ -111,7 +111,7 @@
 
 .inf-section-2-content {
     display: flex;
-    margin-top: 120px;
+    margin-top: 230px;
 }
 
 .imagen-frame {
@@ -157,7 +157,7 @@
 
 .title-2 {
     margin-left: 150px;
-    padding-top: 50px;
+    padding-top: 100px;
     width: 30%;
 }
 
@@ -569,7 +569,7 @@
         margin: 0;
         margin-top: 0px;
         position: relative;
-        left: 30px;
+        left: 0px;
         animation: pulse 1.6s ease-in-out infinite;
     }
 

@@ -1215,10 +1215,17 @@
         margin-top: 0;
         width: 45%;
         height: 300px;
+        padding-bottom: 20px;
+        margin-bottom: 60px;
     }
     .opero-item p {
-        font-size: 1rem;
-        padding-bottom: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+        background-color: #7080F7;
+        border-radius: 30px;
+        position: relative;
+        top: -10px;
+        left: 40px;
     }
 
 

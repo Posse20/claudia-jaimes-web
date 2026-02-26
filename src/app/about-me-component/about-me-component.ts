@@ -11,21 +11,37 @@ import { Router } from '@angular/router';
 export class AboutMeComponent implements AfterViewInit {
 
   @ViewChild('autoVideo', { static: true }) video!: ElementRef<HTMLVideoElement>;
+  @ViewChild('autoVideo1', { static: true }) video1!: ElementRef<HTMLVideoElement>;
 
 
-  ngAfterViewInit(): void {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.video.nativeElement.play();
-        } else {
-          this.video.nativeElement.pause();
-        }
-      },
-      { threshold: 0.5 } // 50% visible
-    );
+  ngAfterViewInit() {
 
-    observer.observe(this.video.nativeElement);
+    if (window.innerWidth < 500) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.video1.nativeElement.play().catch(() => {});
+          } else {
+            this.video1.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.2 }); // 50% visible
+
+      observer.observe(this.video1.nativeElement);
+    }else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.video.nativeElement.play();
+          } else {
+            this.video.nativeElement.pause();
+          }
+        });
+      }, { threshold: 0.2 }); // 50% visible
+
+      observer.observe(this.video.nativeElement);
+    }
+
   }
 
   private _router = inject(Router);
