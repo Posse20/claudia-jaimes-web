@@ -1,3 +1,53 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 11, 43, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(112,128,247, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(112,128,247, 0);
+  }
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.arrow-anim-ri-to-le {
+    animation: bounce-1 1.5s infinite;
+}
+
+.arrow-anim-up-to-down {
+    animation: bounce 1.5s infinite;
+}
+
+
+.anim-pulse {
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
 .hero-card {
     background-color: #4f708d;
     border-top-right-radius: 40px;
@@ -82,7 +132,6 @@
     transition: transform 0.25s ease;
 }
 
-.atr-btn:hover,
 .insta-badge:hover,
 .imagen-frame:hover,
 .abt-me-1:hover,
@@ -140,7 +189,7 @@
 }
 
 .atr-btn {
-    margin-left: 80px;
+    margin-left: 10px;
     margin-top: 50px;
     transition: transform 0.25s ease;
 }
@@ -532,7 +581,7 @@
     }
 
     .perfil-prof-info {
-        margin-left: 90px;
+        margin-left: 75px;
         margin-top: 0px;
     }
 

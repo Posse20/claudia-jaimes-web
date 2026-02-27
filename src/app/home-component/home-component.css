@@ -10,6 +10,44 @@
     }
 }
 
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(112,128,247, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(112,128,247, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(112,128,247, 0);
+  }
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* Section Logo */
 
 .hero-card {
@@ -215,11 +253,15 @@
     width: 90%;
     z-index: 2;
     transition: transform 0.25s ease;
+    animation: pulse 1.6s ease-in-out infinite;
 }
 
-.robotic-button:hover {
-    transform: translateY(-4px) scale(1.05);
+.robotic-button:hover,
+.cta-button:hover {
+    transform: scale(1.05);
+    animation-play-state: paused;
 }
+
 
 /* Part 3 Left Section */
 
@@ -338,8 +380,7 @@
 }
 
 .home-clau-img:hover,
-.decora-lines-abtme-btn:hover,
-.cta-button:hover {
+.decora-lines-abtme-btn:hover {
     transform: translateY(-4px) scale(1.05);
 }
 
@@ -388,6 +429,7 @@
     border-radius: 40px;
     cursor: pointer;
     transition: transform 0.25s ease;
+    animation: pulse 1.6s ease-in-out infinite;
 }
 
 .clau-bio {
@@ -817,7 +859,9 @@
 .social-title:hover,
 .form-title-arrow:hover,
 .form-send-btn:hover,
-.logo-aso:hover {
+.logo-aso:hover,
+.logo-aso-1:hover,
+.logo-aso-2:hover {
     transform: translateY(-4px) scale(1.05);
 }
 
@@ -1069,11 +1113,13 @@
 
 .logo-aso-1 {
     width: 50%;
+    transition: transform 0.25s ease;
     align-content: center;
 }
 
 .logo-aso-2 {
     width: 50%;
+    transition: transform 0.25s ease;
     align-content: center;
 }
 
@@ -1140,6 +1186,32 @@
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,.2);
   animation: fadeInUp .3s ease;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 20px;
+    animation: zoomIn 0.3s ease;
+}
+
+.arrow-anim-ri-to-le {
+    animation: bounce-1 1.5s infinite;
+}
+
+.arrow-anim-up-to-down {
+    animation: bounce 1.5s infinite;
 }
 
 @keyframes fadeInUp {
@@ -1660,7 +1732,7 @@
         left: 0;
         height: 50px;
     }
-
+/* 
     .lightbox {
     position: fixed;
     inset: 0;
@@ -1677,7 +1749,7 @@
     max-height: 85%;
     border-radius: 20px;
     animation: zoomIn 0.3s ease;
-    }
+    } */
 
     @keyframes fadeIn {
     from { opacity: 0; }
@@ -1765,11 +1837,11 @@
         color: white;
         font-weight: 600;
         font-style: italic;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
         margin-top: -50px;
-        padding: 0px 5px;
-        width: 75%;
+        padding: 5px 0px;
+        width: 70%;
         margin-left: 10px;
         border-radius: 10px;
     }
@@ -1782,51 +1854,32 @@
         margin-top: 30px;
         width: 70%;
         margin-left: 10px;
+        overflow: hidden;
+        padding-top: 10px;
     }
 
-    .colsanitas {
-        background-color: white;
-        padding: 0px;
-        border-radius: 30px;
-        margin-bottom: 20px;
-        transition: transform 0.25s ease;
-        cursor: pointer;
-        /* width: 100%; */
-    }
-
-
-    .medisani, .unimarly {
-        margin-top: 10px;
-        background-color: white;
-        padding: 0px;
-        border-radius: 30px;
-        margin-bottom: 20px;
-        transition: transform 0.25s ease;
-        cursor: pointer;
-    }
-
-    .medplus {
-        /* height: 60px; */
-        margin-top: 20px;
-        background-color: white;
-        padding: 0px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        transition: transform 0.25s ease;
-        cursor: pointer;
-        /* width: 80%; */
-    }
-
+    .colsanitas,
+    .medisani,
+    .unimarly,
+    .medplus,
     .coomeva {
-        /* width: 100%;
-        height: auto; */
-        margin-top: 20px;
-        background-color: white;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
         padding: 0px;
-        border-radius: 30px;
-        margin-bottom: 20px;
-        transition: transform 0.25s ease;
-        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .colsanitas img,
+    .medisani img,
+    .unimarly img,
+    .medplus img,
+    .coomeva img {
+        width: 100%;           /* tamaño base */
+        transition: transform 0.3s ease;
+        transform: scale(1.8); /* 🔥 zoom visual */
     }
 
     .arr-2-lf3 {
@@ -1837,7 +1890,7 @@
         text-align: center;
     }
     .arr-2-lf3 p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-style: italic;
         margin: 0;
     }
@@ -1859,6 +1912,8 @@
     .second-column, .column-three {
         width: 100%;
         margin: 0;
+        position: relative;
+        top: -5px;
     }
 
     .what-is {
@@ -2192,7 +2247,7 @@
     }
 
     .icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .icon-info {
@@ -2200,7 +2255,7 @@
     }
 
     .icon-info p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     .form-title {
@@ -2380,6 +2435,10 @@
         animation: bounce 1.5s infinite;
     }
 
+    .aso-row{
+        animation: bounce 1.5s infinite;
+    }
+
     @keyframes bounce {
         0% {
             transform: translateY(0);
@@ -2389,6 +2448,18 @@
         }
         100% {
             transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-1 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+        100% {
+            transform: translateX(0);
         }
     }
 

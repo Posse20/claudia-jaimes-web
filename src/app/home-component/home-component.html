@@ -70,7 +70,7 @@
 
         <div class="lf-3">
             <div class="arr-1-lf3">
-                <i class="fa-solid fa-angles-up"></i>
+                <i class="fa-solid fa-angles-up arrow-anim-up-to-down"></i>
             </div>
             <div class="convenios-title">
                 <h1>Convenios</h1>
@@ -183,7 +183,7 @@
                 <div *ngIf="showAllBenefits" class="convenios">
                     <img src="assets/logos/logos-conve/colsanitas.png" alt="colsanitas" class="colsanitas" (click)="navigateToAssociations('colsanitas')" loading="lazy" >
                     <img src="assets/logos/logos-conve/medisanitas.png" alt="medisani" class="medisani" (click)="navigateToAssociations('medisani')" loading="lazy" >
-                    <img src="assets/logos/logos-conve/medp.png" alt="medplus" class="medplus" (click)="navigateToAssociations('medplus')" loading="lazy" >
+                    <img src="assets/logos/logos-conve/medplus.png" alt="medplus" class="medplus" (click)="navigateToAssociations('medplus')" loading="lazy" >
                     <img src="assets/logos/logos-conve/unimarly.png" alt="unimarly" class="unimarly" (click)="navigateToAssociations('unimarly')" loading="lazy" >
                     <img src="assets/logos/logos-conve/coomeva.png" alt="coomeva" class="coomeva" (click)="navigateToAssociations('coomeva')" loading="lazy" >
                 </div>
@@ -249,7 +249,7 @@
 
 <section class="section-2">
     <div class="gallery-section">
-        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
+        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery arrow-anim-ri-to-le"></i></h1>
         <div class="gallery-wrapper">
             <button class="nav-button left" (click)="prevImage()">‹</button>
             <div class="carrousel">
@@ -267,7 +267,7 @@
 
 <section class="section-2-mobile">
     <div class="gallery-section">
-        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery"></i></h1>
+        <h1>Galería <i class="fa-solid fa-angles-right arr-gallery arrow-anim-ri-to-le"></i></h1>
         <div class="gallery-wrapper">
             <button class="nav-button left" (click)="prevImage()">‹</button>
             <div class="carrousel">
@@ -275,18 +275,7 @@
                     <img [src]="img" alt="Imagen" loading="lazy" />
                 </div>  
             </div>
-            <!-- Overlay Lightbox -->
-            <div 
-                class="lightbox" 
-                *ngIf="selectedImage"
-                (click)="closeImage()"
-            >
-                <img 
-                    [src]="selectedImage" 
-                    class="lightbox-img"
-                    (click)="$event.stopPropagation()" 
-                />
-            </div>
+
             <button class="nav-button right" (click)="nextImage()">›</button>
         </div>
     </div>
@@ -303,7 +292,7 @@
                 <h1>Consultorio</h1>
             </div>
             <div class="anim-arrow">
-                <i class="fa-solid fa-angles-right"></i>
+                <i class="fa-solid fa-angles-right arrow-anim-ri-to-le"></i>
             </div>
 
             <div class="main-medical-office">
@@ -398,7 +387,7 @@
 <section class="section-3-mobile">
     <div class="medical-office-title">
         <h1>Consultorio</h1>
-        <i class="fa-solid fa-angles-right"></i>
+        <i class="fa-solid fa-angles-right arrow-anim-ri-to-le"></i>
     </div>
     <div class="main-medical-office">
         <div class="location">
@@ -576,7 +565,7 @@
             <p>Asociaciones</p>
         </div>
         <div class="mb-aso-arr">
-            <i class="fa-solid fa-angles-down" ></i>
+            <i class="fa-solid fa-angles-down aso-row" ></i>
         </div>
         <div class="mb-logo-aso">
             <img style="width: 70%;" src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')" class="mb-logo-srs" loading="lazy" >
@@ -619,7 +608,7 @@
             <p>Solicita tu valoración en el siguiente formulario</p>
         </div>
         <div class="form-title-arrow">
-            <i class="fa-solid fa-angles-down"></i>
+            <i class="fa-solid fa-angles-down arrow-anim-up-to-down"></i>
         </div>
     </div>
 
@@ -705,14 +694,14 @@
             <div class="aso-title">
                 <p>Asociaciones</p>
                 <div class="form-title-arrow">
-                    <i class="fa-solid fa-angles-down"></i>
+                    <i class="fa-solid fa-angles-down arrow-anim-up-to-down"></i>
                 </div>
             </div>
             <div class="logo-aso pt-5">
                 <img style="width: 50%;" src="assets/logos/logo-aso/SRS.png" alt="" (click)="navigateToAssociations('srs')" loading="lazy" >
             </div>
-            <div class="logo-aso" style="padding-top: 4rem; padding-bottom: 3rem;">
-                <img style="width: 130%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')" loading="lazy" >
+            <div class="logo-aso" style="padding-top: 4rem; padding-bottom: 3rem; margin-right: 20%; margin-top: 9%;">
+                <img style="width: 140%;" src="assets/logos/logo-aso/ACC.png" alt="" (click)="navigateToAssociations('acc')" loading="lazy" >
             </div>
             <div class="logo-aso logo-aso-1 pt-5">
                 <img style="width: 80%;" src="assets/logos/logo-aso/TROGGS.png" alt="" (click)="navigateToAssociations('trogss')" loading="lazy" >
@@ -724,5 +713,18 @@
     </div>
 
 </section>
+
+            <!-- Overlay Lightbox -->
+<div 
+    class="lightbox" 
+    *ngIf="selectedImage"
+    (click)="closeImage()"
+>
+    <img 
+        [src]="selectedImage" 
+        class="lightbox-img"
+        (click)="$event.stopPropagation()" 
+    />
+</div>
 
 <app-footer-clau></app-footer-clau>

@@ -147,4 +147,12 @@
         font-size: 0.4rem;
     }
 
+    .decorative-lines {
+        width: 10%;
+    }
+
+    .information {
+        padding: 5px 5px 5px 10px;
+    }
+
 }

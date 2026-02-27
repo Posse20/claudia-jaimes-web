@@ -4,6 +4,7 @@
   background: rgb(112, 129, 247);
   padding: 0px 20px 30px 20px;
   height: 100px;
+  padding-top: env(safe-area-inset-top);
 }
 
 .menu-left {
@@ -165,7 +166,7 @@
   .nav-links a {
     justify-content: center;
     padding: 15px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   /* Mostrar menú */

@@ -410,6 +410,7 @@
 .toggle-img:hover,
 .bene-card-title:hover,
 .testi-1-img:hover,
+.testi-3-img:hover,
 .testi-2-img:hover,
 .lo-que-dicen i:hover,
 .donde-opero-title i:hover {
@@ -419,12 +420,13 @@
 .section-4 {
     width: 100%;
     background: linear-gradient(to right, #1D3461 50%, #1C2A4A 50%);
-    padding: 10px 10px 350px 10px;
+    padding: 10px 10px 0px 10px;
+    max-height: 2700px;
 }
 
 .lo-que-dicen {
     background-color: #112034;
-    padding: 10px 30px;
+    padding: 10px 30px 10px 70px;
     border-radius: 20px;
     width: 55%;
     display: flex;
@@ -440,8 +442,8 @@
     color: white;
     font-size: 4.5rem;
     position: relative;
-    left: 40px;
-    top: 60px;
+    left: 90px;
+    top: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -465,7 +467,7 @@
 }
 
 .testi-1-msg {
-    width: 130%;
+    width: 150%;
     position: relative;
     top: -150px;
     z-index: 0;
@@ -474,9 +476,30 @@
 .testi-2-1 {
     display: grid;
     width: 50%;
+    margin-left: 30%;
+    margin-top: -200px;
+}
+
+.testi-3-1 {
+    display: grid;
+    width: 50%;
+    margin-top: -300px;
+    margin-left: 100px;
+}
+
+.testi-3-img {
+    width: 65%;
     position: relative;
-    top: 430px;
-    right: 250px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.testi-3-msg {
+    width: 100%;
+    position: relative;
+    top: -450px;
+    left: 180px;
+    z-index: 0;
 }
 
 .testi-2-img {
@@ -580,6 +603,7 @@
 
     .section-4 {
         padding-bottom: 450px;
+        max-height: 3600px;
     }
 
 }
@@ -883,14 +907,14 @@
     }
 
     .first-img img {
-        width: 100%;
+        width: 90%;
         margin-left: 10px;
         border-radius: 30px;
         margin-top: 60px;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.747);
         z-index: 2;
         position: relative;
-        top: 20px;
+        top: 30px;
     }
 
     .sct-1-right {
@@ -904,7 +928,7 @@
         background-color: #173759;
         border: #7080F7 2px solid;
         margin-top: 80px;
-        margin-left: 50px;
+        margin-left: 30px;
         margin-bottom: 30px;
         padding: 10px;
         text-align: center;
@@ -1126,17 +1150,20 @@
         padding: 5px;
         margin-top: -250px;
         padding-top: 140px;
-        max-height: 1100px;
+        max-height: 1800px;
     }
 
     .lo-que-dicen{
         width: 80%;
         padding: 10px;
+        position: relative;
+        top: 40px;
     }
 
     .lo-que-dicen p {
         font-size: 1rem;
         margin: 0;
+        margin-left: 20px;
     }
 
     .lo-que-dicen i {
@@ -1147,13 +1174,21 @@
     .testi-1-1 {
         width: 100%;
         position: unset;
+        margin-top: 100px;
     }
 
     .testi-1-1-a {
         width: 100%;
         display: grid;
         position: relative;
-        top: -60px;
+        top: 0px;
+    }
+
+    .testi-1-1-b {
+        width: 100%;
+        display: grid;
+        position: relative;
+        top: 0px;
     }
 
     .testi-1-img {
@@ -1168,6 +1203,21 @@
         top: -90px;
         right: 70px;
         width: 130%;
+    }
+
+    .testi-3-img {
+        width: 60%;
+        position: relative;
+        right: 30px;
+        animation: pulse 1.6s ease-in-out infinite;
+        
+    }
+
+    .testi-3-msg {
+        top: -200px;
+        right: 0px;
+        width: 95%;
+        left: 10px;
     }
 
     .testi-2-img {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 declare const google: any;
 
@@ -22,10 +22,28 @@ export class GoogleMapComponent implements AfterViewInit {
 
   @ViewChild('map', { static: false }) mapRef!: ElementRef<HTMLDivElement>;
 
-  ngAfterViewInit(): void {
+  private loadGoogleMaps(): Promise<void> {
+    return new Promise((resolve) => {
+      if ((window as any).google) {
+        resolve();
+        return;
+      }
 
-    console.log(this.mapRef.nativeElement);
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAPkhqEsv-E_jjdsY_748180z3RK3mU85s`;
+      script.async = true;
+      script.defer = true;
 
+      script.onload = () => {
+        resolve();
+      };
+
+      document.head.appendChild(script);
+    });
+  }
+
+  async ngAfterViewInit() {
+    await this.loadGoogleMaps();
     const map = new google.maps.Map(this.mapRef.nativeElement, {
       center: {
         lat: this.lat,
