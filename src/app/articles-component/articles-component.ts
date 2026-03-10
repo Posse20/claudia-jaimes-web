@@ -15,18 +15,25 @@ export class ArticlesComponent implements OnInit {
 
   protected articles: Article[] = [];
   protected filteredArticles: Article[] = [];
+  protected loadingArticles: boolean = false;
 
   constructor(
     private _articlesService: ArticlesService
   ){}
 
   ngOnInit(): void {
+    this._initComponent();
+  }
+
+  private async _initComponent() {
+    this.loadingArticles = true;
     this._articlesService.getArticles().subscribe({
       next: data => {
         this.articles = data;
         this.filteredArticles = this.articles;
+        this.loadingArticles = false;
       }
-    })
+    });
   }
 
   protected _onSearch(event: Event){

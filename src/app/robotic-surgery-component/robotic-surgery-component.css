@@ -1175,7 +1175,8 @@
         width: 120%;
         display: flex;
         margin-top: 30px;
-        margin-bottom: 60px;    
+        margin-bottom: 60px;
+        margin-left: 30px; 
     }
 
     .testi-1-img {
@@ -1209,6 +1210,7 @@
         display: flex;
         margin-bottom: 60px;
         margin-top: 50px;
+        margin-left: 30px; 
     }
 
     .testi-2-img {
@@ -1220,7 +1222,8 @@
 
     .testi-2-img img {
         width: 100%;
-        right: 0px;
+        position: relative;
+        right: 35px;
         margin-left: 0px;
         animation: pulse 1.6s ease-in-out infinite;
     }
@@ -1243,6 +1246,7 @@
         width: 120%;
         display: flex;
         margin-bottom: 60px;
+        margin-left: 30px;
     }
 
     .testi-3-img {
@@ -1252,7 +1256,8 @@
 
     .testi-3-img img {
         width: 85%;
-        right: 0px;
+        position: relative;
+        right: 30px;
         margin-left: 0px;
         animation: pulse 1.6s ease-in-out infinite;
     }
