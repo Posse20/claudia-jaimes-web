@@ -622,7 +622,7 @@
         margin-top: 0px;
         position: relative;
         left: 0px;
-        animation: pulse 1.6s ease-in-out infinite;
+        animation: none;
     }
 
     @keyframes pulse {
@@ -640,6 +640,7 @@
     .insta-icon {
         width: 60px;
         height: 60px;
+        animation: pulse 1.6s ease-in-out infinite;
     }
 
     .insta-icon i {
@@ -650,6 +651,7 @@
         font-size: 0.6rem;
         margin-left: 0px;
         margin-right: -11px;
+        animation: pulse 1.6s ease-in-out infinite;
     }
 
     .video-1{

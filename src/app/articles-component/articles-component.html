@@ -4,26 +4,37 @@
     <div class="buscador-title">
         <h1>Buscador de artículos científicos<i class="fa-regular fa-newspaper"></i></h1>
     </div>
-    <div class="buscador">
+    <div class="buscador" >
         <div class="search">
             <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" placeholder="Buscar..." class="search-input" (input)="_onSearch($event)">
         </div>
-        <div class="result">
-            <div class="content" *ngFor="let art of filteredArticles">
-                <div class="name">
-                    <p>{{art.name}}</p>
+        <ng-container *ngIf="!loadingArticles; else loading">
+            <div class="result">
+                <div class="content" *ngFor="let art of filteredArticles">
+                    <div class="name">
+                        <p>{{art.name}}</p>
+                    </div>
+                    <div class="link">
+                        <p>Ver en: &nbsp; <a [href]="art.link" target="_blank">{{ art.link | slice:0:40 }}{{ art.link.length > 40 ? '...' : '' }}</a></p>
+                    </div>
                 </div>
-                <div class="link">
-                    <p>Ver en: &nbsp; <a [href]="art.link" target="_blank">{{ art.link | slice:0:40 }}{{ art.link.length > 40 ? '...' : '' }}</a></p>
+                <div *ngIf="filteredArticles.length === 0" class="no-results">
+                    <h1>No se encontraron resultados</h1>
                 </div>
             </div>
-            <div *ngIf="filteredArticles.length === 0" class="no-results">
-                <h1>No se encontraron resultados</h1>
-            </div>
-        </div>
+        </ng-container>
 
     </div>
+
+    <ng-template #loading>
+        <div style="text-align: center;">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </ng-template>
+
 </section>
 
 <section class="section-1-mobile">
@@ -35,19 +46,29 @@
             <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input type="text" placeholder="Buscar..." class="search-input" (input)="_onSearch($event)">
         </div>
-        <div class="result">
-            <div class="content" *ngFor="let art of filteredArticles">
-                <div class="name">
-                    <p>{{art.name}}</p>
+        <ng-container *ngIf="!loadingArticles; else loading">
+            <div class="result">
+                <div class="content" *ngFor="let art of filteredArticles">
+                    <div class="name">
+                        <p>{{art.name}}</p>
+                    </div>
+                    <div class="link">
+                        <p>Ver en: &nbsp; <a [href]="art.link" target="_blank">{{ art.link | slice:0:40 }}{{ art.link.length > 40 ? '...' : '' }}</a></p>
+                    </div>
                 </div>
-                <div class="link">
-                    <p>Ver en: &nbsp; <a [href]="art.link" target="_blank">{{ art.link | slice:0:40 }}{{ art.link.length > 40 ? '...' : '' }}</a></p>
+                <div *ngIf="filteredArticles.length === 0" class="no-results">
+                    <h1>No se encontraron resultados</h1>
                 </div>
             </div>
-            <div *ngIf="filteredArticles.length === 0" class="no-results">
-                <h1>No se encontraron resultados</h1>
+        </ng-container>
+        
+        <ng-template #loading>
+            <div style="text-align: center;">
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
-        </div>
+        </ng-template>
 
     </div>
 </section>

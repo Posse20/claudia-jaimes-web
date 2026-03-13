@@ -1612,7 +1612,6 @@
 
     .loc-icon {
         font-size: 5rem;
-        animation: pulse 1.6s ease-in-out infinite;
     }
 
     .loc-info {
@@ -2202,7 +2201,7 @@
 
     .loc-icon {
         font-size: 3rem;
-        animation: pulse 1.2s ease-in-out infinite;
+        animation: none;
     }
 
     .loc-info {
