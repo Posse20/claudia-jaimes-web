@@ -14,6 +14,16 @@
                 </span>
                 </ng-container>
             </p>
+            <p class="reveal-text">
+                <ng-container *ngFor="let char of letters2; let i = index">
+                <span
+                    [style.animationDelay]="(i * 0.05) + 's'"
+                    class="char"
+                >
+                    {{ char === ' ' ? '\u00A0' : char }}
+                </span>
+                </ng-container>
+            </p>
             <p class="reveal-text-1">
                 <ng-container *ngFor="let char of letters1; let i = index">
                 <span

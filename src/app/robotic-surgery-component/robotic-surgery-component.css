@@ -1,10 +1,26 @@
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation: bounce 1.5s infinite;
+}
+
 .hero-card {
     background-color: #4f708d;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
     margin-top: -35px;
     padding: 0 2rem;
-    min-height: 50vh;
+    min-height: 50dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -603,23 +619,43 @@
 
     .section-4 {
         padding-bottom: 450px;
-        max-height: 3600px;
+        max-height: 4000px;
     }
 
 }
 
-@media(max-width: 1280px) {
+@media(max-width: 1285px) {
     .robotic-container {
         margin-top: -250px;
     }
     .benefits {
         margin-top: -60px;
     }
+
+    .title-right-sct-1 {
+        margin-top: 10px;
+    }
+
+    .section-4 {
+        max-height: 2200px;
+    }
+
+}
+
+
+@media(max-width: 1500px){
+    .benefits {
+        margin-top: -55px;
+    }
+
+    .section-4 {
+        max-height: 2500px;
+    }
 }
 
 @media (max-width: 1026px) {
     .hero-card {
-        min-height: 40vh;
+        min-height: 40dvh;
     }
 
     .first-img img {
@@ -1150,7 +1186,7 @@
         padding: 5px;
         margin-top: -250px;
         padding-top: 140px;
-        max-height: 1800px;
+        max-height: 2000px;
     }
 
     .lo-que-dicen{

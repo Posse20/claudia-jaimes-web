@@ -65,10 +65,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 
-  text = 'Claudia Viviana \nJaimes González';
+  text = 'Claudia Viviana';
+  text2 = 'Jaimes González';
   text1 = 'Cirugía Robótica Mínima Invasión'
   letters: string[] = [];
   letters1: string[] = [];
+  letters2: string[] = [];
 
   
   protected _content = `
@@ -130,6 +132,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
     this.letters = this.text.split('');
     this.letters1 = this.text1.split('');
+    this.letters2 = this.text2.split('');
   }
 
   selectedImage: string | null = null;

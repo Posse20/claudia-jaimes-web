@@ -54,7 +54,7 @@
     border-top-left-radius: 40px;
     margin-top: -35px;
     padding: 0 2rem;
-    min-height: 60vh;
+    min-height: 60dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,10 +380,6 @@
         width: 520px;
     }
 
-    .articles-btn {
-        width: 350px;
-    }
-
     .video-1 video{
         width: 500px;
         height: 750px;
@@ -398,7 +394,11 @@
     }
 
     .atr-btn {
-        margin-left: 50px;
+        margin-left: 0px;
+    }
+
+    .articles-btn {
+        font-size: 1.5rem;
     }
 }
 
@@ -430,7 +430,10 @@
 
 
     .hero-card {
-        min-height: 30vh;
+        min-height: 50dvh;
+    }
+    .inf-section {
+        margin-top: -250px;
     }
 
     .abt-me-img-1 {
@@ -439,7 +442,7 @@
     }
 
     .abt-me-img-1 img {
-        width: 110%;
+        width: 80%;
         margin-top: 60px;
         margin-left: -20px;
     }
@@ -494,11 +497,11 @@
     .insta-badge {
         margin-top: 400px;
         margin-left: -60px;
-        animation: pulse 1.6s ease-in-out infinite;
+        animation: none;
     }
 
     .clau-articles {
-        margin-left: 200px;
+        margin-left: 300px;
     }
 
     .imagen-frame {
