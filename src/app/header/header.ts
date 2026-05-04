@@ -19,14 +19,17 @@ export class Header implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  text = '   Claudia Viviana \n Jaimes González';
+  text = 'Claudia Viviana';
+  text2 = 'Jaimes González';
   text1 = 'Cirugía Robótica Mínima Invasión'
   letters: string[] = [];
   letters1: string[] = [];
+  letters2: string[] = [];
 
   ngOnInit(): void {
     this.letters = this.text.split('');
     this.letters1 = this.text1.split('');
+    this.letters2 = this.text2.split('');
   }
 
   returnHome() {

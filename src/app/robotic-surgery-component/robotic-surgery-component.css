@@ -67,6 +67,7 @@
 
 .text-1 p {
     color: white;
+    margin: 0;
 }
 
 .areas-photos {
@@ -1312,6 +1313,7 @@
         right: 30px;
         margin-left: 0px;
         animation: pulse 1.6s ease-in-out infinite;
+        top: 50px;
     }
 
     .testi-3-msg {

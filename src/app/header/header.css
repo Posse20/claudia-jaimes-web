@@ -218,7 +218,17 @@
     color: white;
     font-size: 0.9rem;
     margin: 0;
-    text-align: center;
+    text-align: start;
+  }
+
+  .reveal-text-1-1 {
+    overflow: hidden;
+    white-space: pre-line; /* respeta el salto de línea */
+    width: 120px;
+    color: white;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: start;
   }
 
   .reveal-text-1 {
