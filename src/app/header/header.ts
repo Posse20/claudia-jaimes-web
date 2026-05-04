@@ -19,7 +19,7 @@ export class Header implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  text = '  Claudia Viviana \n    Jaimes González';
+  text = '  Claudia Viviana \n  Jaimes González';
   text1 = 'Cirugía Robótica Mínima Invasión'
   letters: string[] = [];
   letters1: string[] = [];
