@@ -214,9 +214,9 @@
   .reveal-text {
     overflow: hidden;
     white-space: pre-line; /* respeta el salto de línea */
-    width: 130px;
+    width: 120px;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
     text-align: end;
   }

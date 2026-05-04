@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { FooterClau } from '../footer-clau/footer-clau';
 import { CommonModule } from '@angular/common';
-import { GoogleMapComponent } from '../google-map/google-map';
-
 @Component({
   selector: 'app-robotic-surgery-component',
-  imports: [FooterClau, CommonModule, GoogleMapComponent],
+  imports: [FooterClau, CommonModule],
   templateUrl: './robotic-surgery-component.html',
   styleUrl: './robotic-surgery-component.css'
 })
