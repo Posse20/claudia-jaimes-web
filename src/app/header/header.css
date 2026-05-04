@@ -216,7 +216,7 @@
     white-space: pre-line; /* respeta el salto de línea */
     width: 120px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0;
     text-align: center;
   }
