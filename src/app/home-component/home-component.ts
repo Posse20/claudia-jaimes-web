@@ -222,7 +222,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         window.open('https://medplus.com.co/', '_blank');
         break;
       case 'unimarly':
-        window.open('https://clinicademarlyjorgecaveliergaviria.com.co/unidad-de-servicios-ambulatorios-unimarly/', '_blank');
+        window.open('https://marly.com.co/servicios-ambulatorios/', '_blank');
         break;
       case 'coomeva':
         window.open('https://medicinaprepagada.coomeva.com.co/', '_blank');

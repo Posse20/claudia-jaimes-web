@@ -622,6 +622,22 @@
         max-height: 4000px;
     }
 
+    .testi-1-img {
+        top: 100px;
+    }
+
+    .testi-2-1 {
+        margin-top: -100px;
+    }
+
+    .testi-3-1 {
+        margin-top: 0px;
+    }
+
+    .testi-3-img {
+        top: 100px;
+    }
+
 }
 
 @media(max-width: 1285px) {
